@@ -1,11 +1,36 @@
-p, h1 {
+/* https://www.kammerl.de/ascii/AsciiSignature.php */
+
+p, h1, h2, h3 {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #ddd;
 }
 
+/* _    _ ______          _____  ______ _____  
+	| |  | |  ____|   /\   |  __ \|  ____|  __ \ 
+	| |__| | |__     /  \  | |  | | |__  | |__) |
+	|  __  |  __|   / /\ \ | |  | |  __| |  _  / 
+	| |  | | |____ / ____ \| |__| | |____| | \ \ 
+	|_|  |_|______/_/    \_\_____/|______|_|  \_\ */
+h1.name {
+	text-align: center;
+}
+
+/* __  __ ______ 
+	|  \/  |  ____|
+	| \  / | |__   
+	| |\/| |  __|  
+	| |  | | |____ 
+	|_|  |_|______| */
+
 p.me {
   font-size:120%;
-} 
+}
+
+img.me {
+	width: 100%;
+	height: auto;
+	max-height:100%;
+}
 
 div.leftPannel {
 	float:left;
@@ -13,7 +38,37 @@ div.leftPannel {
 	height:auto;
 	border-style: solid;
 	border-color: #fff;
+	
+	position: fixed;
 }
+
+/* unvisited link */
+a:link {
+  color: #add8e6;
+}
+
+/* visited link */
+a:visited {
+  color: #8aacb8;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c5e3ed;
+}
+
+/* selected link */
+a:active {
+  color: #deeff5;
+}
+
+
+/* ______ ____  _____  _    _ __  __ 
+	|  ____/ __ \|  __ \| |  | |  \/  |
+	| |__ | |  | | |__) | |  | | \  / |
+	|  __|| |  | |  _  /| |  | | |\/| |
+	| |   | |__| | | \ \| |__| | |  | |
+	|_|    \____/|_|  \_\\____/|_|  |_|*/
 
 div.rightPannel {
 	float:right;
@@ -23,12 +78,12 @@ div.rightPannel {
 	border-style: solid;
 }
 
-h1.name {
-	text-align: center;
-}
-
-img.me {
-	width: 100%;
-	height: auto;
-	max-height:100%;
+div.pannelItem {
+	width: auto;
+	height: 100px;
+	
+	border-style: solid;
+	border-color: #fff;
+	
+	margin-bottom: 1%;
 }
