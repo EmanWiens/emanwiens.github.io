@@ -6,6 +6,13 @@ p, h1, h2, h3 {
 	font-size:120%;
 }
 
+img {
+	width: 100%;
+	height: auto;
+	max-height:100%;
+	border-radius: 4px;
+}
+
 /* _    _ ______          _____  ______ _____  
 	| |  | |  ____|   /\   |  __ \|  ____|  __ \ 
 	| |__| | |__     /  \  | |  | | |__  | |__) |
@@ -16,6 +23,17 @@ h1.name {
 	text-align: center;
 }
 
+div.banner {
+	width: 100%;
+	height: auto;	
+	position: fixed;
+	background-image: linear-gradient(#333, #444);
+	top: 0;
+	
+	/*border-color: #fff;
+	border-style: solid;*/
+}
+
 /* __  __ ______ 
 	|  \/  |  ____|
 	| \  / | |__   
@@ -23,16 +41,11 @@ h1.name {
 	| |  | | |____ 
 	|_|  |_|______| */
 
-img {
-	width: 100%;
-	height: auto;
-	max-height:100%;
-}
 
 div.leftPannel {
-	float:left;
+	float: left;
 	width: 20%;
-	height:auto;	
+	height: auto;	
 	position: fixed;
 }
 
@@ -66,7 +79,7 @@ a:active {
 
 div.rightPannel {
 	float:right;
-	width:79.5%;
+	width:79%;
 	height:2500px;
 }
 
@@ -85,8 +98,8 @@ div.pannelItem {
 	height: auto;
 	overflow: auto;
 	background: #444;
-	padding: 1% 0 1% 1%;
-	border-radius: 10px;
+	padding: 1% 1% 1% 1%;
+	border-radius: 6px;
 	
 	margin-bottom: 1%;
 }
