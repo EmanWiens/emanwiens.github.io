@@ -3,6 +3,7 @@
 p, h1, h2, h3 {
 	font-family: Arial, Helvetica, sans-serif;
 	color: #ddd;
+	font-size:120%;
 }
 
 /* _    _ ______          _____  ______ _____  
@@ -22,11 +23,7 @@ h1.name {
 	| |  | | |____ 
 	|_|  |_|______| */
 
-p.me {
-  font-size:120%;
-}
-
-img.me {
+img {
 	width: 100%;
 	height: auto;
 	max-height:100%;
@@ -35,10 +32,7 @@ img.me {
 div.leftPannel {
 	float:left;
 	width: 20%;
-	height:auto;
-	border-style: solid;
-	border-color: #fff;
-	
+	height:auto;	
 	position: fixed;
 }
 
@@ -72,18 +66,27 @@ a:active {
 
 div.rightPannel {
 	float:right;
-	width:79%;
+	width:79.5%;
 	height:2500px;
-	border-color: #fff;
-	border-style: solid;
+}
+
+div.itemRight {
+	float:right;
+	width:49%;
+}
+
+div.itemLeft {
+	float:left;
+	width:49%;
 }
 
 div.pannelItem {
 	width: auto;
-	height: 100px;
-	
-	border-style: solid;
-	border-color: #fff;
+	height: auto;
+	overflow: auto;
+	background: #444;
+	padding: 1% 0 1% 1%;
+	border-radius: 10px;
 	
 	margin-bottom: 1%;
 }
