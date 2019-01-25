@@ -29,6 +29,8 @@ div.banner {
 	position: fixed;
 	background-image: linear-gradient(#333, #444);
 	top: 0;
+	left: 0;
+	right: 0;
 	
 	/*border-color: #fff;
 	border-style: solid;*/
