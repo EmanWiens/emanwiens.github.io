@@ -13,9 +13,9 @@ img {
 	border-radius: 4px;
 }
 
-img:hover {
+/*img:hover {
 	opacity:0;
-}
+}*/
 
 /* _    _ ______          _____  ______ _____  
 	| |  | |  ____|   /\   |  __ \|  ____|  __ \ 
@@ -84,8 +84,8 @@ a:active {
 	|_|    \____/|_|  \_\\____/|_|  |_|*/
 
 div.rightPannel {
-	float: right;
-	/*margin: auto;*/
+	margin: auto;
+	/*float: right;*/
 	width:72%;
 	height:2500px;
 }
