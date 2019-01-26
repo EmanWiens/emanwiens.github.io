@@ -2,7 +2,7 @@
 
 p, h1, h2, h3 {
 	font-family: Arial, Helvetica, sans-serif;
-	color: #ddd;
+	color: #EEE;
 	font-size:120%;
 }
 
@@ -11,6 +11,10 @@ img {
 	height: auto;
 	max-height:100%;
 	border-radius: 4px;
+}
+
+img:hover {
+	opacity:0;
 }
 
 /* _    _ ______          _____  ______ _____  
@@ -24,10 +28,11 @@ h1.name {
 }
 
 div.banner {
-	width: 100%;
-	height: auto;	
-	position: fixed;
-	background-image: linear-gradient(#333, #444);
+	width: auto;
+	height: auto;
+	margin: 1% 0 1% 0;
+	padding-bottom: .25;
+	background-image: linear-gradient(#555, #666);
 	top: 0;
 	left: 0;
 	right: 0;
@@ -46,9 +51,8 @@ div.banner {
 
 div.leftPannel {
 	float: left;
-	width: 20%;
-	height: auto;	
-	position: fixed;
+	width: 27%;
+	height: auto;
 }
 
 /* unvisited link */
@@ -80,8 +84,9 @@ a:active {
 	|_|    \____/|_|  \_\\____/|_|  |_|*/
 
 div.rightPannel {
-	float:right;
-	width:79%;
+	float: right;
+	/*margin: auto;*/
+	width:72%;
 	height:2500px;
 }
 
@@ -99,7 +104,7 @@ div.pannelItem {
 	width: auto;
 	height: auto;
 	overflow: auto;
-	background: #444;
+	background: #666;
 	padding: 1% 1% 1% 1%;
 	border-radius: 6px;
 	
