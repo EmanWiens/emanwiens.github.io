@@ -1,78 +1,4 @@
-<HTML>
-<HEAD>
-
-<TITLE>E. Wiens</TITLE>
-<link rel="stylesheet" type="text/css" href="style.css">
-<script src="processing.js"></script>
-<script src="processing.min.js"></script>
-</HEAD>
-
-<BODY BGCOLOR="#555">
-
-<div class="banner"> 
-<H1 class="name">E. Wiens</H1>
-</div>
-
-<!--
-<div class="leftPannel"> 
-
-<img src="me.jpg" class="me" />
-
-<p class="me">Emanuel Wiens. <br />
-Feel free to browse my <a href="https://github.com/EmanWiens" target="_blank">Github</a>.<br />
-Student at the University of Manitoba.<br />
-Bachelor of Computer Science Honours.<br />
-This is a webiste featuring some of the work I have done in the past.<br />
-Some of the source code of these programs was provided by the instructor and
-such code will not be posted. Some of the programs are entirely mine and the code is made public.<br />
-Other code may have a "public vesion" where I took out everything in the code that isn't strictly
-code that was written by me.<p>
-
-</div><!-- end LeftPannel -->
-
-
-<div class="RightPannel">
-
-
-
-<!-- ABOUT ME ---------------------------------------------------------------->
-<div class="pannelItem"> 
-<div class="itemRight">
-<h1>Emanuel Wiens</h1>
-<HR>
-<p class="me">
-Student at the University of Manitoba.<br />
-Bachelor of Computer Science Honours.<br /><br />
-I have been programming since about 2011 and have since worked a lot with C++, C#, HTML, CSS, and Java. And I have sufficient experience with Python, Ruby, SQL, Javascript, ARM Assembly, and C.<br /><br />
-I usually choose to make games and simulations. Such as graphical simulations or conceptual ones like cache simulations. However, I enjoyed making distributed programs.<br /><br /> 
-
-This is a webiste featuring some of the work I have done in the past that I am proud of. The source code will also be added if it's public.<br /><br />
-
-Feel free to browse my <a href="https://github.com/EmanWiens" target="_blank">Github</a>.<p>
-</div>
-
-<div class="itemLeft">
-<img src="me.jpg" class="me" />
-</div>
-</div><!-- end pannelItem -->
-<!-- END ABOUT ME ---------------------------------------------------------------->
-
-
-
-
-
-
-
-
-<!-- ITEM 1 ---------------------------------------------------------------->
-<div class="pannelItem">
-<div class="itemRight">
-<!--<img src="proj1.gif" class="pannelItem" \>-->
-
-<canvas data-processing-sources="ParticleSystem.pde" width="100" height="100"></canvas>
-
- <script type="text/processing" data-processing-target="processing-canvas">
- /*
+/*
   Emanuel W.
   Nov 22, 2018
   This is my Particle System. The particles start in a spiral and 
@@ -84,14 +10,14 @@ Feel free to browse my <a href="https://github.com/EmanWiens" target="_blank">Gi
 ArrayList<Particle> p = new ArrayList<Particle>();
 boolean start = true;
 
-final int pCount = 15;
-final float maxSpeeds = .5;
+final int pCount = 1000;
+final float maxSpeeds = .25;
 final float maxMass = 1, minMass = .25;
 float beforeMilli = 0, afterMilli = 0, diffMilli = 0;
-float frameR = 2;
+float frameR = 60;
 
 void setup() {
-  size(300,300,P3D);  
+  size(640,640,P3D);  
   setupParticlesInSpiral();
 }
 
@@ -146,7 +72,7 @@ void setupParticlesInSpiral() {
 class Particle {
   float x, y;
   PVector v;
-  final float maxDiameter = 25;
+  final float maxDiameter = 10;
   float diameter = maxDiameter;
   int id;
   float mass;
@@ -347,84 +273,3 @@ class Particle {
     point(x, y);
   }
 }
- 
- 
- </script>
- <canvas id="processing-canvas" width="100" height="100"> </canvas>
-
-</div>
-
-<div class="itemLeft">
-<h2>Particle System, 2018</h2>
-<HR>
-<p>This is a particle system that I had to do for an assignent and then later slightly modified. (gif unrelated)</p>
-</div>
-</div><!-- end pannelItem -->
-
-
-<!-- ITEM 2 ---------------------------------------------------------------->
-<div class="pannelItem"> 
-<div class="itemRight">
-<h2>Particle System</h2>
-<HR>
-<p>This is a particle system that I had to do for an assignent and then later slightly modified. (gif unrelated)</p>
-</div>
-
-<div class="itemLeft">
-<img src="proj2.gif" class="pannelItem" \>
-</div>
-</div><!-- end pannelItem -->
-
-
-
-
-<!-- ITEM 1 ---------------------------------------------------------------->
-<div class="pannelItem">
-<div class="itemRight">
-<img src="proj1.gif" class="pannelItem" \>
-</div>
-
-<div class="itemLeft">
-<h2>Particle System, 2018</h2>
-<HR>
-<p>This is a particle system that I had to do for an assignent and then later slightly modified. (gif unrelated)</p>
-</div>
-</div><!-- end pannelItem -->
-
-
-<!-- ITEM 2 ---------------------------------------------------------------->
-<div class="pannelItem"> 
-<div class="itemRight">
-<h2>Particle System</h2>
-<HR>
-<p>This is a particle system that I had to do for an assignent and then later slightly modified. (gif unrelated)</p>
-</div>
-
-<div class="itemLeft">
-<img src="proj2.gif" class="pannelItem" \>
-</div>
-</div><!-- end pannelItem -->
-
-</div> <!-- end RightPannel -->
-
-
-
-</BODY>
-
-</HTML>
-
-
-<!-- EMPTY ITEM 
-</div>
-<div class="RightPannel">
-
-<div class="pannelItem"> 
-<div class="itemRight">
-<img src="proj1.gif" class="pannelItem" \>
-</div>
-
-<div class="itemLeft">
-<p>This is a particle system that I had to do for an assignent and then later slightly modified. (gif unrelated)</p>
-</div>
-</div>
--->
