@@ -87,7 +87,7 @@ div.rightPannel {
 	margin: auto;
 	/*float: right;*/
 	width:72%;
-	height:2500px;
+	height:auto;
 }
 
 div.itemRight {
