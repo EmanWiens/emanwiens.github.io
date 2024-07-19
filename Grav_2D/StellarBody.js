@@ -33,35 +33,37 @@ class StellarBody {
         this.#acc_vec.scale(acc);
     }
 
-    draw(scale, min_draw_scale, context, size) {
-        let temp_radius = scale * this.#radius; 
+    draw(scale, max_min_radius, min_draw_scale, context, size) {
+        let temp_radius = scale * this.#radius;
 
         if (temp_radius < min_draw_scale) {
-            temp_radius = min_draw_scale; 
+            temp_radius = this.#radius / (max_min_radius.x + max_min_radius.y);
+            temp_radius *= min_draw_scale; 
+            temp_radius += 2; 
         }
 
-        context.fillStyle = "green";
+        context.fillStyle = "rgba( " + this.#color[0] + ", " + this.#color[1] + ", " + this.#color[2] + ", 1)";
         context.beginPath();
         context.arc(this.#pos_vec.x * scale + size.x / 2, this.#pos_vec.y * scale + size.y / 2, temp_radius, 0, 2 * Math.PI);
         context.fill();
 
-        let temp_acc = new Vector_2D(this.#acc_vec.x, this.#acc_vec.y); 
-        temp_acc.normalize(); 
-        temp_acc.scale(25); 
-        context.fillStyle = "black";
-        context.beginPath();
-        context.moveTo(this.#pos_vec.x * scale + size.x / 2, this.#pos_vec.y * scale + size.y / 2); 
-        context.lineTo(this.#pos_vec.x * scale + size.x / 2 + temp_acc.x, this.#pos_vec.y * scale + size.y / 2 + temp_acc.y);
-        context.stroke();
+        // let temp_acc = new Vector_2D(this.#acc_vec.x, this.#acc_vec.y); 
+        // temp_acc.normalize(); 
+        // temp_acc.scale(25); 
+        // context.fillStyle = "black";
+        // context.beginPath();
+        // context.moveTo(this.#pos_vec.x * scale + size.x / 2, this.#pos_vec.y * scale + size.y / 2); 
+        // context.lineTo(this.#pos_vec.x * scale + size.x / 2 + temp_acc.x, this.#pos_vec.y * scale + size.y / 2 + temp_acc.y);
+        // context.stroke();
 
-        let temp_vel = new Vector_2D(this.#vel_vec.x, this.#vel_vec.y); 
-        temp_vel.normalize(); 
-        temp_vel.scale(25); 
-        context.fillStyle = "red";
-        context.beginPath();
-        context.moveTo(this.#pos_vec.x * scale + size.x / 2, this.#pos_vec.y * scale + size.y / 2); 
-        context.lineTo(this.#pos_vec.x * scale + size.x / 2 + temp_vel.x, this.#pos_vec.y * scale + size.y / 2 + temp_vel.y);
-        context.stroke();
+        // let temp_vel = new Vector_2D(this.#vel_vec.x, this.#vel_vec.y); 
+        // temp_vel.normalize(); 
+        // temp_vel.scale(this.#vel_vec.magnitude()); 
+        // context.fillStyle = "red";
+        // context.beginPath();
+        // context.moveTo(this.#pos_vec.x * scale + size.x / 2, this.#pos_vec.y * scale + size.y / 2); 
+        // context.lineTo(this.#pos_vec.x * scale + size.x / 2 + temp_vel.x, this.#pos_vec.y * scale + size.y / 2 + temp_vel.y);
+        // context.stroke();
     }
 
     to_string() {
@@ -69,7 +71,6 @@ class StellarBody {
     }
 
     update(time) {
-        // let pos_vec_copy = new Vector_2D().copy(this.#pos_vec); 
         let vel_vec_copy = new Vector_2D(this.#vel_vec.x, this.#vel_vec.y); 
         let acc_vec_copy = new Vector_2D(this.#acc_vec.x, this.#acc_vec.y); 
 

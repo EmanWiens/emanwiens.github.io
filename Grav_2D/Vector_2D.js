@@ -17,10 +17,6 @@ class Vector_2D {
         this.#y -= vec.y; 
     }
 
-    dot(vec) {
-        return this.mult(vec).sum();
-    }
-
     magnitude() {
         return Math.sqrt(Math.pow(this.#x, 2) + Math.pow(this.#y, 2));
     }
@@ -68,10 +64,6 @@ class Vector_2D {
     pow(val) { 
         this.#x = Math.pow(this.#x, val)
         this.#y = Math.pow(this.#y, val)
-    }
-
-    static mult(vec_1, vec_2) {
-        vec_1.mult(vec); 
     }
     
     distance(vec) { return Math.sqrt(Math.pow(this.#x - vec.x, 2) + Math.pow(this.#y - vec.y, 2)); } 
