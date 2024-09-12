@@ -1,7 +1,7 @@
 {
   "name": "emanwiens.github.io",
   "version": "0.1.0",
-  "homepage": "https://emanwiens.github.io",
+  "homepage": "https://emanwiens.github.io/gh-pages",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
