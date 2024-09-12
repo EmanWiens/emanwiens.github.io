@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import projects from './projects.json';
+import React from 'react'
 
 import rert_img from './RERT.gif'
 
