@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import projects from './projects.json';
+// import projects from './projects.json';
 import React from 'react'
 
-import rert_img from './RERT.gif'
+// import rert_img from './RERT.gif'
 
 
 // function make_post(index) {
@@ -24,10 +24,10 @@ function make_banner() {
   return (
     <div class="banner">
       <div class="buttonHolder">
-        <a href=""><button type="button" class="headerBtn">About</button></a>
-        <a href=""><button onClick={make_projects} type="button" class="headerBtn">Projects</button></a>
-        <a href=""><button onClick={make_home} type="button" class="headerBtn">Home</button></a>
-        <a href=""><h1 class="name">Emanuel Wiens</h1></a>
+        <a href="/About"><button type="button" class="headerBtn">About</button></a>
+        <a href="/Projects"><button type="button" class="headerBtn">Projects</button></a>
+        <a href="/Home"><button type="button" class="headerBtn">Home</button></a>
+        <a href="/Home"><h1 class="name">Emanuel Wiens</h1></a>
       </div>
     </div>
   );
@@ -43,7 +43,7 @@ function make_projects() {
             
             <div class="pannelItem">
                 <div class="itemRight">
-                    <img src="proj1.gif" class="pannelItem" /> 
+                    <img src="proj1.gif" class="pannelItem" alt="" /> 
                 </div>
                 <h2>Welcome!</h2>
                 <hr></hr>
@@ -86,7 +86,7 @@ function make_projects() {
                 </div>
     
                 <div class="itemLeft">
-                    <img src="RERT.gif" class="pannelItem" />
+                    <img src="RERT.gif" class="pannelItem" alt="Rapid Exploring Random Trees gif" />
                 </div>
             </div> 
     
@@ -94,7 +94,7 @@ function make_projects() {
     
             <div class="pannelItem">
                 <div class="itemRight">
-                    <img src="ACO.gif" class="pannelItem" />
+                    <img src="ACO.gif" class="pannelItem" alt="Ant Colony Optimization gif" />
                 </div>
     
                 <div class="itemLeft">
@@ -109,18 +109,18 @@ function make_projects() {
                 <div class="itemRight">
                     <h2>Least square regression, Winter 2021, Personal Project</h2>
                     <hr></hr>
-                    <p>Least square regression simply tries to minimize the distance to all points. Ridge regression takes the error into account and tries to minimize error by giving points a weight that indicates how much this point should contribute to the model. For example, an outlier is not desirable so giving it a small weight means that it will be less likely to make the model incorrect. Additionally, once you can also use more advanced methods like nonlinear solutions. For now, I implemented the simplest version of the algorithm. <br /><br />See the code on <a href="https://github.com/EmanWiens/Least_Squares_Regression" target="_blank">Github</a>.</p>
+                    <p>Least square regression simply tries to minimize the distance to all points. Ridge regression takes the error into account and tries to minimize error by giving points a weight that indicates how much this point should contribute to the model. For example, an outlier is not desirable so giving it a small weight means that it will be less likely to make the model incorrect. Additionally, once you can also use more advanced methods like nonlinear solutions. For now, I implemented the simplest version of the algorithm. <br /><br />See the code on <a href="https://github.com/EmanWiens/Least_Squares_Regression">Github</a>.</p>
                 </div>
     
                 <div class="itemLeft">
-                    <img src="LeastSquareRegression.png" class="pannelItem" />
+                    <img src="LeastSquareRegression.png" class="pannelItem" alt="Least square regression gif"/>
                 </div>
             </div> 
     
     
             <div class="pannelItem">
                 <div class="itemRight">
-                    <img src="savingyourbacon.png" class="pannelItem" />
+                    <img src="savingyourbacon.png" class="pannelItem" alt=""/>
                 </div>
     
                 <div class="itemLeft">
@@ -128,7 +128,7 @@ function make_projects() {
                     <hr></hr>
                     <p> As part of being on the Executive Team for the Computer Science Students' Association we hosted a Game Jam. After all the event planning done by the other members and myself, we managed to make a mini game. This is a three day project that the four of us finished. 
                     
-                        <br /><br />Game description: Your pig just won first prize at the county fair. The other farmers are angry that you won and start throwing rocks at your pig. The pig is defenceless against getting hit by a rock and will die immediately. Luckly, you are a skilled rock catcher so it is up to you to catch the rocks. While dodging and catching rocks, you find coins on the ground that you can use to buy protection for your pig.<br /><br />See the code on <a href="https://github.com/EmanWiens/FlakySuperpower" target="_blank">Github</a>.</p>
+                        <br /><br />Game description: Your pig just won first prize at the county fair. The other farmers are angry that you won and start throwing rocks at your pig. The pig is defenceless against getting hit by a rock and will die immediately. Luckly, you are a skilled rock catcher so it is up to you to catch the rocks. While dodging and catching rocks, you find coins on the ground that you can use to buy protection for your pig.<br /><br />See the code on <a href="https://github.com/EmanWiens/FlakySuperpower">Github</a>.</p>
                 </div>
             </div> 
     
@@ -142,14 +142,14 @@ function make_projects() {
                 </div>
     
                 <div class="itemLeft">
-                    <img src="Bloch_sphere.svg" class="pannelItem" />
+                    <img src="Bloch_sphere.svg" class="pannelItem" alt="" />
                 </div>
             </div> 
     
     
             <div class="pannelItem">
                 <div class="itemRight">
-                    <img src="planetColonizer.gif" class="pannelItem" />
+                    <img src="planetColonizer.gif" class="pannelItem" alt="" />
                 </div>
     
                 <div class="itemLeft">
@@ -172,11 +172,11 @@ function make_projects() {
                 <div class="itemRight">
                     <h2>Hackmaster, Spring 2018, University Project</h2>
                     <hr></hr>
-                    <p>This is the project that I worked on for my Software engineering course. The five of us worked diligently to complete  this game. There were many bumps in the road, but with proper communication and a lot of patience we all pulled together as a team to make this entertaining mini game. <br /><br />See the code on <a href="https://github.com/EmanWiens/hackmaster" target="_blank">Github</a>.</p>
+                    <p>This is the project that I worked on for my Software engineering course. The five of us worked diligently to complete  this game. There were many bumps in the road, but with proper communication and a lot of patience we all pulled together as a team to make this entertaining mini game. <br /><br />See the code on <a href="https://github.com/EmanWiens/hackmaster">Github</a>.</p>
                 </div>
     
                 <div class="itemLeft">
-                    <img src="hackmaster.jpg" class="pannelItem" />
+                    <img src="hackmaster.jpg" class="pannelItem" alt="" />
                 </div>
             </div> 
     
@@ -186,7 +186,7 @@ function make_projects() {
             
             <div class="pannelItem">
                 <div class="itemRight">
-                    <img src="particleSystem.gif" class="pannelItem" />
+                    <img src="particleSystem.gif" class="pannelItem" alt="" />
                 </div>
     
                 <div class="itemLeft">
@@ -195,7 +195,7 @@ function make_projects() {
                         <p>This is a particle system that I did for an assignment and then later slightly modified. It's a rather simple program, but it was fun to make. I also like the idea of using small particles to simulate things like smoke and fire.<br /><br />
     
                         The particles have mass and slightly change color on every collision, which is only noticeable when the program runs for a few seconds.
-                        <br /><br />See the code on <a href="https://github.com/EmanWiens/ParticleSystem" target="_blank">Github</a>.
+                        <br /><br />See the code on <a href="https://github.com/EmanWiens/ParticleSystem">Github</a>.
                     </p>
                 </div>
             </div> 
@@ -216,7 +216,7 @@ function make_projects() {
                 </div>
     
                 <div class="itemLeft">
-                    <img src="environEngine.gif" class="pannelItem" />
+                    <img src="environEngine.gif" class="pannelItem" alt="" />
                 </div>
             </div>
           </div> 
@@ -267,20 +267,20 @@ function make_home() {
 
 
       <div class="pannelItem">
-        <p>Jan 10, 2022: I have been wanting to make a real-time strategy game for a little while now but I couldn't decide what I wanted to use to make it. Recently, a friend recommended <a href="https://godotengine.org/" target="_blank">Godot</a>. I decided to do a <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html#overview" target="_blank">tutorial</a> and I found it really intuitive to use! The UI is well designed and provides a lot of transparency in terms of game object hierarchies. I have decided to use this to make a real-time strategy game.</p>
+        <p>Jan 10, 2022: I have been wanting to make a real-time strategy game for a little while now but I couldn't decide what I wanted to use to make it. Recently, a friend recommended <a href="https://godotengine.org/">Godot</a>. I decided to do a <a href="https://docs.godotengine.org/en/stable/getting_started/step_by_step/your_first_game.html#overview">tutorial</a> and I found it really intuitive to use! The UI is well designed and provides a lot of transparency in terms of game object hierarchies. I have decided to use this to make a real-time strategy game.</p>
       </div>  
 
 
 
              <div class="pannelItem">
-                <p>Dec 30, 2021: Over the course of this year I attempted to do more personal projects and document them well. Some went well and some not so much. There are some fun projects that I wanted to publish yet but I have not gotten around to cleaning them up. I started publishing my projects on <a href="https://www.notion.so/" target="_blank">Notion.so</a> and you can see my <a href="https://emanuelwiens.notion.site/Published-Pages-c2c9a752f63a4078adb719daeb959b64" target="_blank">published pages</a> there. The RC tank project from below has been published there. Additionally, I have been interested in making visualizations of machine learning algorithms. I noticed that there are some that are just conceptually tough to grasp, but once I saw what it is that they do it was really easy to determine what they are doing. You can see them on the Notion.so page as well as on my <a href="projects.html" target="_blank">projects page</a>. Currently I am attempting to see if I can create a simple visualization of Bayesian inference and if it turns out the way I want it to, I will likely publish it or at least talk about it on the projects page.</p>
+                <p>Dec 30, 2021: Over the course of this year I attempted to do more personal projects and document them well. Some went well and some not so much. There are some fun projects that I wanted to publish yet but I have not gotten around to cleaning them up. I started publishing my projects on <a href="https://www.notion.so/">Notion.so</a> and you can see my <a href="https://emanuelwiens.notion.site/Published-Pages-c2c9a752f63a4078adb719daeb959b64">published pages</a> there. The RC tank project from below has been published there. Additionally, I have been interested in making visualizations of machine learning algorithms. I noticed that there are some that are just conceptually tough to grasp, but once I saw what it is that they do it was really easy to determine what they are doing. You can see them on the Notion.so page as well as on my <a href="projects.html">projects page</a>. Currently I am attempting to see if I can create a simple visualization of Bayesian inference and if it turns out the way I want it to, I will likely publish it or at least talk about it on the projects page.</p>
             </div>  
 
 
 
 
             <div class="pannelItem">
-                <p>Nov 8, 2021: One of the larger projects I have been working on is making my own R.C. car that I can control using my <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/" target="_blank">Raspberry Pi 3 Model B</a>. There has been a lot of learning to do for that project. First, I connected a <a href="https://www.amazon.ca/gp/product/B076MPL9P1/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank">Raspberry PI camera module</a> for a <a href="https://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming" target="_blank">live feed</a>. I inadvertently got an infrared camera so I also got the <a href="https://www.amazon.ca/gp/product/B07JKJQN4S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1" target="_blank">night vision module</a> shortly after. Additionally, I had to learn how to use a control board like the <a href="https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1" target="_blank">L298N module</a> to control the motors. Doing so required me to get a basic understanding of how batteries work such as putting them in <a href="https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/" target="_blank">parallel or in series</a>. I ran into an issue when I connected the tank motors to the Raspberry PI as it was not getting enough power to the motors. I think I used wires that cannot carry the right amount of amps. If I can get that working I have been looking into <a href="https://www.amazon.ca/gp/product/B083DMWHBL/ref=ox_sc_saved_image_1?smid=A30Y6WWS77DGEW&psc=1" target="_blank">radio transceivers</a> as a potential alternative to Wi-Fi or Bluetooth controller, like an <a href="https://howchoo.com/pi/xbox-controller-raspberry-pi" target="_blank">Xbox One controller</a>, and live video feed. Currently, I am working on documenting everything that I have done to make a guide on how you can do these things yourself.</p>
+                <p>Nov 8, 2021: One of the larger projects I have been working on is making my own R.C. car that I can control using my <a href="https://www.raspberrypi.com/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B</a>. There has been a lot of learning to do for that project. First, I connected a <a href="https://www.amazon.ca/gp/product/B076MPL9P1/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">Raspberry PI camera module</a> for a <a href="https://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming">live feed</a>. I inadvertently got an infrared camera so I also got the <a href="https://www.amazon.ca/gp/product/B07JKJQN4S/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">night vision module</a> shortly after. Additionally, I had to learn how to use a control board like the <a href="https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1">L298N module</a> to control the motors. Doing so required me to get a basic understanding of how batteries work such as putting them in <a href="https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/">parallel or in series</a>. I ran into an issue when I connected the tank motors to the Raspberry PI as it was not getting enough power to the motors. I think I used wires that cannot carry the right amount of amps. If I can get that working I have been looking into <a href="https://www.amazon.ca/gp/product/B083DMWHBL/ref=ox_sc_saved_image_1?smid=A30Y6WWS77DGEW&psc=1">radio transceivers</a> as a potential alternative to Wi-Fi or Bluetooth controller, like an <a href="https://howchoo.com/pi/xbox-controller-raspberry-pi">Xbox One controller</a>, and live video feed. Currently, I am working on documenting everything that I have done to make a guide on how you can do these things yourself.</p>
             </div> 
 
 
@@ -289,15 +289,15 @@ function make_home() {
             </div> 
 
              <div class="pannelItem">
-                <p>21 Feb, 2021: Over the last few weeks I have been working on an assignment for a course. In this assignment we are to conduct an experiment to test which is faster for tablet input, the index finger or the thumb. The measurement used to determine which has higher throughput is <a href="https://en.wikipedia.org/wiki/Fitts%27s_law" target="_blank">Fitts's law</a>. Simply put, this is a measure that is said to be able to predict how fast a person can move from one target to another with a disance A and a target of size W. Aside from learning what Fitts's law is, I also learned about react native which is the environment my partner and I used to implement this experiment. It has been amazing learning the ins and outs of react native even though I feel I have only scratched the surface. Further, I learned that the index finger has higher throughput than the thumb on tablets through our experiment.</p>
+                <p>21 Feb, 2021: Over the last few weeks I have been working on an assignment for a course. In this assignment we are to conduct an experiment to test which is faster for tablet input, the index finger or the thumb. The measurement used to determine which has higher throughput is <a href="https://en.wikipedia.org/wiki/Fitts%27s_law">Fitts's law</a>. Simply put, this is a measure that is said to be able to predict how fast a person can move from one target to another with a disance A and a target of size W. Aside from learning what Fitts's law is, I also learned about react native which is the environment my partner and I used to implement this experiment. It has been amazing learning the ins and outs of react native even though I feel I have only scratched the surface. Further, I learned that the index finger has higher throughput than the thumb on tablets through our experiment.</p>
             </div> 
 
              <div class="pannelItem">
-                <p>16 Feb, 2021: I have learned a couple things this week but I am a bit behind during this busy season, so I am hoping that I can catch up over this week as I have the reading week break. To discuss one thing, for one of my courses I had to pick a teaching technology and write about how it works from the student and the teacher perspectives. The technology I chose to explore was <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" target="_blank">Data Structure Visualizations</a> because I love Visualizations of complex data structures and algorithms. From the student perspective, I have used this to get a better image of how some algorithms work and have used these kinds of tools as a way to work through what I think the algorithm will do in a given situation with a given input. For the teachers, the creator Dr. David Gallas made the code available to be extended. I implemented a simple sorting algorithm to understand the framework he has created, which I learned runs almost entirely on JS. As a person with limited JS experience, it was amazing to program JS in an environment that has visual feedback for the algorithms being implemented as I am a visual thinker. This was not in the report I wrote for the course but it feels worth discussing here. </p>
+                <p>16 Feb, 2021: I have learned a couple things this week but I am a bit behind during this busy season, so I am hoping that I can catch up over this week as I have the reading week break. To discuss one thing, for one of my courses I had to pick a teaching technology and write about how it works from the student and the teacher perspectives. The technology I chose to explore was <a href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html">Data Structure Visualizations</a> because I love Visualizations of complex data structures and algorithms. From the student perspective, I have used this to get a better image of how some algorithms work and have used these kinds of tools as a way to work through what I think the algorithm will do in a given situation with a given input. For the teachers, the creator Dr. David Gallas made the code available to be extended. I implemented a simple sorting algorithm to understand the framework he has created, which I learned runs almost entirely on JS. As a person with limited JS experience, it was amazing to program JS in an environment that has visual feedback for the algorithms being implemented as I am a visual thinker. This was not in the report I wrote for the course but it feels worth discussing here. </p>
             </div> 
 
              <div class="pannelItem">
-                <p>7 Feb, 2021: This week I read a paper about <a href="https://www.researchgate.net/publication/221192597_A_Particle_Swarm_Optimization-Based_Heuristic_for_Scheduling_Workflow_Applications_in_Cloud_Computing_Environments" target="_blank">Particle swarm optimization</a>. The concept is to have many particles that are given properties of the problem to solve and each one goes off on their own to attempt to solve the problem. A given particle compares how well it did with its own best attempt as well as the global best attempt. The context of this article was cloud computing resources and attempting to optimize some aspect of it, like least possible execution time. I tried to understand all the math but some of it went over my head, but I am interested to do some more reading. This idea came from ants, since they each perform their own tasks yet are known to be very efficient creatures. According to the paper, this type of optimization algorithm is accurate yet efficient at finding solutions and has been applied to solving other NP-Hard problems.</p>
+                <p>7 Feb, 2021: This week I read a paper about <a href="https://www.researchgate.net/publication/221192597_A_Particle_Swarm_Optimization-Based_Heuristic_for_Scheduling_Workflow_Applications_in_Cloud_Computing_Environments">Particle swarm optimization</a>. The concept is to have many particles that are given properties of the problem to solve and each one goes off on their own to attempt to solve the problem. A given particle compares how well it did with its own best attempt as well as the global best attempt. The context of this article was cloud computing resources and attempting to optimize some aspect of it, like least possible execution time. I tried to understand all the math but some of it went over my head, but I am interested to do some more reading. This idea came from ants, since they each perform their own tasks yet are known to be very efficient creatures. According to the paper, this type of optimization algorithm is accurate yet efficient at finding solutions and has been applied to solving other NP-Hard problems.</p>
             </div> 
 
 
@@ -311,15 +311,15 @@ function make_home() {
             </div> 
 
             <div class="pannelItem">
-                <p>20 Jan, 2021: I have great interest in machine learning and took a few courses that taught me more about them. I really loved learning the concepts but have since forgotten some of the things that I have learned. As I was refreshing my knowledge I had the sudden urge to program <a href="https://towardsdatascience.com/ridge-regression-for-better-usage-2f19b3a202db" target="_blank">Ridge Regression</a> on a live setting where the user can add points and see how well the line fits them. I planned to do Ridge regression but for now only Linear Regression is implemented. The thing that is missing is the error. I have made the <a href="https://github.com/EmanWiens/Ridge_Regression" target="_blank">code</a> I wrote public, it's not the cleanest but it demonstrates some of the key points of the model.</p>
+                <p>20 Jan, 2021: I have great interest in machine learning and took a few courses that taught me more about them. I really loved learning the concepts but have since forgotten some of the things that I have learned. As I was refreshing my knowledge I had the sudden urge to program <a href="https://towardsdatascience.com/ridge-regression-for-better-usage-2f19b3a202db">Ridge Regression</a> on a live setting where the user can add points and see how well the line fits them. I planned to do Ridge regression but for now only Linear Regression is implemented. The thing that is missing is the error. I have made the <a href="https://github.com/EmanWiens/Ridge_Regression">code</a> I wrote public, it's not the cleanest but it demonstrates some of the key points of the model.</p>
             </div> 
 
             <div class="pannelItem">
-                <p>8 Jan, 2021: I have attempted using Unity before for making games a year or so ago but the first time I touched it I did not get far. For this reason, I stopped the project for the time and started some tutorials. A friend of mine sent me the <a href="https://studentgamedev.blogspot.com/2013/08/unity-voxel-tutorial-part-1-generating.html" target="_blank">Unity Voxel Tutorial</a>. The tutorial goes over how to generate a gameobjects mesh and how to shape it after. For example, after creating 2D terrain, it used ray tracing to make caves by casting a line through the map. This was a really fun tutorial to follow and very informative. Since then, I have started a project with another friend in unity. There has been good progress in the project and my friend is very patient as I take longer on simple tasks than he does.</p>
+                <p>8 Jan, 2021: I have attempted using Unity before for making games a year or so ago but the first time I touched it I did not get far. For this reason, I stopped the project for the time and started some tutorials. A friend of mine sent me the <a href="https://studentgamedev.blogspot.com/2013/08/unity-voxel-tutorial-part-1-generating.html">Unity Voxel Tutorial</a>. The tutorial goes over how to generate a gameobjects mesh and how to shape it after. For example, after creating 2D terrain, it used ray tracing to make caves by casting a line through the map. This was a really fun tutorial to follow and very informative. Since then, I have started a project with another friend in unity. There has been good progress in the project and my friend is very patient as I take longer on simple tasks than he does.</p>
             </div> 
     
             <div class="pannelItem">
-                <p>6 Jan, 2021: For one of my courses I had to implement topic modelling using the <a href="https://pypi.org/project/gensim/" target="_blank">Gensim</a> library. There is a generative statistical model called Latent Dirichlet allocation (LDA). The project was based on a paper called <a href="https://research.cs.queensu.ca/home/sthomas/data/Barua_2012_EMSE.pdf" target="_blank">What are developers talking about? An analysis of topics and trends in Stack Overflow</a>. As the title suggests, the point of the article is to analyze what topics developers are talking about and how those trends change over the time spanning from July 2008 to September 2010, which involved around 3.5 million posts. They were able to find significant trends. In our project we were only able to sample 50,000 posts from 3 million ranging from February 2020 to September 2020. However, insignificant, the results we found were interesting and I thoroughly enjoyed learning to use this new modelling tool. Due to this being made for a course, I am not sure if I am allowed to make this code public. Given this limitation, I may write a similar code again and fix the things I did not like the first time and republish the code. This might be a large undertaking and I am currently working on other projects which limits my time. I will, however, be discussing my other projects in later blog entries. </p>
+                <p>6 Jan, 2021: For one of my courses I had to implement topic modelling using the <a href="https://pypi.org/project/gensim/">Gensim</a> library. There is a generative statistical model called Latent Dirichlet allocation (LDA). The project was based on a paper called <a href="https://research.cs.queensu.ca/home/sthomas/data/Barua_2012_EMSE.pdf">What are developers talking about? An analysis of topics and trends in Stack Overflow</a>. As the title suggests, the point of the article is to analyze what topics developers are talking about and how those trends change over the time spanning from July 2008 to September 2010, which involved around 3.5 million posts. They were able to find significant trends. In our project we were only able to sample 50,000 posts from 3 million ranging from February 2020 to September 2020. However, insignificant, the results we found were interesting and I thoroughly enjoyed learning to use this new modelling tool. Due to this being made for a course, I am not sure if I am allowed to make this code public. Given this limitation, I may write a similar code again and fix the things I did not like the first time and republish the code. This might be a large undertaking and I am currently working on other projects which limits my time. I will, however, be discussing my other projects in later blog entries. </p>
             </div> 
     
             <div class="pannelItem">
