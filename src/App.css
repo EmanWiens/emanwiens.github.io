@@ -1,143 +1,31 @@
-/* https://www.kammerl.de/ascii/AsciiSignature.php */
-
-p, h1, h2, h3 {
-	font-family: Arial, Helvetica, sans-serif;
-	color: #EEE;
-	font-size:100%;
+.App {
+  text-align: center;
 }
 
-img {
-	width: 100%;
-	height: auto;
-	max-height:100%;
-	border-radius: 4px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-/*img:hover {
-	opacity:0;
-}*/
-
-/* _    _ ______          _____  ______ _____  
-	| |  | |  ____|   /\   |  __ \|  ____|  __ \ 
-	| |__| | |__     /  \  | |  | | |__  | |__) |
-	|  __  |  __|   / /\ \ | |  | |  __| |  _  / 
-	| |  | | |____ / ____ \| |__| | |____| | \ \ 
-	|_|  |_|______/_/    \_\_____/|______|_|  \_\ */
-h1.name {
-	text-align: center;
-	float: left;
-	padding-left: 1%;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-div.banner {
-	width: auto;
-	
-	margin: 0% 0% 1% -1%;
-	top: 0;
-  height: 50px; 
-	/*padding-bottom: .25;
-	height: auto;
-	/*left: 0;
-	right: 0;*/
-	
-	/*border-color: #fff;
-	border-style: solid;*/
-	background-image: linear-gradient(#555, #666);
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.buttonHolder {
-	height: 5%;
-	width: 70%;
-	margin: 0% 0% 0% 15%;
-	padding-bottom: .75%;
-  padding-top: 1%;
-
-	/*background-color: #fff;border-radius: 2px;margin-left:45%;*/
-	
-}
-
-button.headerBtn {
-	background-color: #777;
-	border-style: none;
-	height: auto;
-	border-radius: 2px;
-	margin-left: .5%;
-	
-	float: right;
-}
-
-button.headerBtn:hover {
-	background-color: cornflowerblue;
-}
-
-/* __  __ ______ 
-	|  \/  |  ____|
-	| \  / | |__   
-	| |\/| |  __|  
-	| |  | | |____ 
-	|_|  |_|______| */
-
-
-div.leftPannel {
-	float: left;
-	width: 27%;
-	height: auto;
-}
-
-/* unvisited link */
-a:link {
-  color: #add8e6;
-}
-
-/* visited link */
-a:visited {
-  color: #8aacb8;
-}
-
-/* mouse over link */
-a:hover {
-  color: #c5e3ed;
-}
-
-/* selected link */
-a:active {
-  color: #deeff5;
-}
-
-
-/* ______ ____  _____  _    _ __  __ 
-	|  ____/ __ \|  __ \| |  | |  \/  |
-	| |__ | |  | | |__) | |  | | \  / |
-	|  __|| |  | |  _  /| |  | | |\/| |
-	| |   | |__| | | \ \| |__| | |  | |
-	|_|    \____/|_|  \_\\____/|_|  |_|*/
-
-div.contentPannel {
-	margin: auto;
-	/*float: right;*/
-	width:72%;
-	height:auto;
-}
-
-div.itemRight {
-	float:right;
-	width:49%;
-}
-
-div.itemLeft {
-	float:left;
-	width:49%;
-}
-
-div.pannelItem {
-	width: auto;
-	height: auto;
-	overflow: auto;
-	background: #666;
-	padding: 1% 1% 1% 1%;
-	border-radius: 6px;
-	
-	margin-bottom: 1%;
+.App-link {
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
