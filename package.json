@@ -42,7 +42,6 @@
     "gh-pages": "^6.1.1",
     "shell-quote": ">=1.7.3", 
     "braces": ">=3.0.3", 
-    "webpack-dev-middleware": ">=5.3.4", 
     "semver": ">=6.3.1", 
     "loader-utils": ">=1.4.2", 
     "minimatch": ">=3.0.5", 
