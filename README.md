@@ -4,7 +4,9 @@
 `git clone https://github.com/EmanWiens/emanwiens.github.io.git` <br />
 `npm install` <br />
 `npm install react-bootstrap bootstrap` <br />
-`npm install react-router-dom` <br /><br />
+`npm install react-router-dom` <br />
+`npm install html-react-parser`<br />
+<br />
 
 TL;DR <br />
 [Github pages does not support BrowserRouter -> switch to HashRouter](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages)<br />

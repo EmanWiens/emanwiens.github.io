@@ -21,7 +21,7 @@
                         }, 
                         {
                             "title": "Scanner software", 
-                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>. The version of <a href=\"https://github.com/barracuda-fsh/pyobd\">pyOBD<a/> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to ge the program running."
+                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>, an open source program. <a href=\"https://github.com/barracuda-fsh/pyobd\">The version of pyOBD<a/> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to ge the program running. Another option is the <a href=\"\">python obd library</a> for more finetuned control of the data."
                         }
                     ]
                 }
