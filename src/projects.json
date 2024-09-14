@@ -1,8 +1,8 @@
 {
     "projects": [
         {
-            "Name": "Car OBD II", 
-            "Introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>. I did some research so I can do basic diagnostics on my car. ", 
+            "name": "Car OBD II", 
+            "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>. I did some research so I can do basic diagnostics on my car. ", 
             "components": [
                 {
                     "link": "https://www.amazon.ca/dp/B011NSX27A?ref=ppx_yo2ov_dt_b_fed_asin_title", 
