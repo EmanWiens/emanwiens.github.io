@@ -7,7 +7,7 @@ function NavigationBar() {
       <>
         <Navbar bg="dark" data-bs-theme="dark">
           <Container>
-            <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+            <Navbar.Brand href="#home">Emanuel Wiens</Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#features">Features</Nav.Link>
