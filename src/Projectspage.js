@@ -3,6 +3,8 @@ import Projects from './projects'
 import parse from "html-react-parser" 
 import { format } from 'react-string-format';
 
+import electric_drill_annot from './electric_drill_annot.jpg'
+
 function create_project_element(index) {
   // Add the title and introduction
   
@@ -27,6 +29,12 @@ function create_project_element(index) {
     for (let blurb = 0; blurb < Projects['projects'][index]["iterations"][iteration]["blurbs"].length; blurb++) {
       project_html = format("{0}<h3>{1}</h3>", project_html, Projects['projects'][index]["iterations"][iteration]["blurbs"][blurb]["title"]);
       project_html = format("{0}<p>{1}</p>", project_html, Projects['projects'][index]["iterations"][iteration]["blurbs"][blurb]["text"]);
+
+      // place the images 
+      console.log(electric_drill_annot)
+      for (let image = 0; image < Projects['projects'][index]["iterations"][iteration]["blurbs"][blurb]["images"].length; image++) {
+        project_html = format("{0}<img src=\"{1}\" />", project_html, Projects['projects'][index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["path"]);
+      }
     }
   }
 
@@ -55,6 +63,10 @@ const Projectspage = () =>{
       <div>
         <p>Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
           I also want to use this opportunity to rewrite some of my personal projects :D
+          <br />
+          <br />
+          <br />
+          The distinction between a project and a guide is that a guide explains something else in a standalone fashion, e.g. Installing CUPS.
         </p>
         <hr />
 

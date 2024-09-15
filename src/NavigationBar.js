@@ -9,10 +9,11 @@ function NavigationBar() {
       <>
         <Navbar bg="dark" data-bs-theme="dark">
           <Container>
-            <Navbar.Brand to="/">Emanuel Wiens</Navbar.Brand>
-            <Nav className="me-auto">
+            <NavLink to="/">Emanuel Wiens</NavLink>
+            <Nav>
               <NavLink to="/">Home</NavLink>
               <NavLink to="/projects">Projects</NavLink>
+              <NavLink to="/guides">Guides</NavLink>
               <NavLink to="/about">About</NavLink>
             </Nav>
           </Container>

@@ -1,13 +1,11 @@
 {
     "name": "", 
     "introduction": "", 
+    "images": [],
     
     "iterations": [
         {
             "introduction": "",
-            "images": [
-
-            ],
             "components": [
                 {
                     "link": "", 
@@ -17,11 +15,13 @@
             "blurbs": [
                 {
                     "title": "", 
-                    "text": ""
+                    "text": "", 
+                    "images" : [] 
                 }, 
                 {
                     "title": "", 
-                    "text": ""
+                    "text": "", 
+                    "images" : [] 
                 }
             ]
         }
