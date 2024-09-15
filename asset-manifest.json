@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "./static/css/main.9a5c6096.css",
-    "main.js": "./static/js/main.7a57ca91.js",
+    "main.js": "./static/js/main.d44433cc.js",
     "static/js/453.c4dc83ef.chunk.js": "./static/js/453.c4dc83ef.chunk.js",
     "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
     "index.html": "./index.html",
     "main.9a5c6096.css.map": "./static/css/main.9a5c6096.css.map",
-    "main.7a57ca91.js.map": "./static/js/main.7a57ca91.js.map",
+    "main.d44433cc.js.map": "./static/js/main.d44433cc.js.map",
     "453.c4dc83ef.chunk.js.map": "./static/js/453.c4dc83ef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9a5c6096.css",
-    "static/js/main.7a57ca91.js"
+    "static/js/main.d44433cc.js"
   ]
 }
