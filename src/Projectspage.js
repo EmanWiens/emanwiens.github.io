@@ -19,7 +19,6 @@ const Projectspage = () =>{
         <hr />
 
         {create_project_page()}
-        <hr />
       </div>
     </div>
   );

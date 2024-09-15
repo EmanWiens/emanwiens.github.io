@@ -4,9 +4,8 @@ import { format } from 'react-string-format';
 
 import Projects from './projects'
 
-export const create_element = (dict, index) => {
+function create_element(dict, index) {
     // Add the title and introduction
-    
     var element_html = format("<h3>{0}</h3>", dict[index]['name']);
     element_html = format("{0}<p>{1}</p>", element_html, dict[index]["introduction"]);
   
