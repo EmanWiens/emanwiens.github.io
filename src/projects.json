@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Car OBD II", 
-            "Tags": "Electronics, OBD II",
+            "Tags": ["Electronics", "OBD II"],
             "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>, abbreviated to OBD II. I did some research so I can do basic diagnostics on my car. ", 
             
             "iterations": [
@@ -32,7 +32,7 @@
         }, 
         {
             "name": "Electric Drill", 
-            "Tags": "Electronics, Electric Drill",
+            "Tags": ["Electronics", "Electric Drill"],
             "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and oxidizing.", 
             
             "iterations": [
@@ -55,6 +55,51 @@
                             "title": "", 
                             "text": "", 
                             "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+
+
+
+
+
+    
+
+
+    "guides": [
+        {
+            "name": "CUPS: Remote printer", 
+            "tags": ["Electronics", "Printer", "Raspberry Pi"],
+            "introduction": "My dad got an old printer from a garage sale and though the printer is excellent it does not have wireless printing. The printer itself is of good quality and for a few dollars it was worth the money. Instead of trying to find some fancy printer, I decided to try to see if I can find a workaround for this. And since I like learning new things, especially related to tech, that is exactly what I did. I used <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">CUPS</a> to along with my <a href=\"https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/\">Raspberry Pi 3B+</a> to turn the printer into a wireless printer! TODO make a guides section and put this in there?.", 
+            "images": [], 
+            
+            "iterations": [
+                {
+                    "introduction": "",
+                    "images": [],
+                    "components": [
+                        {
+                            "link": "https://www.brother.ca/en/p/HL2040", 
+                            "text": "Brother HL-2040 Personal Laser Printer"
+                        }, 
+                        {
+                            "link": "https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/", 
+                            "text": "Raspberry Pi 3B+"
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Description", 
+                            "text": "<ol><li>Install CUPS using: <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/</a></li><li>To turn the Raspberrry Pi into a print server use: <a href=\"https://www.tomshardware.com/how-to/raspberry-pi-print-server\">https://www.tomshardware.com/how-to/raspberry-pi-print-server</a><ul><li><code>sudo cupsctl --remote-any</code></li></ul></li><li>Use <code>cupsctl --remote-admin</code> to allow for remote admin</li><li>Find your printer driver online<ul><li><a href=\"https://support.brother.com/g/b/productsearch.aspx?c=ca&lang=en&content=dl\">Brothers printer drivers</a></li><li>In my case I have to find a driver for Brother HL-2040 series <a href=\"https://www.openprinting.org/printer/Brother/Brother-HL-2040\">https://www.openprinting.org/printer/Brother/Brother-HL-2040</a></li></ul></ol>", 
+                            "images" : []
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : []
                         }
                     ]
                 }
