@@ -6,6 +6,7 @@
 `npm install react-bootstrap bootstrap` <br />
 `npm install react-router-dom` <br />
 `npm install html-react-parser`<br />
+`npm install react-string-format`<br />
 <br />
 
 TL;DR <br />

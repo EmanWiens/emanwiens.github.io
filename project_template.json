@@ -1,16 +1,24 @@
 {
-    "Name": "", 
-    "Introduction": "", 
-    "components": [
-        {
-            "link": "", 
-            "text": ""
-        }
-    ],
-    "images": [],
+    "name": "", 
+    "introduction": "", 
+    
     "iterations": [
         {
+            "introduction": "",
+            "images": [
+
+            ],
+            "components": [
+                {
+                    "link": "", 
+                    "text": ""
+                }
+            ],
             "blurbs": [
+                {
+                    "title": "", 
+                    "text": ""
+                }, 
                 {
                     "title": "", 
                     "text": ""

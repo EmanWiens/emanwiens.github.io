@@ -2,26 +2,60 @@
     "projects": [
         {
             "name": "Car OBD II", 
-            "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>. I did some research so I can do basic diagnostics on my car. ", 
-            "components": [
-                {
-                    "link": "https://www.amazon.ca/dp/B011NSX27A?ref=ppx_yo2ov_dt_b_fed_asin_title", 
-                    "text": "Bluetooth OBD II Scanner"
-                }
-            ],
-            "images": [
-
-            ],
+            "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>, abbreviated to OBD II. I did some research so I can do basic diagnostics on my car. ", 
+            
             "iterations": [
                 {
+                    "introduction": "",
+                    "images": [
+
+                    ],
+                    "components": [
+                        {
+                            "link": "https://www.amazon.ca/dp/B011NSX27A?ref=ppx_yo2ov_dt_b_fed_asin_title", 
+                            "text": "Bluetooth OBD II Scanner"
+                        }
+                    ],
                     "blurbs": [
                         {
                             "title": "Connecting to Bluetooth", 
-                            "text": "Connect the OBD II scanner into the slot in your car. I used Linux on my laptop to connect to it. The device will pair but does not connect so I had to <a href=\"https://askubuntu.com/questions/248817/how-to-i-connect-a-raw-serial-terminal-to-a-bluetooth-connection\">connect a raw serial terminal to a bluetooth connection</a>. To connect to the raw serial use the command <code>sudo rfcomm connect /dev/rfcomm0 MAC_ID 1 &</code>. For more context, /dev/ is where input device files generally reside."
+                            "text": "Connect the OBD II scanner into the slot in your car, it's often near the driver's seat. I used Linux on my laptop to connect to the bluetooth device. The device will pair but does not connect so I had to <a href=\"https://askubuntu.com/questions/248817/how-to-i-connect-a-raw-serial-terminal-to-a-bluetooth-connection\">connect a raw serial terminal to a bluetooth connection</a>. All inputs are considered files and if you know where they are, /dev/ in Linux, you can open and read them like a file. <br>To connect to the raw serial use the command <code>sudo rfcomm connect /dev/rfcomm0 MAC_ID 1 &</code>. For more context, /dev/ is where input device files generally reside. This command creates a file to facilitate the communication, rfcomm is the <a href=\"https://www.btframework.com/rfcomm.htm\">bluetooth protocol</a>"
                         }, 
                         {
                             "title": "Scanner software", 
-                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>, an open source program. <a href=\"https://github.com/barracuda-fsh/pyobd\">The version of pyOBD<a/> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to ge the program running. Another option is the <a href=\"\">python obd library</a> for more finetuned control of the data."
+                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>. <a href=\"https://github.com/barracuda-fsh/pyobd\">The version of pyOBD<a/> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to ge the program running. After the setup, use <code>python3 pyobd.py</code> to run the program. Another option is the <a href=\"https://python-obd.readthedocs.io/en/latest/\">python obd library</a> for more finetuned control of the data."
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Electric Drill", 
+            "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and oxidizing.", 
+            
+            "iterations": [
+                {
+                    "introduction": "",
+                    "images": [
+                        {
+                            "path":"./electric_drill_annot.jpg", 
+                            "alt": "A drill with the cover taken off and labelled."
+                        }
+                    ],
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Drill components", 
+                            "text": "The drill itself is as simple as a machine can get. "
+                        }, 
+                        {
+                            "title": "", 
+                            "text": ""
                         }
                     ]
                 }
