@@ -1,12 +1,101 @@
 {
     "projects": [
         {
+            "name": "RC tank project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "Iteration 1: Trial run",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
+                            "text": "Jada Toys -2015 Dodge Challenger SRT Hellcat"
+                        }, 
+                        {
+                            "link": "https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/", 
+                            "text": "Raspberry PI Model B+ "
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1", 
+                            "text": "L298N Module H Bridge Driver "
+                        },
+                        {
+                            "link": "https://www.canadiantire.ca/en/pdp/bluehive-5300-mah-power-bank-compatible-with-ipods-iphones-smartphones-cameras-and-most-small-mobile-devices-0355270p.html#srp", 
+                            "text": "Phone power bank "
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1", 
+                            "text": "Female to female connectors "
+                        },
+                        {
+                            "link": "https://www.xbox.com/en-CA/accessories/controllers/xbox-wireless-controller", 
+                            "text": "Xbox one controller "
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Connecting the motor control module", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Connecting an Xbox One controller to a Raspberry PI ", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Writing a script for the RC car", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Result", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }, 
+                {
+                    "title": "Iteration 2:",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Car OBD II", 
+            "publish": true,
             "Tags": ["Electronics", "OBD II"],
             "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>, abbreviated to OBD II. I did some research so I can do basic diagnostics on my car. ", 
             
             "iterations": [
                 {
+                    "title": "",
+                    "publish": true,
                     "introduction": "",
                     "images": [],
                     "components": [
@@ -23,7 +112,7 @@
                         }, 
                         {
                             "title": "Scanner software", 
-                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>. <a href=\"https://github.com/barracuda-fsh/pyobd\">The version of pyOBD<a/> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to get the program running. After the setup, use <code>python3 pyobd.py</code> to run the program. Another option is the <a href=\"https://python-obd.readthedocs.io/en/latest/\">python obd library</a> for more finetuned control of the data.", 
+                            "text": "There are a couple of <b>open source</b> options to read the scanner output. I used a program that was based on <a href=\"https://www.obdtester.com/pyobd\">pyOBD</a>. <a href=\"https://github.com/barracuda-fsh/pyobd\">The version of pyOBD</a> I used had been reworked a little and it worked well. The documentation provided was straight forward and I followed it to get the program running. After the setup, use <code>python3 pyobd.py</code> to run the program. Another option is the <a href=\"https://python-obd.readthedocs.io/en/latest/\">python obd library</a> for more finetuned control of the data.", 
                             "images" : [] 
                         }
                     ]
@@ -32,11 +121,14 @@
         }, 
         {
             "name": "Electric Drill", 
+            "publish": true,
             "Tags": ["Electronics", "Electric Drill"],
             "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and oxidizing.", 
             
             "iterations": [
                 {
+                    "title": "",
+                    "publish": true,
                     "introduction": "",
                     "images": [],
                     "components": [],
@@ -50,11 +142,6 @@
                                     "alt": "An electric drill with the cover taken off and the parts annotated."
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -72,12 +159,15 @@
     "guides": [
         {
             "name": "CUPS: Remote printer", 
+            "publish": true,
             "tags": ["Electronics", "Printer", "Raspberry Pi"],
-            "introduction": "My dad got an old printer from a garage sale and though the printer is excellent it does not have wireless printing. The printer itself is of good quality and for a few dollars it was worth the money. Instead of trying to find some fancy printer, I decided to try to see if I can find a workaround for this. And since I like learning new things, especially related to tech, that is exactly what I did. I used <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">CUPS</a> to along with my <a href=\"https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/\">Raspberry Pi 3B+</a> to turn the printer into a wireless printer! TODO make a guides section and put this in there?.", 
+            "introduction": "My dad got an old printer from a garage sale and though the printer is excellent it does not have wireless printing. The printer itself is of good quality and for a few dollars it was worth the money. Instead of trying to find some fancy printer, I decided to try to see if I can find a workaround for this. And since I like learning new things, especially related to tech, that is exactly what I did. I used <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">CUPS</a> to along with my <a href=\"https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/\">Raspberry Pi 3B+</a> to turn the printer into a wireless printer!", 
             "images": [], 
             
             "iterations": [
                 {
+                    "title": "",
+                    "publish": true,
                     "introduction": "",
                     "images": [],
                     "components": [
@@ -95,11 +185,85 @@
                             "title": "Description", 
                             "text": "<ol><li>Install CUPS using: <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/</a></li><li>To turn the Raspberrry Pi into a print server use: <a href=\"https://www.tomshardware.com/how-to/raspberry-pi-print-server\">https://www.tomshardware.com/how-to/raspberry-pi-print-server</a><ul><li><code>sudo cupsctl --remote-any</code></li></ul></li><li>Use <code>cupsctl --remote-admin</code> to allow for remote admin</li><li>Find your printer driver online<ul><li><a href=\"https://support.brother.com/g/b/productsearch.aspx?c=ca&lang=en&content=dl\">Brothers printer drivers</a></li><li>In my case I have to find a driver for Brother HL-2040 series <a href=\"https://www.openprinting.org/printer/Brother/Brother-HL-2040\">https://www.openprinting.org/printer/Brother/Brother-HL-2040</a></li></ul></ol>", 
                             "images" : []
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "CUDA: Installation guide", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "<ol><li>First check that you have a compatible graphics card. CUDA is specifically designed for NVIDIA GPUs.<ul><li>Note, you can check if your GPU is compatible at <a href=\"https://developer.nvidia.com/cuda-gpus\">https://developer.nvidia.com/cuda-gpus</a></li></ul></li><li>Install the CUDA toolkit <code>sudo apt install nvidia-cuda-toolkit</code><ul><li>Documentation for CUDA: <a href=\"https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html\">https://docs.nvidia.com/cuda/cuda-compiler-driver-nvcc/index.html</a></li></ul></li><li>Check that the PCI bus is accessible using <code>lspci | grep -i nvidia</code><ul><li>Resource from <a href=\"http://manpages.ubuntu.com/manpages/trusty/man8/lspci.8.html\">http://manpages.ubuntu.com/manpages/trusty/man8/lspci.8.html</a></li><li>If this does not work run <code>sudo update-pciids</code><ul><li>Resource from <a href=\"http://manpages.ubuntu.com/manpages//artful/man8/update-pciids.8.html\">http://manpages.ubuntu.com/manpages//artful/man8/update-pciids.8.html</a></li><li>Then run the previous command again</li></ul></ul></li><li>Check that the installation worked using <code>nvcc --version</code><ul><li>Additional CUDA documentation <a href=\"https://helpmanual.io/help/nvcc/\">https://helpmanual.io/help/nvcc/</a></li></ul></li><li>Beginner tutorial at <a href=\"https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/\">https://cuda-tutorial.readthedocs.io/en/latest/tutorials/tutorial01/</a></li></ol>", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Git Personal Access Token (PAT)", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "General", 
+                            "text": "<ol><li>How to install Git <a href=\"https://www.atlassian.com/git/tutorials/install-git\">https://www.atlassian.com/git/tutorials/install-git</a></li><li>How to create a PAT <a href=\"https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token\">https://docs.github.com/en/githubauthenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></li><li>How to cache a PAT <a href=\"https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token\">https://docs.github.com/en/githubauthenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></li></ol>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Steps ", 
+                            "text": "<ol><li>Generate a PAT and copy it</li><li>Set your email and username<ul><li><code>git config --global user.email yourEmail@github.com</code></li><li><code>git config --global user.name yourGitHubUserName</code></li></ul></li><li>Storing the credentials<ul><li>For temporary storage <code>git config --global credential.helper cache</code></li><li>For permanent storage <code>git config --global credential.helper store</code></li><li>NOTE: remove <code>--global</code> to store the credentials in the specified repo</li></ul></li><li>Run <code>git clone https://github.com/UserName/your.git</code><ul><li>Enter your username</li><li>Enter your PAT</li></ul></li><li>From now on, every time you pull it should access the token automatically (or temporarily if you used cache)</li></ol>", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Install Windows Subsystem for Linux (WSL)", 
+            "publish": true,
+            "introduction": "",
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "<ol><li>Go to the windows store to install Ubuntu 20.04.4 LTS, a version that you like</li><li>Then you have to enable the right Windows features<ol><li>You can press start and search: <code>Turn Windows features on or off</code></li></ol></li><li>For newer versions of WSL, enable the following: (source <a href=\"https://github.com/microsoft/WSL/issues/5014\">https://github.com/microsoft/WSL/issues/5014</a>)<ul><li><code>Microsoft-Windows-Subsystem-Linux</code></li><li><code>VirtualMachinePlatform</code></li></ul></li></ol>", 
+                            "images" : [] 
                         }, 
                         {
                             "title": "", 
                             "text": "", 
-                            "images" : []
+                            "images" : [] 
                         }
                     ]
                 }

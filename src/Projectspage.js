@@ -4,18 +4,10 @@ import { create_project_page } from './Utils';
 const Projectspage = () =>{
   return (
     <div>
-      <pre id="./projects"></pre>
-
       <h2>Projects page</h2>
       
       <div>
-        <p>Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
-          I also want to use this opportunity to rewrite some of my personal projects :D
-          <br />
-          <br />
-          <br />
-          The distinction between a project and a guide is that a guide explains something else in a standalone fashion, e.g. Installing CUPS.
-        </p>
+        <p>There are a few personal projects and hobbies that I have been doing for many years. A couple of years ago I started documenting these projects more regularly and better. I decided to take a tutorial tone with these projects so that I and other people can reproduce them. </p>
         <hr />
 
         {create_project_page()}

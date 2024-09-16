@@ -1,11 +1,14 @@
 {
     "name": "", 
+    "publish": true,
     "introduction": "", 
     "tags": [],
     "images": [],
     
     "iterations": [
         {
+            "title": "",
+            "publish": true,
             "introduction": "",
             "components": [
                 {
