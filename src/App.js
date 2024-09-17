@@ -13,16 +13,25 @@ import NavigationBar from './NavigationBar'
 function App() {
   return (
   <>
-    <HashRouter>
-      <NavigationBar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/projects" exact element={<Projects />} />
-        <Route path="/guides" exact element={<Guides />} />
-        <Route path="/about" exact element={<About />} />
-        <Route path="*" element={<NoPage />} />
-      </Routes>
-    </HashRouter>
+    <html>
+      <head>
+        <title>E. Wiens</title>
+      </head>
+
+      <body>
+        <HashRouter>
+          <NavigationBar />
+          
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/guides" element={<Guides />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NoPage />} />
+          </Routes>
+        </HashRouter>
+      </body>
+    </html>
   </>
   );
 }

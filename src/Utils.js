@@ -4,12 +4,16 @@ import { format } from 'react-string-format';
 
 import Projects from './projects'
 
+import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
+import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
+
+// create pages ---------------------------------------------------------------------------------------------------------------------
 function create_element(dict, index) {
   var element_html = ""; 
 
   if (dict[index]["publish"] === true) {
     // Add the title and introduction
-    var element_html = format("<h3>{0}</h3>", dict[index]['name']);
+    element_html = format("<h3>{0}</h3>", dict[index]['name']);
     element_html = format("{0}<p>{1}</p>", element_html, dict[index]["introduction"]);
 
     // add each iteration of the project 
@@ -72,3 +76,5 @@ export const create_guides_page = () => {
     </>
   );
 }
+
+// end create pages -----------------------------------------------------------------------------------------------------------------

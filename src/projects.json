@@ -257,7 +257,7 @@
                     "blurbs": [
                         {
                             "title": "", 
-                            "text": "<ol><li>Go to the windows store to install Ubuntu 20.04.4 LTS, a version that you like</li><li>Then you have to enable the right Windows features<ol><li>You can press start and search: <code>Turn Windows features on or off</code></li></ol></li><li>For newer versions of WSL, enable the following: (source <a href=\"https://github.com/microsoft/WSL/issues/5014\">https://github.com/microsoft/WSL/issues/5014</a>)<ul><li><code>Microsoft-Windows-Subsystem-Linux</code></li><li><code>VirtualMachinePlatform</code></li></ul></li></ol>", 
+                            "text": "<ol><li>Go to the windows store to install Ubuntu 20.04.4 LTS, or a version that you like</li><li>Then you have to enable the right Windows features<ol><li>You can press start and search: <code>Turn Windows features on or off</code></li><li>Then enable <code>Windows Subsystems for Linux</code></li><li>To enable this feature, you will need to restart your comtpuer</li></ol></li><li>For newer versions of WSL, enable the following: (source <a href=\"https://github.com/microsoft/WSL/issues/5014\">https://github.com/microsoft/WSL/issues/5014</a>)<ul><li><code>Microsoft-Windows-Subsystem-Linux</code></li><li><code>VirtualMachinePlatform</code></li></ul></li></ol>", 
                             "images" : [] 
                         }, 
                         {

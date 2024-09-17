@@ -1,23 +1,18 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function NavigationBar() {
     return (
       <>
-        <Navbar bg="dark" data-bs-theme="dark">
-          <Container>
-            <NavLink to="/">Emanuel Wiens</NavLink>
-            <Nav>
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/projects">Projects</NavLink>
-              <NavLink to="/guides">Guides</NavLink>
-              <NavLink to="/about">About</NavLink>
-            </Nav>
-          </Container>
-        </Navbar>
+        <div className="nav_bar_container">
+          <div className="nav_bar">
+            <Link className="nav_bar_name" to="/" >Emanuel Wiens</Link>
+
+            <NavLink className="nav_bar" to="/about">About</NavLink>
+            <NavLink className="nav_bar" to="/guides">Guides</NavLink>
+            <NavLink className="nav_bar" to="/projects">Projects</NavLink>
+            <NavLink style={{"border-left": "1px solid white"}} className="nav_bar" to="/">Home</NavLink>
+          </div>
+        </div>
       </>
     );
   }
