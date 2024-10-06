@@ -9,6 +9,8 @@
 `npm install react-string-format`<br />
 <br />
 
+A tutorial on how to make responsive navigation bars
+
 TL;DR <br />
 [Github pages does not support BrowserRouter -> switch to HashRouter](https://stackoverflow.com/questions/71984401/react-router-not-working-with-github-pages)<br />
 

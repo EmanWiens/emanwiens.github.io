@@ -65,7 +65,6 @@ export const create_project_page = () => {
 export const create_guides_page = () => {
   var guides_html = ""; 
 
-  console.log(Projects['guides'].length)
   for (let guide = 0; guide < Projects['guides'].length; guide++) {
     guides_html = format("{0}{1}<hr />", guides_html, create_element(Projects['guides'], guide)); 
   }
@@ -73,6 +72,20 @@ export const create_guides_page = () => {
   return (
     <>
       {parse(guides_html)}
+    </>
+  );
+}
+
+export const create_plants_page = () => {
+  var plants_html = ""; 
+
+  for (let plant = 0; plant < Projects['plants'].length; plant++) {
+    plants_html = format("{0}{1}<hr />", plants_html, create_element(Projects['plants'], plant)); 
+  }
+
+  return (
+    <>
+      {parse(plants_html)}
     </>
   );
 }

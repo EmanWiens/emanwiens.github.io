@@ -16,9 +16,7 @@ const Homepage = () =>{
             <li><strike>Make a functional Navigation bar.</strike></li>
             <li>Make a <i>nice looking</i> Navigation bar.</li>
             <li>Migrate my project contents here.</li>
-            <li><strike>Make a guides page for stand-alone explanations.</strike></li>
-            <li>Move my guide contents here.</li>
-            <li>Make a nice UI for the projects and guides pages.</li>
+            <li>Make a nice UI for the projects pages.</li>
           </ol>        
         </div>
       </div>

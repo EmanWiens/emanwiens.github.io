@@ -269,5 +269,88 @@
                 }
             ]
         }
+    ],
+
+
+
+
+    
+
+
+    "plants": [
+        {
+            "name": "Sarracenia", 
+            "publish": true,
+            "introduction": "Sarracenia is a species of carivorous plants, also sometimes referred to as a trumpet pitcher plant. These plants are quite unique in almost every aspect about them. I got my first Saraccenia from my grandmother in 2022. I now have two subspecies of the plant. ", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "Sarracenia Farnhamii",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }, 
+                {
+                    "title": "Sarracenia purpurea",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Nepenthes", 
+            "publish": true,
+            "introduction": "This is another carnivorous plant, and though it is also sometimes referred to as a pitcher plant it is a different species than Sarracenias. These plants are native to Asia and can grow in a variety of areas. These plants us a similar yet also unique way to catch their pray. This is a species I always wanted to have! I got my first Nepenthes in early 2023, it's still alive and seems to be doing well.", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }
     ]
 }

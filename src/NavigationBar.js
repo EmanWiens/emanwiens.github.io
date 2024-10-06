@@ -10,6 +10,7 @@ function NavigationBar() {
             <NavLink className="nav_bar" to="/about">About</NavLink>
             <NavLink className="nav_bar" to="/guides">Guides</NavLink>
             <NavLink className="nav_bar" to="/projects">Projects</NavLink>
+            <NavLink className="nav_bar" to="/plants">Plants</NavLink>
             <NavLink style={{"border-left": "1px solid white"}} className="nav_bar" to="/">Home</NavLink>
           </div>
         </div>
