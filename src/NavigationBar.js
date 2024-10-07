@@ -1,6 +1,6 @@
 import { NavLink, Link } from "react-router-dom";
 
-function NavigationBar() {
+const NavigationBar = () => {
     return (
       <>
         <div className="nav_bar_container">

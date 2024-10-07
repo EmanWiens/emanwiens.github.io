@@ -1,7 +1,7 @@
 import React from 'react';
 import { create_plants_page } from './Utils';
 
-const Plantspage = () =>{
+const Plantspage = () => {
   return (
     <div className='body'>
       <div className='content_body'>

@@ -4,8 +4,8 @@ import { format } from 'react-string-format';
 
 import Projects from './projects'
 
-import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
-import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
+// import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
+// import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
 
 // create pages ---------------------------------------------------------------------------------------------------------------------
 function create_element(dict, index) {

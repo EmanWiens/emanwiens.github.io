@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Aboutpage = () =>{
+const Aboutpage = () => {
   return (
     <div className='body'>
       <div className='content_body'>

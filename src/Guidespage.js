@@ -1,7 +1,7 @@
 import React from 'react';
 import { create_guides_page } from './Utils';
 
-const Guidespage = () =>{
+const Guidespage = () => {
   return (
     <div className='body'>
       <div className='content_body'>
@@ -17,4 +17,5 @@ const Guidespage = () =>{
     </div>
   );
 }
+
 export default Guidespage;
