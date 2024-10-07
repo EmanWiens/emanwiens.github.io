@@ -7,9 +7,37 @@ import Projects from './projects'
 // import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
 // import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
 
+
+
+
+// start images ---------------------------------------------------------------------------------------------------------------------
+import electric_drill_annot from './electric_drill_annot.jpg'
+import rc_car_it_1 from './rc_car_it_1.jpg'
+// end images -----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+// start helper functions -----------------------------------------------------------------------------------------------------------
+function map_images(name) {
+  if (electric_drill_annot.includes(name)) {
+    return electric_drill_annot; 
+  } else if (rc_car_it_1.includes(name)) {
+    return rc_car_it_1;
+  } else {
+    return null;
+  }
+}
+// end helper functions -------------------------------------------------------------------------------------------------------------
+
+
+
+
 // create pages ---------------------------------------------------------------------------------------------------------------------
 function create_element(dict, index) {
   var element_html = ""; 
+  var path; 
 
   if (dict[index]["publish"] === true) {
     // Add the title and introduction
@@ -20,6 +48,7 @@ function create_element(dict, index) {
     for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
       if (dict[index]["iterations"][iteration]["publish"] === true) {
         element_html = format("{0}<h4>{1}</h4>", element_html, dict[index]["iterations"][iteration]["title"]);
+        element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["introduction"]);
 
         // add components list 
         if (dict[index]["iterations"][iteration]["components"].length >= 1){
@@ -36,9 +65,11 @@ function create_element(dict, index) {
           element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["text"]);
 
           // place the images 
-          // console.log(electric_drill_annot)
           for (let image = 0; image < dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length; image++) {
-            element_html = format("{0}<img src=\"{1}\" />", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["path"]);
+            path = map_images(dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["name"]); 
+
+            if (path != null)
+              element_html = format("{0}<img src=\"{1}\" alt=\"{2}\" />", element_html, path, dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["alt"]);
           }
         }
       }

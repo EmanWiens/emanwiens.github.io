@@ -10,12 +10,12 @@ const Homepage = () => {
           </p><br /><br />
 
           <h5>Roadmap</h5>
-          <p>These are the changes I need to make happen for this switch in order of importance, they might not be the first done.</p>
+          <p>These are the changes I need to make happen for this switch in order of importance.</p>
           <ol>
             <li><strike>Switch the backend to <a href="https://react.dev/">React</a>.</strike></li>
             <li><strike>Make a functional Navigation bar.</strike></li>
-            <li>Make a <i>nice looking</i> Navigation bar.</li>
             <li>Migrate my project contents here.</li>
+            <li>Make a <i>nice looking</i> Navigation bar.</li>
             <li>Make a nice UI for the projects pages.</li>
           </ol>        
         </div>

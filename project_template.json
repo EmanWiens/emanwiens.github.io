@@ -3,7 +3,13 @@
     "publish": true,
     "introduction": "", 
     "tags": [],
-    "images": [],
+    "images": [
+        {
+            "name": "", 
+            "type": "", 
+            "alt": ""
+        }
+    ],
     
     "iterations": [
         {

@@ -13,4 +13,5 @@ const Aboutpage = () => {
     </div>
   );
 }
+
 export default Aboutpage;

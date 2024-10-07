@@ -18,6 +18,10 @@ div.content_body {
   margin: 0% 0% 0% 15%;
 }
 
+img {
+  width:50%;
+}
+
 /* div.nav_bar_container {
 	width: 100%;
 	position: fixed;

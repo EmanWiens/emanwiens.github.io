@@ -75,7 +75,13 @@
                         {
                             "title": "", 
                             "text": "", 
-                            "images" : [] 
+                            "images" : [
+                                {
+                                    "name": "rc_car_it_1", 
+                                    "type": "jpg", 
+                                    "alt": "This is the result of the first iteration of this project."
+                                }
+                            ] 
                         }, 
                         {
                             "title": "", 
@@ -123,7 +129,7 @@
             "name": "Electric Drill", 
             "publish": true,
             "Tags": ["Electronics", "Electric Drill"],
-            "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and oxidizing.", 
+            "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidized</i>.", 
             
             "iterations": [
                 {
@@ -135,10 +141,11 @@
                     "blurbs": [
                         {
                             "title": "Drill components", 
-                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. TODO finish this",
+                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>.",
                             "images" : [
                                 {
-                                    "path": "electric_drill_annot.jpg", 
+                                    "name": "electric_drill_annot",
+                                    "type": "jpg", 
                                     "alt": "An electric drill with the cover taken off and the parts annotated."
                                 }
                             ] 
