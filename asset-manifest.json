@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.a848131c.css",
-    "main.js": "./static/js/main.9c9e421f.js",
+    "main.css": "./static/css/main.97eb6044.css",
+    "main.js": "./static/js/main.65782375.js",
     "static/js/453.c4dc83ef.chunk.js": "./static/js/453.c4dc83ef.chunk.js",
+    "static/media/rc_car_it_1.jpg": "./static/media/rc_car_it_1.1eb6d1093cbf58f631a2.jpg",
+    "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
     "index.html": "./index.html",
-    "main.a848131c.css.map": "./static/css/main.a848131c.css.map",
-    "main.9c9e421f.js.map": "./static/js/main.9c9e421f.js.map",
+    "main.97eb6044.css.map": "./static/css/main.97eb6044.css.map",
+    "main.65782375.js.map": "./static/js/main.65782375.js.map",
     "453.c4dc83ef.chunk.js.map": "./static/js/453.c4dc83ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a848131c.css",
-    "static/js/main.9c9e421f.js"
+    "static/css/main.97eb6044.css",
+    "static/js/main.65782375.js"
   ]
 }
