@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import { HashRouter } from 'react-router-dom';
 
-import Homepage from './Homepage'
-import Projects from './Projectspage'
-import Guides from './Guidespage'
-import About from './Aboutpage'
-import Plants from './Plantspage'
-import NoPage from './NoPage'
+import Homepage from './pages/Homepage'
+import Projects from './pages/Projectspage'
+import Guides from './pages/Guidespage'
+import About from './pages/Aboutpage'
+import Plants from './pages/Plantspage'
+import NoPage from './pages/NoPage'
 
 import NavigationBar from './NavigationBar'
 

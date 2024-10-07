@@ -2,7 +2,7 @@ import React from 'react';
 import parse from "html-react-parser" 
 import { format } from 'react-string-format';
 
-import Projects from './projects'
+import Projects from './data/projects'
 
 // import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
 // import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
@@ -11,8 +11,9 @@ import Projects from './projects'
 
 
 // start images ---------------------------------------------------------------------------------------------------------------------
-import electric_drill_annot from './electric_drill_annot.jpg'
-import rc_car_it_1 from './rc_car_it_1.jpg'
+import electric_drill_annot from './images/electric_drill_annot.jpg'
+import rc_car_it_1_1 from './images/rc_car_it_1_1.jpg'
+import rc_car_it_1_2 from './images/rc_car_it_1_2.jpg'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -23,8 +24,10 @@ import rc_car_it_1 from './rc_car_it_1.jpg'
 function map_images(name) {
   if (electric_drill_annot.includes(name)) {
     return electric_drill_annot; 
-  } else if (rc_car_it_1.includes(name)) {
-    return rc_car_it_1;
+  } else if (rc_car_it_1_1.includes(name)) {
+    return rc_car_it_1_1;
+  } else if (rc_car_it_1_2.includes(name)) {
+    return rc_car_it_1_2;
   } else {
     return null;
   }
@@ -68,8 +71,9 @@ function create_element(dict, index) {
           for (let image = 0; image < dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length; image++) {
             path = map_images(dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["name"]); 
 
-            if (path != null)
+            if (path != null) {
               element_html = format("{0}<img src=\"{1}\" alt=\"{2}\" />", element_html, path, dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["alt"]);
+            }
           }
         }
       }
