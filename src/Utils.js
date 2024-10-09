@@ -2,7 +2,7 @@ import React from 'react';
 import parse from "html-react-parser" 
 import { format } from 'react-string-format';
 
-import Projects from './data/projects'
+import Data from './data/data'
 
 // import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
 // import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
@@ -83,16 +83,16 @@ function create_element(dict, index) {
   return element_html; 
 }
 
-export const create_project_page = () => {
-  var project_html = ""; 
+export const create_electronics_page = () => {
+  var electronics_html = ""; 
 
-  for (let project = 0; project < Projects['projects'].length; project++) {
-    project_html = format("{0}{1}<hr />", project_html, create_element(Projects['projects'], project)); 
+  for (let electronics = 0; electronics < Data['electronics'].length; electronics++) {
+    electronics_html = format("{0}{1}<hr />", electronics_html, create_element(Data['electronics'], electronics)); 
   }
 
   return (
     <>
-      {parse(project_html)}
+      {parse(electronics_html)}
     </>
   );
 }
@@ -100,8 +100,8 @@ export const create_project_page = () => {
 export const create_guides_page = () => {
   var guides_html = ""; 
 
-  for (let guide = 0; guide < Projects['guides'].length; guide++) {
-    guides_html = format("{0}{1}<hr />", guides_html, create_element(Projects['guides'], guide)); 
+  for (let guide = 0; guide < Data['guides'].length; guide++) {
+    guides_html = format("{0}{1}<hr />", guides_html, create_element(Data['guides'], guide)); 
   }
 
   return (
@@ -114,13 +114,27 @@ export const create_guides_page = () => {
 export const create_plants_page = () => {
   var plants_html = ""; 
 
-  for (let plant = 0; plant < Projects['plants'].length; plant++) {
-    plants_html = format("{0}{1}<hr />", plants_html, create_element(Projects['plants'], plant)); 
+  for (let plant = 0; plant < Data['plants'].length; plant++) {
+    plants_html = format("{0}{1}<hr />", plants_html, create_element(Data['plants'], plant)); 
   }
 
   return (
     <>
       {parse(plants_html)}
+    </>
+  );
+}
+
+export const create_programming_page = () => {
+  var programming_html = ""; 
+
+  for (let plant = 0; plant < Data['programming'].length; plant++) {
+    programming_html = format("{0}{1}<hr />", programming_html, create_element(Data['programming'], plant)); 
+  }
+
+  return (
+    <>
+      {parse(programming_html)}
     </>
   );
 }

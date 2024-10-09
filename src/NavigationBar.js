@@ -16,7 +16,8 @@ const NavigationBar = () => {
             <div className="nav-items">
               <ul className="overview">
                 <li><NavLink className="nav_bar" to="">Home</NavLink></li>
-                <li><NavLink className="nav_bar" to="projects">Projects</NavLink></li>
+                <li><NavLink className="nav_bar" to="electronics">Electronics</NavLink></li>
+                <li><NavLink className="nav_bar" to="programming">Programming</NavLink></li>
                 <li><NavLink className="nav_bar" to="plants">Plants</NavLink></li>
                 <li><NavLink className="nav_bar" to="guides">Guides</NavLink></li>
                 <li><NavLink className="nav_bar" to="about">About</NavLink></li>
