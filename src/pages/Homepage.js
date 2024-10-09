@@ -19,8 +19,9 @@ const Homepage = () => {
             <li><strike>Switch the backend to <a href="https://react.dev/">React</a>.</strike></li>
             <li><strike>Make a functional Navigation bar.</strike></li>
             <li>Migrate my project contents here.</li>
-            <li>Make a <i>nice looking</i> Navigation bar.</li>
+            <li><strike>Make a <i>nice looking</i> Navigation bar.</strike></li>
             <li>Make a nice UI for the projects pages.</li>
+            <li>Personalize webpage colors and layout.</li>
           </ol>        
         </div>
       </div>
