@@ -6,7 +6,11 @@ const Homepage = () => {
       <div className='content_body'>
         <h2>Home page</h2>
         <div>
-          <p>Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
+          <h5 style={{"color":"#77FF77"}}>
+            Now compatible with mobile!<br /><br />
+          </h5>
+          <p>
+            Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
           </p><br /><br />
 
           <h5>Roadmap</h5>
