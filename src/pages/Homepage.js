@@ -4,7 +4,7 @@ const Homepage = () => {
   return (
     <div className='body'>
       <div className='content_body'>
-        <h2>Home page</h2>
+        <h1>Home page</h1>
         <div>
           <h5 style={{"color":"#77FF77"}}>
             Now compatible with mobile!<br /><br />
@@ -13,7 +13,7 @@ const Homepage = () => {
             Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
           </p><br /><br />
 
-          <h3>Roadmap</h3>
+          <h2>Roadmap</h2>
           <p>These are the changes I need to make happen for this switch to be deemed a success.</p>
           <ol>
             <li><strike>Switch the backend to <a href="https://react.dev/">React</a>.</strike></li>

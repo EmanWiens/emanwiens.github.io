@@ -5,7 +5,7 @@ const NavigationBar = () => {
       <>
         <nav>
           <div className="logo">
-            <NavLink to=""><h2>Emanuel Wiens</h2></NavLink>
+            <NavLink to=""><h1>Emanuel Wiens</h1></NavLink>
           </div>
 
           <div className="nav-items_mobile">

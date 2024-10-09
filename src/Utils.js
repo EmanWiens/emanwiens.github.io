@@ -44,18 +44,18 @@ function create_element(dict, index) {
 
   if (dict[index]["publish"] === true) {
     // Add the title and introduction
-    element_html = format("<h3>{0}</h3>", dict[index]['name']);
+    element_html = format("<h2>{0}</h2>", dict[index]['name']);
     element_html = format("{0}<p>{1}</p>", element_html, dict[index]["introduction"]);
 
     // add each iteration of the project 
     for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
       if (dict[index]["iterations"][iteration]["publish"] === true) {
-        element_html = format("{0}<h4>{1}</h4>", element_html, dict[index]["iterations"][iteration]["title"]);
+        element_html = format("{0}<br/><h3>{1}</h3>", element_html, dict[index]["iterations"][iteration]["title"]);
         element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["introduction"]);
 
         // add components list 
         if (dict[index]["iterations"][iteration]["components"].length >= 1){
-          element_html = format("{0}<h3>{1}</h3><ul>", element_html, "Components");
+          element_html = format("{0}<h4>{1}</h4><ul>", element_html, "Components");
           for (let component = 0; component < dict[index]["iterations"][iteration]["components"].length; component++) {
             element_html = format("{0}<li><a href=\"{1}\">{2}</a></li>", element_html, dict[index]["iterations"][iteration]["components"][component]["link"], dict[index]["iterations"][iteration]["components"][component]["text"]);
           }
@@ -64,7 +64,7 @@ function create_element(dict, index) {
 
         // Add all the blurbs for the project 
         for (let blurb = 0; blurb < dict[index]["iterations"][iteration]["blurbs"].length; blurb++) {
-          element_html = format("{0}<h3>{1}</h3>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["title"]);
+          element_html = format("{0}<br/><h4>{1}</h4>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["title"]);
           element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["text"]);
 
           // place the images 

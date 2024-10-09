@@ -4,7 +4,7 @@ const NoPage = () => {
   return (
     <div className='body'>
       <div className='content_body'>
-        <h2>404 page not found :(</h2>
+        <h1>404 page not found :(</h1>
       </div>
     </div>
   );

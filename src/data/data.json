@@ -115,7 +115,7 @@
                     "blurbs": [
                         {
                             "title": "Drill components", 
-                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, which is used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. The motor controller is likely the most technical part of all of this, but there are really just a couple of electrical components and a spring. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor buy allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed speed whereas more amperage will provide more torque. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
+                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, which is used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor buy allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed speed whereas more amperage will provide more torque. The motor controller is likely the most technical part of all of this but there are really just a couple of mosfets, switches, diodes, and a spring. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
                             "images" : [
                                 {
                                     "name": "electric_drill_annot",
@@ -334,11 +334,49 @@
         {
             "name": "Sarracenia", 
             "publish": true,
-            "introduction": "Sarracenia is a species of carivorous plants, also sometimes referred to as a trumpet pitcher plant. These plants are quite unique in almost every aspect about them. I got my first Saraccenia from my grandmother in 2022. I now have two subspecies of the plant. ", 
+            "introduction": "Sarracenia is a species of carivorous plants, also sometimes referred to as a Trumpet Pitcher Plant. These plants are quite unique in almost every aspect about them. I got my first Saraccenia from my grandmother in 2022. I now have two subspecies of the plant. ", 
             "tags": [],
             "images": [],
             
             "iterations": [
+                {
+                    "title": "Sarracenias in general",
+                    "publish": true,
+                    "introduction": "Since these are two sub-species of each other they share a lot of common traits. The first fact I want to state is that these plants <i>do <b>not</b> have moving parts</i> that they use to catch their pray. And though you may think these plants are not going to survive they are excellent at what they do, catching insects. Everything from the shape to their taste and smell are desgined to make them merciless bug hunters. I have two sub-special <b>Sarracenia Farnhamii</b> and <b>Sarracenia purpurea</b>",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Shared traits: Environment", 
+                            "text": "These plants exist primarily in the north Americas. That's right, right here in our own homes! These plants are adapted to live in bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means constant direct sunlight. Additionally, the water in the environment is usually nutrient poor. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow. <br/><br/>Due the the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touched the plant. When I repot them I usually make sure to keep my hands wet to dilute anthing that might be on my hands.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Shared traits: Nectar around the brim", 
+                            "text": "First, they produce a nectar around the brim of the opening. This nectar is sweet, it is compared to the nectar found in flowers. The brim will have visible beads of nectar. I touched a bead once and it was really sticky and smelled sweet. I want to know what it tastes like but I also don't wanna share a meal with flies if I can help it.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Shared traits: Roots and Crown", 
+                            "text": "First, they produce a nectar around the brim of the opening. This nectar is sweet, it is compared to the nectar found in flowers. The brim will have visible beads of nectar. I touched a bead once and it was really sticky and smelled sweet. I want to know what it tastes like but I also don't wanna share a meal with flies if I can help it.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Different traits: Trapping and digesting", 
+                            "text": "", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "Sarracenia Farnhamii", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Sarracenia purpurea", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }, 
                 {
                     "title": "Sarracenia Farnhamii",
                     "publish": true,
