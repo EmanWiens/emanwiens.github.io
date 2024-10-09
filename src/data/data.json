@@ -103,19 +103,19 @@
             "name": "Electric Drill", 
             "publish": true,
             "Tags": ["Electronics", "Electric Drill"],
-            "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidized</i>.", 
+            "introduction": "Electric drills are not as complicated as you may think. I wanted to know more about them to I took apart an old drill my brother for at a flea market. ", 
             
             "iterations": [
                 {
-                    "title": "",
+                    "title": "Introduction",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidized</i>.",
                     "images": [],
                     "components": [],
                     "blurbs": [
                         {
                             "title": "Drill components", 
-                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>.",
+                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, which is used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. The motor controller is likely the most technical part of all of this, but there are really just a couple of electrical components and a spring. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor buy allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed speed whereas more amperage will provide more torque. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
                             "images" : [
                                 {
                                     "name": "electric_drill_annot",
