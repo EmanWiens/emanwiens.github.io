@@ -208,9 +208,9 @@ a.nav_bar.active {
 
   div.content_body {
     height:auto; 
-    width:95%;
+    width:100%;
     background-color: #888;
-    margin: 0% 0% 0% 2.5%;
+    margin: 0% 0% 0% 0%;
   }
 
   img {
