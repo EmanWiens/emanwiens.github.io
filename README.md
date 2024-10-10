@@ -8,7 +8,7 @@
 `npm install html-react-parser`<br />
 `npm install react-string-format`<br />
 <br />
-
+ 
 A tutorial on how to make responsive navigation bars
 
 TL;DR <br />
