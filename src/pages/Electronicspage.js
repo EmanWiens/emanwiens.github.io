@@ -8,7 +8,7 @@ const Electronicspage = () =>{
         <div className='title_div'>
           <h1>Electronics page</h1>
           <p>
-              There are a few personal projects and hobbies that I have been doing for many years. A couple of years ago I started documenting these projects more regularly and better. I decided to take a tutorial tone with these projects so that I and other people can reproduce them. 
+              I have been interested in small eletronics and have start making some myself. Some of the items I strip out of old broken electronics, some I make, and some I buy. I always enjoy learning more about eletronics and tinkering around with them myself has been teaching me a lot. These projects often require more learning and planning, usually leading to longer turn around times. 
           </p>
         </div>
 
