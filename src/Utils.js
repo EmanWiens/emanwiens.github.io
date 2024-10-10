@@ -18,6 +18,15 @@ import sarracenia_roots from './images/sarracenia_roots.jpg'
 import sarracenia_young from './images/sarracenia_young.jpg'
 import sarracenia_farnhamii from './images/sarracenia_farnhamii.jpg'
 import sarracenia_purpurea from './images/sarracenia_purpurea.jpg'
+import aco from './images/aco.gif'
+import environ_engine from './images/environ_engine.gif'
+import hackmaster from './images/hackmaster.jpg'
+import least_square_segression from './images/least_square_segression.png'
+import particle_system from './images/particle_system.gif'
+import planet_sim from './images/planet_sim.gif'
+import rert from './images/rert.gif'
+import saving_your_bacon from './images/saving_your_bacon.png'
+import walk_around3D from './images/walk_around3D.gif'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -40,6 +49,24 @@ function map_images(name) {
     return sarracenia_farnhamii;
   } else if (sarracenia_purpurea.includes(name)) {
     return sarracenia_purpurea;
+  } else if (aco.includes(name)) {
+    return aco;
+  } else if (environ_engine.includes(name)) {
+    return environ_engine;
+  } else if (hackmaster.includes(name)) {
+    return hackmaster;
+  } else if (least_square_segression.includes(name)) {
+    return least_square_segression;
+  } else if (particle_system.includes(name)) {
+    return particle_system;
+  } else if (planet_sim.includes(name)) {
+    return planet_sim;
+  } else if (rert.includes(name)) {
+    return rert;
+  } else if (saving_your_bacon.includes(name)) {
+    return saving_your_bacon;
+  } else if (walk_around3D.includes(name)) {
+    return walk_around3D;
   } else {
     return null;
   }

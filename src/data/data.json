@@ -110,7 +110,7 @@
                 {
                     "title": "Introduction",
                     "publish": true,
-                    "introduction": "Recently my brother happened to find an electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidized</i>.",
+                    "introduction": "Recently my brother happened to find an old electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is large eletric motor, a motor controller, and a battery and if even 1 of those works then the $5 invenestment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidized</i>.",
                     "images": [],
                     "components": [],
                     "blurbs": [
@@ -579,17 +579,366 @@
                     "title": "",
                     "publish": true,
                     "introduction": "",
-                    "components": [
-                        {
-                            "link": "", 
-                            "text": ""
-                        }
-                    ],
+                    "components": [],
                     "blurbs": [
+                        {
+                            "title": "Grav_2D, Fall 2024, Personal Project", 
+                            "text": "I always wanted to make a gravity simulation, where the stellar bodies actually move around based on gravity. I've also always wanted to do something with Javascript. So, I combined the two and wrote this gravity simulation in Javascript. There are a wide variety of calculations that I had to use and it was really not as simple as I thought it would be. However, it was really fun to do and I really enjoy watching it go. Currently, is has the sun and the first 4 planets in our solar system.Github.", 
+                            "images" : [] 
+                        }, 
                         {
                             "title": "", 
                             "text": "", 
                             "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "Rapid Exploring Random Trees, Fall 2021, Personal Project",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "Rapid Exploring Random Trees is a method of exploring a terrain. The idea is that you place a target in a random location on the screen, which is not drawn, then find the closest point of the path already travelled and take a step into the direction of the random point. Continue this until you reach the goal. I learned about this a while back in a course and have now re-implemented it mostly for amusement, I just love watching it explore. It's interesting that even though it takes a random step, it still finds the goal even in really tough spots. See the code on <a href=\"https://github.com/EmanWiens/Rapidly_Exploring_Random_Trees\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "rert", 
+                                    "type": "gif", 
+                                    "alt": "A short animation demonstrating how the algorithm searches through some randomly generated barriers."
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Ant Colony Optimization (ACO), Fall 2021, Personal Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "ACO is a meta-heuristic for combinatorial optimization problems, which is a fancy way of saying routing problem. The most basic instance of a routing problem is the famous <a href=\"https://www.jstor.org/stable/167517\">\"Travelling-salesman problem\" introduced by Merrill M. Flood in 1955</a>. The basic idea is for a single salesman to visit every city with the shortest possible distance. The reason this is a combinatorial problem is because for n cities there are n! different solutions. For example, if there are 10 cities then there are 3628800 different combinations of possible routes, where one route will be the shortest. Since finding the optimal solution when n is large is not possible within a reasonable amount of time, better methods need to be developed. In ACO, the variation is that there are many ants and they make choices based on probability which is based on the distance. Meaning, a given ant can see all the cities and each city will have a probability of being visited based on the distance. So, the closest will have the highest probability and the furthest the least. Additionally, when an ant travels down a path is lays pheromones which can be seen by other ants. In which case the probability will be based on both the distance and the pheromone strength. I implemented this as a visual reprentation to see how the algorithm works based on a tutorial by <a href=\"https://bsantosa.files.wordpress.com/2015/03/aco-tutorial-english2.pdf\">Budi Santosa (2015)</a>. See the code on <a href=\"https://github.com/EmanWiens/ACO\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "aco", 
+                                    "type": ".gif", 
+                                    "alt": "A short animation demonstrating how Ant Colony Optimization searches through nodes."
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Least square regression, Winter 2021, Personal Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "Least square regression simply tries to minimize the distance to all points. Ridge regression takes the error into account and tries to minimize error by giving points a weight that indicates how much this point should contribute to the model. For example, an outlier is not desirable so giving it a small weight means that it will be less likely to make the model incorrect. Additionally, once you can also use more advanced methods like nonlinear solutions. For now, I implemented the simplest version of the algorithm. <br /><br />See the code on <a href=\"https://github.com/EmanWiens/Least_Squares_Regression\" target=\"_blank\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "least_square_segression", 
+                                    "type": "png", 
+                                    "alt": "An image showing an example of least squares regression using some plotted points."
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Save Your Bacon, Fall 2019, Event Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "As part of being on the Executive Team for the Computer Science Students' Association we hosted a Game Jam. After all the event planning done by the other members and myself, we managed to make a mini game. This is a three day project that the four of us finished.<br /><br />Game description: Your pig just won first prize at the county fair. The other farmers are angry that you won and start throwing rocks at your pig. The pig is defenceless against getting hit by a rock and will die immediately. Luckly, you are a skilled rock catcher so it is up to you to catch the rocks. While dodging and catching rocks, you find coins on the ground that you can use to buy protection for your pig.<br /><br />See the code on <a href=\"https://github.com/EmanWiens/FlakySuperpower\" target=\"_blank\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "saving_your_bacon", 
+                                    "type": "png", 
+                                    "alt": "The title screen of the game we made."
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Honours Project, Fall 2019, University Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": " In my last year I did an honours project focusing on Quantum Computing and Quantum Information processing. This started by first looking into what a Quantum Processor is and why it is different and such a hot topic. Once I learned more about how to manage state and the underlying math behind it, I worked on writing simple quantum algorithms on IBM Q. Throughout this project I made us of technologies such as <a href=\"https://qiskit.org/\">Qiskit</a> and <a href=\"https://quantum-computing.ibm.com/\">IBM Q Experience</a>.<br /><br />Image Retrieved from <a href=\"https://en.wikipedia.org/wiki/Qubit\">https://en.wikipedia.org/wiki/Qubit</a>.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Planet Sim, Summer 2018, Personal Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "This is a personal project that I worked on through the summer. It's a simulation that \"populates\" the planets and its moons. There are calculations based on real population growth and decay, as well as a max population that can be supported on a given planet. And, of course these numbers are based on real statistics. Otherwise, where's the fun? As of now it only includes our solar system (not all pictured).", 
+                            "images" : [
+                                {
+                                    "name": "planet_sim", 
+                                    "type": "", 
+                                    "alt": ""
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Hackmaster, Spring 2018, University Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "This is the project that I worked on for my Software engineering course. The five of us worked diligently to complete  this game. There were many bumps in the road, but with proper communication and a lot of patience we all pulled together as a team to make this entertaining mini game. <br /><br />See the code on <a href=\"https://github.com/EmanWiens/hackmaster\" target=\"_blank\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "hackmaster", 
+                                    "type": "", 
+                                    "alt": ""
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Particle System, Fall 2018, University Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "This is a particle system that I did for an assignment and then later slightly modified. It's a rather simple program, but it was fun to make. I also like the idea of using small particles to simulate things like smoke and fire.<br /><br />The particles have mass and slightly change color on every collision, which is only noticeable when the program runs for a few seconds.<br /><br />See the code on <a href=\"https://github.com/EmanWiens/ParticleSystem\" target=\"_blank\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "particle_system", 
+                                    "type": "", 
+                                    "alt": ""
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Environmental Engine, Summer 2016, Personal Project", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "Another personal project that simulates growing grass using particles. This whole program is procedurally generated. Each 'root' is made up of several blades of grass and each blade of grass is made up of several particles. The grass can grow and be mowed. I also worked on making it sway in the wind which was a challenge. <br /><br />I have since learned more about optimizing code and different strategies that I could have used to accomplish similar things, but I enjoyed writing it. When I wrote this program I didn't know that this is technically a particle system, I just had the idea and wanted to try it.", 
+                            "images" : [
+                                {
+                                    "name": "environ_engine", 
+                                    "type": "", 
+                                    "alt": ""
+                                }
+                            ] 
                         }, 
                         {
                             "title": "", 
