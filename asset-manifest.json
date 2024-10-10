@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.d33dff2a.css",
+    "main.css": "./static/css/main.6d57d9a6.css",
     "main.js": "./static/js/main.dbd70dc4.js",
     "static/js/453.f57ff242.chunk.js": "./static/js/453.f57ff242.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
@@ -19,12 +19,12 @@
     "static/media/environ_engine.gif": "./static/media/environ_engine.d9788fe3b0ced93cafad.gif",
     "static/media/least_square_segression.png": "./static/media/least_square_segression.7fdfface43a52beca5d1.png",
     "index.html": "./index.html",
-    "main.d33dff2a.css.map": "./static/css/main.d33dff2a.css.map",
+    "main.6d57d9a6.css.map": "./static/css/main.6d57d9a6.css.map",
     "main.dbd70dc4.js.map": "./static/js/main.dbd70dc4.js.map",
     "453.f57ff242.chunk.js.map": "./static/js/453.f57ff242.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d33dff2a.css",
+    "static/css/main.6d57d9a6.css",
     "static/js/main.dbd70dc4.js"
   ]
 }
