@@ -244,7 +244,7 @@ a.nav_bar.active {
   div.content_body {
     height:auto; 
     width:100%;
-    background-color: #888;
+    /* background-color: #888; */
     margin: 0% 0% 0% 0%;
   }
 
