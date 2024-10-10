@@ -8,7 +8,6 @@ const Programmingpage = () => {
         <h1>Programming page</h1>
         <div>
           <p>This will be the page where I showcase some of my programming projects. Some are games I made with friends, some are random simulations.</p>
-          <hr />
 
           {create_programming_page()}
         </div>

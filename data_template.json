@@ -1,0 +1,39 @@
+{
+    "name": "", 
+    "publish": true,
+    "introduction": "", 
+    "tags": [],
+    "images": [
+        {
+            "name": "", 
+            "type": "", 
+            "alt": ""
+        }
+    ],
+    
+    "iterations": [
+        {
+            "title": "",
+            "publish": true,
+            "introduction": "",
+            "components": [
+                {
+                    "link": "", 
+                    "text": ""
+                }
+            ],
+            "blurbs": [
+                {
+                    "title": "", 
+                    "text": "", 
+                    "images" : [] 
+                }, 
+                {
+                    "title": "", 
+                    "text": "", 
+                    "images" : [] 
+                }
+            ]
+        }
+    ]
+}

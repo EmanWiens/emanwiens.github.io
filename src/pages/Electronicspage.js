@@ -9,7 +9,6 @@ const Electronicspage = () =>{
         
         <div>
           <p>There are a few personal projects and hobbies that I have been doing for many years. A couple of years ago I started documenting these projects more regularly and better. I decided to take a tutorial tone with these projects so that I and other people can reproduce them. </p>
-          <hr />
 
           {create_electronics_page()}
         </div>
