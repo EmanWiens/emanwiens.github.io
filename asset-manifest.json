@@ -1,22 +1,30 @@
 {
   "files": {
     "main.css": "./static/css/main.d33dff2a.css",
-    "main.js": "./static/js/main.8004a477.js",
+    "main.js": "./static/js/main.e2657ebf.js",
     "static/js/453.f57ff242.chunk.js": "./static/js/453.f57ff242.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
     "static/media/sarracenia_young.jpg": "./static/media/sarracenia_young.64eb1352ff0010d776cf.jpg",
     "static/media/sarracenia_roots.jpg": "./static/media/sarracenia_roots.7949c8d8619a6036a42f.jpg",
+    "static/media/walk_around3D.gif": "./static/media/walk_around3D.6b634505ac5a401e6948.gif",
+    "static/media/aco.gif": "./static/media/aco.1fc6083a275c0e86a3bd.gif",
     "static/media/rc_car_it_1_2.jpg": "./static/media/rc_car_it_1_2.1eb6d1093cbf58f631a2.jpg",
+    "static/media/hackmaster.jpg": "./static/media/hackmaster.eac1d3952bf8e774563a.jpg",
     "static/media/rc_car_it_1_1.jpg": "./static/media/rc_car_it_1_1.3212927e1edf0fbdb588.jpg",
     "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
+    "static/media/particle_system.gif": "./static/media/particle_system.5c4ddddddda0e7f5423d.gif",
+    "static/media/rert.gif": "./static/media/rert.52279fd9b140dd0175e5.gif",
+    "static/media/planet_sim.gif": "./static/media/planet_sim.824320077f6277743264.gif",
+    "static/media/environ_engine.gif": "./static/media/environ_engine.d9788fe3b0ced93cafad.gif",
+    "static/media/least_square_segression.png": "./static/media/least_square_segression.7fdfface43a52beca5d1.png",
     "index.html": "./index.html",
     "main.d33dff2a.css.map": "./static/css/main.d33dff2a.css.map",
-    "main.8004a477.js.map": "./static/js/main.8004a477.js.map",
+    "main.e2657ebf.js.map": "./static/js/main.e2657ebf.js.map",
     "453.f57ff242.chunk.js.map": "./static/js/453.f57ff242.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d33dff2a.css",
-    "static/js/main.8004a477.js"
+    "static/js/main.e2657ebf.js"
   ]
 }
