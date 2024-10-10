@@ -132,7 +132,7 @@
         {
             "name": "Dehumidifier", 
             "publish": true,
-            "introduction": "", 
+            "introduction": "To make a dehumidifier you need a source of cold, since as air cools it drops moisture. One method of converting electricity into cold is using a Thermoelectric Cooler or Peltier Cooler. I happen to have a couple of TECs and old computer fans lying around and thought I might try making a small dehumidifier.", 
             "tags": [],
             "images": [
                 {
@@ -148,6 +148,10 @@
                     "publish": true,
                     "introduction": "",
                     "components": [
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B078T7J3SF/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
+                            "text": "12v Thermoelectric Cooler"
+                        }, 
                         {
                             "link": "", 
                             "text": ""

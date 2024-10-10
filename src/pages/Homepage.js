@@ -4,8 +4,8 @@ const Homepage = () => {
   return (
     <div className='body'>
       <div className='content_body'>
-        <h1>Home page</h1>
-        <div>
+        <div className='title_div'>
+          <h1>Home page</h1>
           <h5 style={{"color":"#77FF77"}}>
             Now compatible with mobile!<br /><br />
           </h5>
@@ -22,7 +22,7 @@ const Homepage = () => {
             <li><strike>Make a <i>nice looking</i> Navigation bar.</strike></li>
             <li>Make a nice UI for the projects pages.</li>
             <li>Personalize webpage colors and layout.</li>
-          </ol>        
+          </ol>     
         </div>
       </div>
     </div>
