@@ -3,7 +3,7 @@
         {
             "name": "RC tank project", 
             "publish": true,
-            "introduction": "", 
+            "introduction": "During my undergraduate degree I volunteered in the Humanoid Robotics Lab and got to learn a lot about robotics and computer engineering. This inspired me to want to learn more by learning how RC cars work and how I can make my own. This project has so many components I will need to learn about that this can really be considered an unending project, there is always another thing that I can add. To avoid this endless scope creep, I set this up in iterations where I set some goals for each iteration and conclude it when those goals have been reached.", 
             "tags": [],
             "images": [],
             
@@ -11,7 +11,7 @@
                 {
                     "title": "Iteration 1: Trial run",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "The main goals of this iteration are to <b>learn about the components</b> that are in a remote controlled car. As a Computer Scientist, I am interested in knowing how I can make this general purpose as well, meaning that once I get the components running I want to be able to add more advanced hardware and software like a live feed camera and an accelerometer.",
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
@@ -40,7 +40,12 @@
                     ],
                     "blurbs": [
                         {
-                            "title": "Connecting the motor control module", 
+                            "title": "Remote control car components", 
+                            "text": "The main components needed for a minimum viable remote control car are a <b>general purpose computer</b>, a <b>motor controller</b>, <b>motors</b>, and a <b>power source.</b>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Controlling the motors", 
                             "text": "The motor controller is what allows the computer to send signals to the motor as the computer cannot be connected to the motor directly.", 
                             "images" : [
                                 {
@@ -51,7 +56,7 @@
                             ] 
                         }, 
                         {
-                            "title": "Connecting an Xbox One controller to a Raspberry Pi ", 
+                            "title": "Connecting an Xbox One controller to a Raspberry PI ", 
                             "text": "", 
                             "images" : [] 
                         }, 
@@ -62,7 +67,7 @@
                         }, 
                         {
                             "title": "Result", 
-                            "text": "Lorem ", 
+                            "text": "",
                             "images" : [
                                 {
                                     "name": "rc_car_it_1_1", 
@@ -110,10 +115,28 @@
                 {
                     "title": "Introduction",
                     "publish": true,
-                    "introduction": "Recently my brother happened to find an old electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it, and it did not work, and initially we thought we would just scrap it for parts. After all, there is a large electric motor, a motor controller, and a battery and if even 1 of those works then the $5 investment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidised</i>.",
+                    "introduction": "Recently my brother happened to find an old electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially we thought we would just scrap it for parts. Afterall, there is a large electric motor, a motor controller, and a battery and if even 1 of those works then the $5 investment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidised</i>.",
                     "images": [],
-                    "components": [],
+                    "components": [
+                        {
+                            "link": "https://www.boschtools.com/ca/en/", 
+                            "text": "14.4v Bosch Brute drill"
+                        }, 
+                        {
+                            "link": "", 
+                            "text": "Batteries"
+                        }, 
+                        {
+                            "link": "", 
+                            "text": "Battery charger"
+                        }
+                    ],
                     "blurbs": [
+                        {
+                            "title": "Project outline", 
+                            "text": "When testing the components individually, I realised that the entire tool still works and only the batteries are shot. This means that we can replace the batteries that match the voltage and potentially still see function out of this drill. If nothing else, the motor and motor controller appear to be in good shape and that alone is worth more than $5.",
+                            "images" : [] 
+                        },
                         {
                             "title": "Drill components", 
                             "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, which is used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor by allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed whereas more amperage will provide more torque. The motor controller is likely the most technical part of all of this but there are really just a couple of mosfets, switches, diodes, and a spring. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
@@ -144,14 +167,57 @@
             
             "iterations": [
                 {
-                    "title": "",
+                    "title": "Iteration 1: Trial run",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "First I need to understand the main components that make up the dehumidifier, including things like airflow. There are electrical components that are meant to interact with the physical world, meaning that we need to get a thorough understanding of the physics as well as the electrical components.",
                     "components": [
                         {
                             "link": "https://www.amazon.ca/gp/product/B078T7J3SF/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
                             "text": "12v Thermoelectric Cooler"
                         }, 
+                        {
+                            "link": "", 
+                            "text": "12v computer fan"
+                        }, 
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B091GGVS9Z/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
+                            "text": "USB-C with Power Trigger"
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Dehumidifier components", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Plant camera", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
                         {
                             "link": "", 
                             "text": ""
@@ -178,7 +244,16 @@
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
 
 
     "guides": [
@@ -365,13 +440,116 @@
                     ]
                 }
             ]
+        }, 
+        {
+            "name": "Biosphere", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Fertilizer", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "What is fertiliser?", 
+                            "text": "Plants need fertiliser to grow.” We’ve all heard this statement at one point or another but what does that mean? Well, I am here to explain that. Instead of it meaning, “Go to the nearest plant store or supermarket and buy some general purpose fertiliser.” What it actually means is that the plant needs minerals. Much like your body needs certain minerals for growth and maintenance, plants do as well. So really, when talking about fertiliser we are talking about minerals that the plants need to grow. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What are minerals?", 
+                            "text": "Luckily, “Minerals are substances that are naturally formed on Earth” - <a href=\"https://www.notion.so/5219da77e2bf4ed5ac900f9ae2182725?pvs=21\">byjus</a>. These minerals are then used by the plants to grow. For example, onions need sulphur in the soil and in return they <a href=\"http://files-do-not-link.udc.edu/docs/causes/online/Onions%209.pdf\">store sulphur in them</a>. Another example is cucumbers, which <a href=\"https://libanswers.nybg.org/faq/223327#:~:text=Cucumbers%20need%20moderate%20nitrogen%20and,4%2D6)%20is%20good.\">need potassium in the soil to grow</a> and guess what’s <a href=\"https://ingenaes.illinois.edu/wp-content/uploads/ING-Info-Sheet-2018_05-Cucumber-nutritional-value-Kowalewska.pdf\">inside cucumbers, potassium</a>, among many other minerals. Coincidentally, from plants is where we get a lot of our minerals, since we <a href=\"https://www.notion.so/Mental-Health-ea7d9ba33d7e413cb5a7ac7096ab66bc?pvs=21\">cannot digest dirt</a>. <br /><br />The problem is that when we are farming plants in a small-ish area and they use up the same minerals, at some point certain minerals will deplete and there are two major ways that we can combat this. The first and easiest, plant other plants in that area. Different plants need different minerals so while one plant may struggle in a particular spot, another plant may thrive. And the second, of course, being that we retrieve those minerals from somewhere and put them in the ground ourselves. However, those minerals are often in some form that plants can absorb and then we call it fertiliser.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "How do minerals not deplete in nature? ", 
+                            "text": "We have forests that have been standing for hundreds of years, they are still healthy lush plants. Yet, we plant tomatoes in the same bed for a few years and each year the plants do worse and eventually they won’t grow at all… How can that be? Never underestimate the power of an ecosystem. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Where do we find minerals? ", 
+                            "text": "As mentioned, often just putting the pure mineral in the ground will not help the plant. For example, plants need calcium. A huge source is eggshells, so we can crush up the eggshells to a powder and add it to the soil of our plants. At this point, we will have to wait for the calcium to break down first at which point the plant can use it. The breaking down of these minerals can happen in a variety of ways including bacteria, insects, worms, and I’m sure there are more but I don’t know them all. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What minerals do plants need?", 
+                            "text": "There are people far more knowledgeable than me who have worked on this and <a href=\"https://www.dpi.nsw.gov.au/agriculture/soils/soil-testing-and-analysis/plant-nutrients#:~:text=Soil%20is%20a%20major%20source,are%20calcium%2C%20magnesium%20and%20sulfur\">published what they found! :)</a>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What is electroculture?", 
+                            "text": "I have heard of this term but I know nothing about it, one of these days I will figure out what it is. ", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
         }
     ],
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 
     "plants": [
@@ -386,28 +564,28 @@
                 {
                     "title": "Sarracenias in general",
                     "publish": true,
-                    "introduction": "Since these are two subspecies of each other they share a lot of common traits. The first fact I want to state is that these plants <i>do <b>not</b> have moving parts</i> that they use to catch their prey. And though you may think these plants are not going to survive they are excellent at what they do, catching insects. Everything from the shape to their taste and smell are designed to make them merciless bug hunters. I have two sub-special <b>Sarracenia Farnhamii</b> and <b>Sarracenia purpurea</b>",
+                    "introduction": "Since these are two subspecies of each other they share a lot of common traits. The first fact I want to state is that these plants <i>do <b>not</b> have moving parts</i> that they use to catch their prey. And though you may think these plants are not going to survive they are excellent at what they do, catching insects. Everything from the shape to their taste and smell are designed to make them merciless bug hunters. I have two sub-special <b>Sarracenia Farnhamii</b> and <b>Sarracenia purpurea</b>. One source I used is provided by <a href=\"https://tomscarnivores.com/resources/how-to-grow-pitcher-plants/\">Tom's Carnivores</a>, which is in depth and has nice vo",
                     "components": [],
                     "blurbs": [
                         {
                             "title": "Shared traits: Background", 
-                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow. <br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I repot them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the crown, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
+                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in are bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow. <br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I report them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the rhizome, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
                             "images" : [] 
                         },
                         {
-                            "title": "Different traits: Environment", 
+                            "title": "Shared traits: Environment", 
                             "text": "There are four main things that we need to match in terms of the environment: <b>soil, water, light, and dormancy</b>. The rest, bugs, will sort themselves out when the plants are outside, as mentioned they are great hunters. <br /><br />For the <b>soil</b> I used one part peat moss and one part perlite. Peat moss by itself has very little to no nutrients the plant can use while having amazing water retention due to the shredded sphagnum moss inside. <b>Warning,</b> sphagnum moss is horrible at absorbing water when it is already dry as opposed to humid or damp! However, by itself peat moss will compact and become hard so it needs something to give it structure. For that I have used perlite which makes the soil fluffy and does not retain water well, or in other words provides drainage. The down side of this is that it is not easy to work with and apparently toxic to breathe. There are a couple of alternatives I have been wanting to try like coconut husks. <br /><br />In this case <b>water</b> will be classified as humidity in the air or in the soil. It is important to understand that moisture in the soil is different from mud. In wet highlands, the ground would be fibrous and fluffy meaning that roots have access to water but also to air. There are two things we do to simulate humidity. The first is to put sphagnum moss on top of the soil to cover it. The moss itself holds moisture but as it covers the ground it helps the ground retain moisture as well. The second is that I like to have them stand in a deeper dish and a little bit of water. The bottom of the dish will have some aquarium gravel in it and the pot is less than 10% in the water, really not deep! This allows the soil to constantly absorb moisture without the roots standing in water. The <b>roots should never be submerged in water but should always have humidity</b> around them. ", 
                             "images" : [
                                 {
                                     "name": "sarracenia_roots", 
                                     "type": "jpg", 
-                                    "alt": "The exposed root system of a sarracenia crown."
+                                    "alt": "The exposed root system of a sarracenia rhizome and crown."
                                 }
                             ] 
                         }, 
                         {
                             "title": "", 
-                            "text": "For the bottom <b>dish of water</b>, I have tried using distilled water, rain water, and well water. With distilled and rain water I have noticed that the water will turn a black or brown colour and by the end of the year there were red little worms living in it. Not pleasant. With well water I usually have a lot of algae growing in the water, which does not harm the Sarracenia while also absorbing nutrients in the water. Algae and Sarracenias seem to have a symbiotic relationship in this case. The water will not be harmful to you or the plant, the water will not be smelly, and it is easy to clean with simple rinse and dollar-store strainer. I will note that I live in North America meaning that untreated well water is more or less exactly the water these plants are used to, so it makes sense to me that they grow well in it.<br /><br /><b>Light</b> is an easy one if you can put the plants outside in the summer. They need a fair amount of sunlight, I have had them in places where they would get a good 12 hours of direct sunlight in 30 C weather and did not show a sign of stress. Slightly shaded light outside will also often do the trick. Remember, these plants live in the North Americas so the climate here is more or less perfect for them. The reason why I cannot grow them outdoors is that the winters where I am get much too cold. As they are dormant during the winter and the summers are warm are perfect where I live I do not keep them indoors much. I would imagine you would need strong lights.<br /><br /><b>Dormancy</b> for these plants would happen around november, giving them until about march for dormancy. In this case dormancy means wait until the soil is just slightly moist, trim the leaves off, sprinkle sulphur on top of the soil/moss to avoid mold, and put them in a fridge. Since the plant is dormant, it will not grow or photosynthesize so it does not need its leaves but it also cannot be completely dry. The dormancy period lasts 3 to 4 months and after that the plants can be taken out again. Having the plants at about 3C in the fridge seems to be cold enough that it simulates winter for these plants, freezing them should be avoided and will likely kill them.", 
+                            "text": "For the bottom <b>dish of water</b>, I have tried using distilled water, rain water, and well water. With distilled and rain water I have noticed that the water will turn a black or brown colour and by the end of the year there were red little worms living in it. Not pleasant. With well water I usually have a lot of algae growing in, which does not harm the Sarracenia while also absorbing nutrients in the water. Algae and Sarracenias seem to have a symbiotic relationship in this case. The water will not be harmful to you or the plant, the water will not be smelly, and it is easy to clean with simple rinse and dollar-store strainer. I will note that I live in North America meaning that untreated well water is more or less exactly the water these plants are used to, so it makes sense to me that they grow well in it.<br /><br /><b>Light</b> is an easy one if you can put the plants outside in the summer. They need a fair amount of sunlight, I have had them in places where they would get a good 12 hours of direct sunlight in 30 C weather and did not show a sign of stress. Slightly shaded light outside will also often do the trick. Remember, these plants live in the North Americas so the climate here is more or less perfect for them. The reason why I cannot grow them outdoors is that the winters where I am get much too cold. As they are dormant during the winter and the summers are warm are perfect where I live I do not keep them indoors much. I would imagine you would need strong lights.<br /><br /><b>Dormancy</b> for these plants would happen around november, giving them until about march for dormancy. In this case dormancy means wait until the soil is just slightly moist, trim the leaves off, sprinkle sulphur on top of the soil/moss to avoid mold, and put them in a fridge. Since the plant is dormant, it will not grow or photosynthesize so it does not need its leaves but it also cannot be completely dry. The dormancy period lasts 3 to 4 months and after that the plants can be taken out again. Having the plants at about 3C in the fridge seems to be cold enough that it simulates winter for these plants, freezing them should be avoided and will likely kill them.", 
                             "images" : [
                                 {
                                     "name": "sarracenia_young", 
@@ -423,7 +601,7 @@
                         },
                         {
                             "title": "Shared traits: Catching insects", 
-                            "text": "They produce a nectar around the brim of the opening. This nectar is sweet, it is compared to the nectar found in flowers. The brim will have visible beads of nectar. I touched a bead once and it was sticky and smelled sweet. I want to know what it tastes like but I also don't wanna share a meal with flies if I can help it. This nectar is meant to attract insects to the opening of the pitcher. I have noticed that flies will crawl all over the plant and I suspect that the whole plant is sweet to lure insects. Once they insect notices the nectar they generally attempt to eat it without falling into the hole. The underside of the part of the leaf that covers the opening, has many little hairs that the insects cannot hold onto. This design makes the nectar uncomfortable for the flies to reach from the open end, whereas the underside of the leaf is not a place they can stand. Once they try, the tumble into the plant pitcher. Once the bug falls inside the pitcher, they have great difficulty getting out which is for different reasons depending on which subspecies. However, the nectar around the brim and the little hairs are generally how these plants catch their prey. Additionally, flies are attracted to the smell of other dead flies so the plants only attracts more insects both with more leaves that provide a sweet aroma as well as the stench of decaying insects. Generally, I don't notice a smell because the plants are really good at absorbing the nutrients.<br /><br />I read it somewhere, but I have also witnessed that spiders like to make webs on these plants as it attracts a lot of insects, often inevitably leading to the spider falling into the plant.", 
+                            "text": "They produce a nectar around the brim of the opening. This nectar is sweet, it is compared to the nectar found in flowers. The brim will have visible beads of nectar. I touched a bead once and it was really sticky and smelled sweet. I want to know what it tastes like but I also don't wanna share a meal with flies if I can help it. This nectar is meant to attract insects to the opening of the pitcher. I have noticed that flies will crawl all over the plant and I suspect that the whole plant is sweet to lure insects. Once they insect notices the nectar they generally attempt to eat it without falling into the hole. The underside of the part of the leaf that covers the opening, has many little hairs that the insects cannot hold onto. This design makes the nectar uncomfortable for the flies to reach from the open end, whereas the underside of the leaf is not a place they can stand. Once they try, the tumble into the plant pitcher. Once the bug falls inside the pitcher, they have great difficulty getting out which is for different reasons depending on which subspecies. However, the nectar around the brim and the little hairs are generally how these plants catch their prey. Additionally, flies are attracted to the smell of other dead flies so the plants only attracts more insects both with more leaves that provide a sweet aroma as well as the stench of decaying insects. Generally, I don't notice a smell because the plants are really good at absorbing the nutrients.<br /><br />I read it somewhere, but I have also witnessed that spiders like to make webs on these plants as it attracts a lot of insects, often inevitably leading to the spider falling into the plant.", 
                             "images" : [
                                 {
                                     "name": "sarracenia_purpurea", 
@@ -512,9 +690,9 @@
             ]
         }, 
         {
-            "name": "", 
+            "name": "Grow lights", 
             "publish": true,
-            "introduction": "", 
+            "introduction": "I have wanted to learn more about grow lights and the more I learn the more it feels simple, yet incredibly complex at the same time. As I am mostly relying on a rudimentary understanding of physics, there are a few components that need to be well understood.", 
             "tags": [],
             "images": [
                 {
@@ -526,23 +704,23 @@
             
             "iterations": [
                 {
-                    "title": "",
+                    "title": "Iteration 1: what is a grow light",
                     "publish": true,
-                    "introduction": "",
-                    "components": [
-                        {
-                            "link": "", 
-                            "text": ""
-                        }
-                    ],
+                    "introduction": "Since I am not even sure what makes a grow light different from a regular light, I first need to find that out. This means that I will also need to know more about <b>light sources</b> such as <b>LEDs</b>, <b>electromagnetic waves</b>, a little bit of <b>colour theory</b>, and of course <b>biology</b> of plants.",
+                    "components": [],
                     "blurbs": [
                         {
-                            "title": "", 
+                            "title": "What is light?", 
                             "text": "", 
                             "images" : [] 
                         }, 
                         {
-                            "title": "", 
+                            "title": "What is an LED?", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What is a grow light?", 
                             "text": "", 
                             "images" : [] 
                         }
@@ -551,6 +729,14 @@
             ]
         }
     ], 
+
+
+
+
+
+
+
+
 
 
 
