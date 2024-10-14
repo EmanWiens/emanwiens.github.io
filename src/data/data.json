@@ -19,55 +19,29 @@
                         }, 
                         {
                             "link": "https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/", 
-                            "text": "Raspberry PI Model B+ "
+                            "text": "Raspberry PI Model B+"
                         },
                         {
                             "link": "https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1", 
-                            "text": "L298N Module H Bridge Driver "
+                            "text": "L298N Module H Bridge Driver"
                         },
                         {
                             "link": "https://www.canadiantire.ca/en/pdp/bluehive-5300-mah-power-bank-compatible-with-ipods-iphones-smartphones-cameras-and-most-small-mobile-devices-0355270p.html#srp", 
-                            "text": "Phone power bank "
+                            "text": "Phone power bank"
                         },
                         {
                             "link": "https://www.amazon.ca/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1", 
-                            "text": "Female to female connectors "
+                            "text": "Female to female connectors"
                         },
                         {
                             "link": "https://www.xbox.com/en-CA/accessories/controllers/xbox-wireless-controller", 
-                            "text": "Xbox one controller "
+                            "text": "Xbox one controller"
                         }
                     ],
                     "blurbs": [
                         {
-                            "title": "Remote control car components", 
-                            "text": "The main components needed for a minimum viable remote control car are a <b>general purpose computer</b>, a <b>motor controller</b>, <b>motors</b>, and a <b>power source.</b>", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "Controlling the motors", 
-                            "text": "The motor controller is what allows the computer to send signals to the motor as the computer cannot be connected to the motor directly.", 
-                            "images" : [
-                                {
-                                    "name": "rc_car_it_1_2", 
-                                    "type": "jpg", 
-                                    "alt": "This is the result of the first iteration of this project."
-                                }
-                            ] 
-                        }, 
-                        {
-                            "title": "Connecting an Xbox One controller to a Raspberry PI ", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "Writing a script for the RC car", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "Result", 
-                            "text": "",
+                            "title": "Remote Control Car Components", 
+                            "text": "The main components needed for a minimum viable remote control car are a <b>general purpose computer</b>, a <b>motor controller</b>, <b>motors</b>, and a <b>power source.</b><br /><br />The first thing we need is some kind of <b>compute chip</b>. This chip can be embedded or something more general purpose. Examples of embedded are <i>Arduino</i> and the <i>Raspberry Pi Pico</i>. These do not have an operating system and will instead execute some code upon startup. On the other hand a general purpose computer would have an operating system as well as all the things around it. This means that we can run a script on startup, but we can also do more advanced things like running multiple software and installing frameworks. Examples of general purpose computers to use for this would be Raspberry Pi zero and up. In this trial I will use what is available to me and use the Raspberry Pi 3B+ as I have one lying around. <br /><br />The second component we need is a <b>motor control board</b>. There are a couple of reasons this is a requirement. First, the motor is likely running on a much higher voltage and current than the computer so we cannot connect a motor directly to the computer. Second, the direction of spin on the motor alternates with the current. Meaning, there is no real + or - on an electric motor but rather it will spin in different directions based on which direction the power is connected. Fun fact, if you use an external source to spin the motor it will generate electricity. The motor controller allows for the current to be switched either way. The compute module will then communicate commands to the motor controller  using <a href=\"https://www.geeksforgeeks.org/pulse-width-modulation-pwm/\">Pulse Width Modulation (PWM)</a> to control the motor speed and direction.<br /><br />The <b>motors</b> are likely just going to be brushed motors. In my case I will start with using an existing RC car so I can skip the motor gearbox and stearing for now. <br /><br />The <b>power source</b> will need to be sufficient for the whole system. In my case I will use a seperate power source for the compute module and the motors, this may change in later revisions.", 
                             "images" : [
                                 {
                                     "name": "rc_car_it_1_1", 
@@ -75,6 +49,32 @@
                                     "alt": "This is the result of the first iteration of this project."
                                 }
                             ] 
+                        },
+                        {
+                            "title": "Connecting The Motor Control Module", 
+                            "text": "A common motor controller for beginners I found was the <a href=\"https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1\">L298N Module H Bridge Driver</a>. There are amazing guides on how to <a href=\"https://www.electronicshub.org/raspberry-pi-l298n-interface-tutorial-control-dc-motor-l298n-raspberry-pi/\">connect the L298N to a Raspberry Pi</a> and use a simple python script to control the motors. This tutorial also introduces how to use <a href=\"https://gpiozero.readthedocs.io/en/stable/api_output.html#gpiozero.PWMOutputDevice\">PWMs</a>, allowing you to control the motor speed. Comparatively, without making use of PWM the motors can only switch to full power or no power, i.e. on or off. I used a separate power source for the computer and the motors. The computer is using a phone power bank and the motors have 3 AA batteries in series to get 3.6v (underneath the phone power bank).", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Connecting an Xbox One controller to a Raspberry PI", 
+                            "text": "The Raspberry Pi model I own has Bluetooth which means that it was possible to connect an Xbox one controller. Sometimes the connection will not work when attempting to reconnect the controller. To fix it, remove the controller from the list of Bluetooth devices using remove MAC_ADDRESS. Once the device is removed attempt to reconnect it. A quick way of testing if the connection worked is to run <code>cat /dev/input/event0</code>. This simply prints out the device input as characters. Basically, you should see a lot of garbage showing up when you push buttons.", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "Writing a script", 
+                            "text": "The last step of the process is to connect it all using python scripts. The first step is to import the IO libraries which is then followed by the buttons. We already have an example of how to map the pinouts from the Raspberry Pi. Here is the code I made for this:<br /> ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "code": "<code><ol><li>from gpiozero import Motor<br /></li><li>import time <br /></li><li>from evdev import InputDevice, categorize, ecodes<br /></li><li>import tty<br /></li><li>import sys<br /></li><li>import termios<br /></li><li><br /></li><li>gamepad_active = False<br /></li><li>gamepad = None<br /></li><li><br /></li><li>back_motor = Motor(27, 22, 17, pwm=True) <br /></li><li>front_motor = Motor(23, 24, 25, pwm=True) <br /></li><li>die = False <br /></li><li>a = 304<br /></li><li>b = 305<br /></li><li>y = 308<br /></li><li>x = 307<br /></li><li>left_btn = 16<br /></li><li>down = 17<br /></li><li>right_T = 9<br /></li><li>left_T = 10<br /></li><li><br /></li><li>def xboxContoller():<br /></li><li>&emsp;for event in gamepad.read_loop():<br /></li><li>&emsp;&emsp;#filters by event type<br /></li><li>&emsp;&emsp;if event.type == ecodes.EV_KEY:<br /></li><li>&emsp;&emsp;&emsp;print(event)<br /></li><li><br /></li><li>&emsp;&emsp;&emsp;if (event.code == a and event.value == 1):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"A press\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;back_motor.forward()<br /></li><li>&emsp;&emsp;&emsp;if (event.code == a and event.value == 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"A release\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;back_motor.stop()<br /></li><li><br /></li><li>&emsp;&emsp;&emsp;if (event.code == b and event.value == 1):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"B press\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;back_motor.backward()<br /></li><li>&emsp;&emsp;&emsp;if (event.code == b and event.value == 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"B release\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;back_motor.stop()<br /></li><li>&emsp;&emsp;else:<br /></li><li>&emsp;&emsp;&emsp;print(event)<br /></li><li><br /></li><li>&emsp;&emsp;&emsp;# if the triggers are used<br /></li><li>&emsp;&emsp;&emsp;speed = 0.0<br /></li><li>&emsp;&emsp;&emsp;if (event.code == right_T):<br /></li><li>&emsp;&emsp;&emsp;&emsp;speed = (event.value / 1023.0)<br /></li><li>&emsp;&emsp;&emsp;&emsp;if (speed > .1):<br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;back_motor.forward(speed)<br /></li><li>&emsp;&emsp;&emsp;&emsp;else:<br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;back_motor.stop()<br /></li><li></li><li>&emsp;&emsp;&emsp;if (event.code == left_T):<br /></li><li>&emsp;&emsp;&emsp;&emsp;speed = (event.value / 1023.0)<br /></li><li>&emsp;&emsp;&emsp;&emsp;if (speed > .1):<br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;back_motor.backward(speed)<br /></li><li>&emsp;&emsp;&emsp;&emsp;else:<br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;back_motor.stop()<br /></li><li><br /></li><li>&emsp;&emsp;&emsp;# left and right turning using d-pad<br /></li><li>&emsp;&emsp;&emsp;if (event.code == left_btn and event.value < 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"left_btn\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;front_motor.forward()<br /></li><li>&emsp;&emsp;&emsp;if (event.code == left_btn and event.value == 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"nothing\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;front_motor.stop()<br /></li><li>&emsp;&emsp;&emsp;if (event.code == left_btn and event.value > 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(\"right\")<br /></li><li>&emsp;&emsp;&emsp;&emsp;front_motor.backward()<br /></li><li><br /></li><li>&emsp;&emsp;&emsp;# left and right turning using joystick<br /></li><li>&emsp;&emsp;&emsp;speed = 0.0 <br /></li><li>&emsp;&emsp;&emsp;if (event.code == 0 and event.type == 3): <br /></li><li>&emsp;&emsp;&emsp;&emsp;speed = (event.value - 65535 / 2) / (65535 / 2)<br /></li><li>&emsp;&emsp;&emsp;&emsp;print(speed) <br /></li><li><br /></li><li>&emsp;&emsp;&emsp;&emsp;if (speed > 0): <br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;front_motor.backward(speed) <br /></li><li>&emsp;&emsp;&emsp;&emsp;if (speed < 0):<br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;front_motor.forward(abs(speed))<br /></li><li>&emsp;&emsp;&emsp;&emsp;if (speed > -.25 and speed < .25): <br /></li><li>&emsp;&emsp;&emsp;&emsp;&emsp;front_motor.stop() <br /></li><li><br /></li><li>while not die:<br /></li><li>&emsp;try:<br /></li><li>&emsp;&emsp;gamepad = InputDevice('/dev/input/event0')<br /></li><li>&emsp;&emsp;print(gamepad)<br /></li><li>&emsp;&emsp;print(gamepad.name)<br /></li><li><br /></li><li>&emsp;&emsp;if (gamepad.name == 'Xbox Wireless Controller'):<br /></li><li>&emsp;&emsp;&emsp;gamepad_active = True<br /></li><li>&emsp;&emsp;else:<br /></li><li>&emsp;&emsp;&emsp;gamepad_active = False<br /></li><li>&emsp;&emsp;xboxContoller()<br /></li><li>&emsp;except:<br /></li><li>&emsp;&emsp;print(\"No gamepad detected. \" + str(time.time()))<br /></li><li>&emsp;&emsp;time.sleep(1)<br /></li><ol></code>",
+                            "text": "In short, gpiozero is a library that allows you to access the General Purpose Input Output Pins (GPIO). Please see the latest <a href=\"https://gpiozero.readthedocs.io/en/latest/\">gpiozero documentation</a> and to get the pinout of your Pi user the <code>pinout</code> command.<br /><br />We will be using the <a href=\"https://python-evdev.readthedocs.io/en/latest/\">evdev</a> library for reading user inputs, in this case the bluetooth controller.<br /><br />Lines 11 and 12 are setting up the pins that will be used for the motors, see how to use <a href=\"https://gpiozero.readthedocs.io/en/latest/api_output.html#motor\">Motor()</a>.<br /><br />Lines 14 to 21 are mapping the buttons from the controller to variables. These were obtained by using <code>cat /dev/input/your_input_device</code> on Linux, which simply listens to the input channel and displays it on the screen. For example, when you press a on the controller the input read by the computer is 304. This is a unique value that will allow us to determine what button is pressed.<br /><br />The way we know a button is pressed is by setting up an event listener for the controller, see line 87. If we are able to successfully create an event listener, then we listen, see line 24.<br /><br />Line 26 checks what type of event, since the controller filters the events by type of button. Specifically, this statement filter for the ABXY buttons on the controller, the other events including triggers and joysticks are handled after line 42.<br /><br />The button press events are handled on lines 29 to 41. The button press is a boolean event meaning the button is pressed or not.<br /><br />The trigger, on the other hand, allows for values from 0 to 1023. On line 47 we check for the right trigger (line 54 for left trigger), then we take the read value and normalize it on line 48 to make it a value between 0 and 1. Then we can use the PWM, which is already packaged into the Motor() class and allows us to set a speed between 0 and 1, where 1 is the max speed of the motors.<br /><br />Lines 62 to 70 checks if the user is using the controller d-pad to drive. The d-pad is also like a button so it will also be a motors on or off style.<br /><br />Lastly, we read the joystick values on lines 74 to 83. As you can see on line 75, the joystick has a values between 65535 in total. That means that half is for -x and the other half is for +x, same is true for y. In this case we are only reading the y value to go forwards or backwards. On lines 78 to 83 we apply the speed values from the joystick.",
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Result", 
+                            "text": "Alright, it's not going to win any beauty pageants but it works!<br /><br />Using PWM I was able to control the rate of acceleration using the triggers and joysticks. The motor controller was too weak to run the motors at full power and the whole setup was slow and hard to steer. Overall this project is a success, the main idea of it worked and it gave me a lot of data to know what to improve for the next iteration.",
+                            "images" : [] 
                         }
                     ]
                 }, 

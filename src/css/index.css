@@ -77,22 +77,27 @@ div.iteration_div {
 }
 
 div.blurb_div {
-  /* border: 1px solid #a0ebfd;  */
   background-color: #8A8A8A; 
   border-radius: 10px;
   display: flex;
 }
 
 div.left_blurb_item {
-  /* border: 10px solid blue;  */
   width: 50%;
   padding: 1%; 
 }
 
 div.right_blurb_item {
-  /* border: 10px solid purple;  */
   width: 50%;
   padding: 1%; 
+}
+
+div.left_blurb_item.code {
+  min-width: 66%;
+}
+
+div.right_blurb_item.code {
+  min-width: 66%;
 }
 /* end content ----------------------------------------------------------------------------- */
 

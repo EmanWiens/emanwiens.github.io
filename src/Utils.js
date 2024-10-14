@@ -81,6 +81,7 @@ function create_element(dict, index) {
   var element_html = ""; 
   var path; 
   var left = true; 
+  var code = false; 
 
   if (dict[index]["publish"] === true) {
     // Add the title and introduction
@@ -110,10 +111,11 @@ function create_element(dict, index) {
         for (let blurb = 0; blurb < dict[index]["iterations"][iteration]["blurbs"].length; blurb++) {
           element_html = format("{0}<br/><h4>{1}</h4>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["title"]);
           element_html = format("{0}<div className=\"blurb_div\">", element_html);
+          code = "code" in dict[index]["iterations"][iteration]["blurbs"][blurb];
 
           // if it is just a blurb, don't add another div
           // if there is an image, alternate adding in right_blurb_item
-          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1) {
+          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1 || (code && dict[index]["iterations"][iteration]["blurbs"][blurb]["code"])) {
             if (left) {
               element_html = format("{0}<div className=\"left_blurb_item\">", element_html);
             } else {
@@ -123,27 +125,32 @@ function create_element(dict, index) {
           }
           
           element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["text"]);
-          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1) {
+          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1 || (code && dict[index]["iterations"][iteration]["blurbs"][blurb]["code"])) {
             element_html = format("{0}</div>", element_html); // close blurb_item
           }
 
           // place the images 
-          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1) {
+          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1 || (code && dict[index]["iterations"][iteration]["blurbs"][blurb]["code"])) {
             if (left) {
-              element_html = format("{0}<div className=\"left_blurb_item\">", element_html);
+              element_html = format("{0}<div className=\"left_blurb_item{1}\">", element_html, code ? " code" : "");
             } else {
-              element_html = format("{0}<div className=\"right_blurb_item\">", element_html);
-            }
-          }
-          for (let image = 0; image < dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length; image++) {
-            path = map_images(dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["name"]); 
-
-            if (path != null) {
-              element_html = format("{0}<img src=\"{1}\" alt=\"{2}\" />", element_html, path, dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["alt"]);
+              element_html = format("{0}<div className=\"right_blurb_item{1}\">", element_html, code ? " code" : "");
             }
           }
 
-          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1) {
+          if (code) {
+            element_html = format("{0}{1}", element_html, dict[index]["iterations"][iteration]["blurbs"][blurb]["code"]);
+          } else {
+            for (let image = 0; image < dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length; image++) {
+              path = map_images(dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["name"]); 
+
+              if (path != null) {
+                element_html = format("{0}<img src=\"{1}\" alt=\"{2}\" />", element_html, path, dict[index]["iterations"][iteration]["blurbs"][blurb]["images"][image]["alt"]);
+              }
+            }
+          }
+
+          if (dict[index]["iterations"][iteration]["blurbs"][blurb]["images"].length >= 1 || (code && dict[index]["iterations"][iteration]["blurbs"][blurb]["code"])) {
             element_html = format("{0}</div>", element_html); // close blurb_item
           }
 
