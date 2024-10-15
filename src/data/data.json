@@ -326,6 +326,47 @@
                     ]
                 }
             ]
+        }, 
+        {
+            "name": "Local backups", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
         }
     ],
 
@@ -346,6 +387,40 @@
 
 
     "guides": [
+        {
+            "name": "Biosphere", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "I really like the idea of self-sustainability, which is also probably why I like renewable energy! The concept of putting plants in a closed jar still amazes me and I have wanted to try making some in the past with little success. Of all the ones I have made only two have survived so far as they usually end up being taken over by mold. I wanted to document here the guides and resources I have found and for the next ones I make, I want to document the process so that hopefully I can replicate it in the future.",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "<div style=\"display:block\"><h4>Basic setup</h4>http://www2.nau.edu/lrm22/lessons/bottle_biology/ https://www.wikihow.com/Make-a-Worm-HabitatBiosphere A.K.A. ecosphere<ul><li>2-5 cm gravel or sand (¾ depth of substrate)</li><li>5-10 cm well draining soil<ul><li>Cactus soil works well</li></ul></li><li>Plants that can handle warm, humid environments</li><li>Can add bugs</li><li>Add water so that gravel is “fairly saturated”</li></ul>[Making a Bottle Terrarium + Closed Terrarium Basics](https://www.youtube.com/watch?v=7Lg4tzkHgVo&ab_channel=SerpaDesign)<ul><li>For outside soil Bake for 15-20 minutes at 350</li></ul><br/><h4> Soil</h4>[Tropical Terrarium Substrate Mix errarium Tips](https://www.youtube.com/watch?v=bmSr17J2jho&ab_channel=SerpaDesign)<ul><li>Soil base<ul><li>Coco fibre, dirt, potting soil</li><li>Do NOT use peat moss</li></ul></li><li>Fine bark<ul><li>Any bark that is not died</li></ul></li><li>Sphagnum moss:<ul><li>Helps retain humidity</li></ul></li><li>Sand: Any sand works</li><li>1 part soil, 1 part fine bark, 2 parts moss, 1 part sand (little less is better)</li></ul><br/></div><div style=\"display:block\"><h4>Springtails</h4><ul><li>Not necessary but preferred</li><li>Solve mold problems</li><li>Helps with decomposition</li><li>Soil from outside that’s not backed will result in springtails</li><li>Watering<ul><li>Distilled water</li><li>Too much: condensation on glass the whole day<ul><li>Wipe it off</li></ul></li><li>Good: condensation in morning and evening</li></ul></li></ul>[All About Springtails Care, Culturing, Seeding & More](https://www.youtube.com/watch?v=c7UgKFtSjD0&ab_channel=SerpaDesign)<ul><li>High moisture</li><li>Organic debris<ul><li>Soil, leaf litter, lichen, bark, decaying plants</li></ul></li><li>Cannot fly, but can jump</li><li>Diet: mold, fungi, algae, pollen, and decaying matter</li><li>Known as bioactive terrarium</li><li>Also: isopods and earth worms</li><li>Shallow container that closes tightly</li><li>Medium: Charcoal, bonfire coals, activated charcoal<ul><li>Rinse the charcoal with hot water</li><li>Lumpwood charcoal sold at the hardware store</li></ul></li><li>Half to one inch of water in the container</li><li>Get starter culture online (can do it yourself)</li><li>Food: Nutritious yeast flakes<ul><li>Uncooked rice (will mold, they’ll eat the mold)</li></ul></li><li>Open regularly to let air flow in</li><li>Established cultures can be used a couple times a week<ul><li>Takes about 2 to 4 weeks to establish</li></ul></li></ul><br/><h4> Jars</h4><ul><li>Mason jars don’t work => meant to let air escape</li><li>Some say it works fine…</li><li>Grab some pond water/dirt<ul><li>Grab some algae</li><li>Close it</li></ul></li></ul></div>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Car OBD II", 
             "publish": true,
@@ -537,6 +612,47 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "3D printer setup", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
         }, 
         {
             "name": "Biosphere", 
@@ -567,7 +683,7 @@
                     "blurbs": [
                         {
                             "title": "", 
-                            "text": "", 
+                            "text": "https://octoprint.org/ https://all3dp.com/2/best-octoprint-alternatives/", 
                             "images" : [] 
                         }, 
                         {
@@ -668,7 +784,12 @@
                     "blurbs": [
                         {
                             "title": "Shared traits: Background", 
-                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in are bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow. <br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I report them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the rhizome, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
+                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in are bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow.<br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I report them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the rhizome, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "Shared traits: TL;DR", 
+                            "text": "<div style=\"display:block\"><p>According to <a href=\"https://www.carnivorousplants.co.uk/resources/how-to-grow-pitcher-plants/\">carnivorousplants.co</a>:</p><h4>Dos</h4><ul><li>Full direct sun</li><li>Unheated greenhouses</li></ul><h4>Don’ts</h4><ul><li>Terrariums are generally unsuitable</li><li>Don’t always cope well with strong winds</li></ul></div><div style=\"display:block\"><h4>Dormancy</h4><ul><li>Cold winter dormancy between November and February</li><li>Leaves die when days get shorter</li><li>Winter is a good time to replant</li></ul><h4>Water</h4><ul><li>Distilled or rain water <ol><li>Avoid tap water, bottled water and filtered water</li><li>Avoid fertiliser for similar reasons</li></ol></li></ul></div>", 
                             "images" : [] 
                         },
                         {
@@ -725,7 +846,7 @@
             ]
         }, 
         {
-            "name": "Nepenthes", 
+            "name": "Nepenthes Ventrata", 
             "publish": true,
             "introduction": "This is another carnivorous plant, and though it is also sometimes referred to as a pitcher plant it is a different species than Sarracenias. These plants are native to Asia and can grow in a variety of areas. These plants use a similar yet also unique way to catch their prey. This is a species I always wanted to have! I got my first Nepenthes in early 2023, it's still alive and seems to be doing well.", 
             "tags": [],
@@ -774,12 +895,12 @@
                     "blurbs": [
                         {
                             "title": "What is light?", 
-                            "text": "", 
+                            "text": "https://lightbulbexpert.com/what-spectrum-of-light-do-leds-produce/", 
                             "images" : [] 
                         }, 
                         {
                             "title": "What is an LED?", 
-                            "text": "", 
+                            "text": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7349540/#:~:text=What%20is%20commonly%20known%20as,as%20shown%20in%20Figure%202.&text=Emission%20spectrum%20RGB%2DLED", 
                             "images" : [] 
                         }, 
                         {
@@ -844,6 +965,40 @@
                 }
             ]
         }, 
+        {
+            "name": "Ludum Dare 2022", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Fall 2022, Personal Project", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Rapid Exploring Random Trees", 
             "publish": true,
