@@ -4,8 +4,6 @@ import { format } from 'react-string-format';
 
 import Data from './data/data'
 
-// import Accordion from 'react-bootstrap/Accordion'; // for projects, https://react-bootstrap.github.io/docs/components/accordion/
-// import Carousel from 'react-bootstrap/Carousel'; // for images, https://react-bootstrap.github.io/docs/components/carousel
 
 
 
@@ -102,7 +100,14 @@ function create_element(dict, index) {
           element_html = format("{0}<div className=\"blurb_div\">", element_html);
           element_html = format("{0}<ul>", element_html, "Components");
           for (let component = 0; component < dict[index]["iterations"][iteration]["components"].length; component++) {
-            element_html = format("{0}<li><a href=\"{1}\">{2}</a></li>", element_html, dict[index]["iterations"][iteration]["components"][component]["link"], dict[index]["iterations"][iteration]["components"][component]["text"]);
+
+            // if components changed over iterations use "old_link" and "old_text"
+            if (dict[index]["iterations"][iteration]["components"][component]["old_text"] === "") {
+              element_html = format("{0}<li><a href=\"{1}\">{2}</a></li>", element_html, dict[index]["iterations"][iteration]["components"][component]["link"], dict[index]["iterations"][iteration]["components"][component]["text"]);
+            } else {
+              element_html = format("{0}<li><strike><a href=\"{1}\">{2}</a></strike> → <a href=\"{3}\">{4}</a></li>", element_html, dict[index]["iterations"][iteration]["components"][component]["old_link"], dict[index]["iterations"][iteration]["components"][component]["old_text"], dict[index]["iterations"][iteration]["components"][component]["link"], dict[index]["iterations"][iteration]["components"][component]["text"]);
+            }
+
           }
           element_html = format("{0}</ul></div>", element_html);  // close iteration_div
         }

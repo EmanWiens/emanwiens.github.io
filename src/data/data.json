@@ -15,27 +15,39 @@
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
-                            "text": "Jada Toys -2015 Dodge Challenger SRT Hellcat"
+                            "text": "Jada Toys -2015 Dodge Challenger SRT Hellcat", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/", 
-                            "text": "Raspberry PI Model B+"
+                            "text": "Raspberry PI Model B+", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1", 
-                            "text": "L298N Module H Bridge Driver"
+                            "text": "L298N Module H Bridge Driver", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.canadiantire.ca/en/pdp/bluehive-5300-mah-power-bank-compatible-with-ipods-iphones-smartphones-cameras-and-most-small-mobile-devices-0355270p.html#srp", 
-                            "text": "Phone power bank"
+                            "text": "Phone power bank", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.amazon.ca/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1", 
-                            "text": "Female to female connectors"
+                            "text": "Female to female connectors", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.xbox.com/en-CA/accessories/controllers/xbox-wireless-controller", 
-                            "text": "Xbox one controller"
+                            "text": "Xbox one controller", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -81,11 +93,74 @@
                 {
                     "title": "Iteration 2:",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "In the previous iteration I realized that the motor controller is too weak. In this iteration, I want to solve the power problem which likely will include the motor controller as well as batteries. Additionally, for what I am running the Raspberry Pi 3B+ is too large.",
+                    "components": [
+                        {
+                            "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
+                            "text": "Jada Toys -2015 Dodge Challenger SRT Hellcat", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html", 
+                            "text": "Raspberry PI Pico W", 
+                            "old_link": "https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/", 
+                            "old_text": "Raspberry PI Model B+"
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B07D2948RZ/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
+                            "text": "DBH-1A Dual-Channel H Bridge Motor Driver Board Module", 
+                            "old_link": "https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1", 
+                            "old_text": "L298N Module H Bridge Driver"
+                        },
+                        {
+                            "link": "", 
+                            "text": "18650 Batteries", 
+                            "old_link": "https://www.canadiantire.ca/en/pdp/bluehive-power-bank-5300-mah-0355270p.html#srp", 
+                            "old_text": "Phone power bank"
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1", 
+                            "text": "Female to female connectors", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "", 
+                            "text": "Xbox one controller ", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/dp/B09Z6D4Z2L?psc=1&ref=ppx_yo2ov_dt_b_product_details", 
+                            "text": "18650 battery holder", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Testing DBH-1A", 
+                            "text": "Given that the large motor takes around 15A and the L298N has a maximum current of around 2A, we need to upgrade to carry that level of current. For this, I will test the DBH-1A which is rated for up to 30A.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                },
+                {
+                    "title": "Iteration 3:",
+                    "publish": false,
+                    "introduction": "I want to use a stronger chip for ",
                     "components": [
                         {
                             "link": "", 
-                            "text": ""
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -120,15 +195,21 @@
                     "components": [
                         {
                             "link": "https://www.boschtools.com/ca/en/", 
-                            "text": "14.4v Bosch Brute drill"
+                            "text": "14.4v Bosch Brute drill", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "", 
-                            "text": "Batteries"
+                            "text": "Batteries", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "", 
-                            "text": "Battery charger"
+                            "text": "Battery charger", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -173,15 +254,21 @@
                     "components": [
                         {
                             "link": "https://www.amazon.ca/gp/product/B078T7J3SF/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
-                            "text": "12v Thermoelectric Cooler"
+                            "text": "12v Thermoelectric Cooler", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "", 
-                            "text": "12v computer fan"
+                            "text": "12v computer fan", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "https://www.amazon.ca/gp/product/B091GGVS9Z/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
-                            "text": "USB-C with Power Trigger"
+                            "text": "USB-C with Power Trigger", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -201,7 +288,7 @@
         }, 
         {
             "name": "Plant camera", 
-            "publish": true,
+            "publish": false,
             "introduction": "", 
             "tags": [],
             "images": [
@@ -220,7 +307,9 @@
                     "components": [
                         {
                             "link": "", 
-                            "text": ""
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -272,7 +361,9 @@
                     "components": [
                         {
                             "link": "https://www.amazon.ca/dp/B011NSX27A?ref=ppx_yo2ov_dt_b_fed_asin_title", 
-                            "text": "Bluetooth OBD II Scanner"
+                            "text": "Bluetooth OBD II Scanner", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -306,11 +397,15 @@
                     "components": [
                         {
                             "link": "https://www.brother.ca/en/p/HL2040", 
-                            "text": "Brother HL-2040 Personal Laser Printer"
+                            "text": "Brother HL-2040 Personal Laser Printer", 
+                            "old_link": "", 
+                            "old_text": ""
                         }, 
                         {
                             "link": "https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/", 
-                            "text": "Raspberry Pi 3B+"
+                            "text": "Raspberry Pi 3B+", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -423,7 +518,9 @@
                     "components": [
                         {
                             "link": "", 
-                            "text": ""
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -462,7 +559,9 @@
                     "components": [
                         {
                             "link": "", 
-                            "text": ""
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
                         }
                     ],
                     "blurbs": [
@@ -622,42 +721,6 @@
                             ] 
                         }
                     ]
-                }, 
-                {
-                    "title": "Sarracenia Farnhamii",
-                    "publish": true,
-                    "introduction": "",
-                    "components": [],
-                    "blurbs": [
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }
-                    ]
-                }, 
-                {
-                    "title": "Sarracenia purpurea",
-                    "publish": true,
-                    "introduction": "",
-                    "components": [],
-                    "blurbs": [
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }
-                    ]
                 }
             ]
         }, 
@@ -706,7 +769,7 @@
                 {
                     "title": "Iteration 1: what is a grow light",
                     "publish": true,
-                    "introduction": "Since I am not even sure what makes a grow light different from a regular light, I first need to find that out. This means that I will also need to know more about <b>light sources</b> such as <b>LEDs</b>, <b>electromagnetic waves</b>, a little bit of <b>colour theory</b>, and of course <b>biology</b> of plants.",
+                    "introduction": "Since I am not even sure what makes a grow light different from a regular light, I first need to find that out. This means that I will also need to know more about <b>light sources</b> such as <b>LEDs</b> and, <b>electromagnetic waves</b>.",
                     "components": [],
                     "blurbs": [
                         {

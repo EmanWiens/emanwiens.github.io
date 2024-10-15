@@ -19,7 +19,9 @@
             "components": [
                 {
                     "link": "", 
-                    "text": ""
+                    "text": "", 
+                    "old_link": "", 
+                    "old_text": ""
                 }
             ],
             "blurbs": [
