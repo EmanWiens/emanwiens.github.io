@@ -108,12 +108,12 @@ const render_iteration = (iteration_dict, index) => {
 
   var render_components = null; 
   if (iteration_dict[index]["components"].length >= 1) {
-    <div className="components_div">
+    render_components = (<div className="components_div">
       <h4>Components</h4>
       <ul>
         {component_elements}
       </ul>
-    </div>
+    </div>); 
   }
 
   return (
