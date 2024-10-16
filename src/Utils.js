@@ -75,6 +75,120 @@ function map_images(name) {
 
 
 // create pages ---------------------------------------------------------------------------------------------------------------------
+const render_element = (dict, index) => {
+  var iteration_elements = []; 
+
+  for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
+    if (dict[index]["iterations"][iteration]["publish"] === true) {
+      iteration_elements.push(render_iteration(dict[index]["iterations"], iteration)); 
+    }
+  }
+
+  return (
+    <div className="project_div">
+      <h2>{dict[index]['name']}</h2>
+      <p>{dict[index]["introduction"]}</p>
+
+      {iteration_elements}
+    </div>
+  ); 
+}
+
+const render_iteration = (iteration_dict, index) => {
+  var component_elements = []; 
+  var blurb_elements = []; 
+
+  for (let component = 0; component < iteration_dict[index]["components"].length; component++) {
+    component_elements.push(render_component(iteration_dict[index]["components"], component)); 
+  }
+
+  for (let blurb = 0; blurb < iteration_dict[index]["blurbs"].length; blurb++) {
+    blurb_elements.push(render_blurb(iteration_dict[index]["blurbs"], blurb)); 
+  }
+
+  return (
+    <div className="iteration_div">
+      <div className="iteration_header_div">
+        <h3>{iteration_dict[index]["title"]}</h3>
+        <p>{iteration_dict[index]["introduction"]}</p>
+      </div>
+
+      <div className="components_div">
+        <h4>Components</h4>
+        <ul>
+          {component_elements}
+        </ul>
+      </div>
+
+      <div className="blurbs_div">
+        {blurb_elements}
+      </div>
+    </div>
+  );
+}
+
+const render_component = (component_dict, index) => {
+  if (component_dict[index]["old_text"] === "") {
+    return (<li><a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>); 
+  } else {
+    return (<li><strike><a href={component_dict[index]["old_link"]}>{component_dict[index]["old_text"]}</a></strike> → <a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>); 
+  }
+}
+
+const render_blurb = (blurb_dict, index) => {
+  var right_blurb = null; 
+  var left_blurb = null; 
+  var whole_blurb = null; 
+  var code = false; 
+
+  if (blurb_dict[index]["images"].length >= 1) {
+    right_blurb = (
+      <div className="right_blurb_item">
+        <img src={map_images(blurb_dict[index]["images"][0]["name"])} alt={blurb_dict[index]["alt"]} />
+      </div>
+    ); 
+
+    left_blurb = (
+      <div className="left_blurb_item">
+        <p>{parse(blurb_dict[index]["text"])}</p>
+      </div>
+    ); 
+  } else if ("code" in blurb_dict[index]) {
+    right_blurb = (
+      <div className="right_blurb_item code">
+        {parse(blurb_dict[index]["code"])}
+      </div>
+    ); 
+
+    left_blurb = (
+      <div className="left_blurb_item">
+        <p>{parse(blurb_dict[index]["text"])}</p>
+      </div>
+    ); 
+  } else if (blurb_dict[index]["images"].length === 0) {
+    whole_blurb = (
+      <div className="whole_blurb_item">
+        <p>{parse(blurb_dict[index]["text"])}</p>
+      </div>
+    ); 
+  }
+
+  return (
+    <>
+      <h4>{blurb_dict[index]["title"]}</h4>
+
+      <div className="blurb_div">
+        {left_blurb}
+
+        {right_blurb}
+        
+        {whole_blurb}
+      </div>
+    </>
+  ); 
+}
+
+
 function create_element(dict, index) {
   var element_html = ""; 
   var path; 
@@ -95,10 +209,11 @@ function create_element(dict, index) {
         element_html = format("{0}<p>{1}</p>", element_html, dict[index]["iterations"][iteration]["introduction"]);
 
         // add components list 
-        if (dict[index]["iterations"][iteration]["components"].length >= 1){
+        if (dict[index]["iterations"][iteration]["components"].length >= 1) {
           element_html = format("{0}<h4>{1}</h4>", element_html, "Components");
           element_html = format("{0}<div className=\"blurb_div\">", element_html);
           element_html = format("{0}<ul>", element_html, "Components");
+
           for (let component = 0; component < dict[index]["iterations"][iteration]["components"].length; component++) {
 
             // if components changed over iterations use "old_link" and "old_text"
@@ -224,6 +339,20 @@ export const create_programming_page = () => {
   return (
     <>
       {parse(programming_html)}
+    </>
+  );
+}
+
+export const test_render = () => {
+  var elements = []; 
+
+  for (let test_counter = 0; test_counter < Data['electronics'].length; test_counter++) {
+    elements.push(render_element(Data["electronics"], test_counter)); 
+  }
+
+  return (
+    <>
+      {elements}
     </>
   );
 }
