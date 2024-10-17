@@ -7,6 +7,7 @@
 `npm install react-router-dom` <br />
 `npm install html-react-parser`<br />
 `npm install react-string-format`<br />
+`npm install react-accessible-accordion`<br />
 <br />
  
 A tutorial on how to make responsive navigation bars

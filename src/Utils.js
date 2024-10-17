@@ -1,6 +1,14 @@
 import React from 'react';
 import parse from "html-react-parser" 
-import { format } from 'react-string-format';
+
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel,
+} from 'react-accessible-accordion'; // TODO in future use this (https://www.npmjs.com/package/react-accessible-accordion) to make collapsible iterations 
+import Carousel from 'react-bootstrap/Carousel'; // TODO in future use this (https://www.npmjs.com/package/react-bootstrap-carousel) to make collapsible iterations 
 
 import Data from './data/data'
 
@@ -87,7 +95,7 @@ const render_element = (dict, index) => {
   return (
     <div className="project_div">
       <h2>{dict[index]['name']}</h2>
-      <p>{dict[index]["introduction"]}</p>
+      <p>{parse(dict[index]["introduction"])}</p>
 
       {iteration_elements}
     </div>
@@ -120,7 +128,7 @@ const render_iteration = (iteration_dict, index) => {
     <div className="iteration_div">
       <div className="iteration_header_div">
         <h3>{iteration_dict[index]["title"]}</h3>
-        <p>{iteration_dict[index]["introduction"]}</p>
+        <p>{parse(iteration_dict[index]["introduction"])}</p>
       </div>
 
       {render_components}
