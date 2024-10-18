@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.c97a0826.js",
-    "static/js/453.f57ff242.chunk.js": "./static/js/453.f57ff242.chunk.js",
+    "main.js": "./static/js/main.ca4f0425.js",
+    "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
     "static/media/sarracenia_young.jpg": "./static/media/sarracenia_young.64eb1352ff0010d776cf.jpg",
     "static/media/sarracenia_roots.jpg": "./static/media/sarracenia_roots.7949c8d8619a6036a42f.jpg",
     "static/media/walk_around3D.gif": "./static/media/walk_around3D.6b634505ac5a401e6948.gif",
     "static/media/aco.gif": "./static/media/aco.1fc6083a275c0e86a3bd.gif",
+    "static/media/uv_index.png": "./static/media/uv_index.f26cd9c794f478d0848b.png",
     "static/media/rc_car_it_1_2.jpg": "./static/media/rc_car_it_1_2.1eb6d1093cbf58f631a2.jpg",
     "static/media/hackmaster.jpg": "./static/media/hackmaster.eac1d3952bf8e774563a.jpg",
     "static/media/rc_car_it_1_1.jpg": "./static/media/rc_car_it_1_1.3212927e1edf0fbdb588.jpg",
@@ -20,15 +21,16 @@
     "static/media/rbg_led_spectrum.jpg": "./static/media/rbg_led_spectrum.dd1479e7d07ca6e4ef44.jpg",
     "static/media/planet_sim.gif": "./static/media/planet_sim.824320077f6277743264.gif",
     "static/media/environ_engine.gif": "./static/media/environ_engine.d9788fe3b0ced93cafad.gif",
+    "static/media/full_spectrum_with_UV.png": "./static/media/full_spectrum_with_UV.98cdfeb98788feb570f9.png",
     "static/media/chlorophyll_spectrum.jpg": "./static/media/chlorophyll_spectrum.d688c22ab3744d797931.jpg",
     "static/media/least_square_segression.png": "./static/media/least_square_segression.7fdfface43a52beca5d1.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.c97a0826.js.map": "./static/js/main.c97a0826.js.map",
-    "453.f57ff242.chunk.js.map": "./static/js/453.f57ff242.chunk.js.map"
+    "main.ca4f0425.js.map": "./static/js/main.ca4f0425.js.map",
+    "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.c97a0826.js"
+    "static/js/main.ca4f0425.js"
   ]
 }
