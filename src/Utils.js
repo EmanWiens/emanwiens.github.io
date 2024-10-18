@@ -37,6 +37,8 @@ import sunlight_spectrum from './images/sunlight_spectrum.png'
 import chlorophyll_spectrum from './images/chlorophyll_spectrum.jpg'
 import led_spectral_graphs from './images/led_spectral_graphs.jpg'
 import rbg_led_spectrum from './images/rbg_led_spectrum.jpg'
+import full_spectrum_with_UV from './images/full_spectrum_with_UV.png'
+import uv_index from './images/uv_index.png'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -85,6 +87,10 @@ function map_images(name) {
     return rbg_led_spectrum;
   } else if (led_spectral_graphs.includes(name)) {
     return led_spectral_graphs;
+  } else if (uv_index.includes(name)) {
+    return uv_index;
+  } else if (full_spectrum_with_UV.includes(name)) {
+    return full_spectrum_with_UV;
   } else {
     return null;
   }

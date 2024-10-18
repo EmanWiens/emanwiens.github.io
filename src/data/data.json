@@ -901,7 +901,31 @@
                                     "source": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7349540/#:~:text=What%20is%20commonly%20known%20as,as%20shown%20in%20Figure%202.&text=Emission%20spectrum%20RGB%2DLED"
                                 }
                             ] 
-                        }, 
+                        },
+                        {
+                            "title": "Infrared light", 
+                            "text": "On the larger wavelengths we have infrared light. Infrared is also sometimes referred to as heat since that is how we experience it. This can be done through light bulbs or through heat elements. Plants do not use infrared diectly, but rather rely on the heat to keep them alive. However, temperature plays a role in a plants growth as well as some temperatures promote growth, while others do not. There is an extensive article about this by <a href=\"https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.577235/full\">Kinuka Ohtaka et al. in a study about how day and night temperatures promote tomato seedling growth.</a>. In short, the changes in temperature will affect growth as plants have optimal ranges of growth. When plants experience high temperatures they will be stressed, while low temperatures makes them go dormant. Note, plants will stop growing after a certain point but it is not going to be harmful and may even be beneficial for the plant to \"rest\". Any plants I have in the house grow real slow, as soon as I put them outside they shoot up and I admit that light is likely a factor but temperture would be as well.", 
+                            "images" : [
+                                {
+                                    "name": "full_spectrum_with_UV", 
+                                    "type": "png", 
+                                    "alt": "The full light spectrum including UV and infrared.", 
+                                    "source": "https://www.researchgate.net/figure/Electromagnetic-spectrum-where-different-types-of-electromagnetic-radiation-are-depi-V-UV_fig1_363229158"
+                                }
+                            ] 
+                        },
+                        {
+                            "title": "Ultraviolet light", 
+                            "text": "On the other side of the spectrum, we have UV light. This light has high energy and is even warned to be dangerous for humans, especially your eyes and skin. Most if the higher energy UV rays, including UV-C and UV-B, are filtered out by the atmosphere leaving mostly UV-A with a little UV-B rays. According to <a href=\"https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.00541/full\">Laura Llorens et al. in Editorial: Ultraviolet Radiation: Friend or Foe for Plants?</a>, UV-A and UV-B light is important for certain developments in plants. UV light can be harmful in large doses but plants have adapted to these rays, and they should not be cosnidered as a regulatory stiumulus rather than a stressor. Even UV within the range of 385 nm increased plant growth. <a href=\"https://hydrobuilder.com/learn/uv-light-for-plants/\">Hydrobuilder.com</a> argues that they increase resitance to disease due to the ability to create a larger variety of proteins. I am not a chemist, but this makes sense to me as there is always the <a href=\"https://chem.libretexts.org/Bookshelves/General_Chemistry/Book%3A_Structure_and_Reactivity_in_Organic_Biological_and_Inorganic_Chemistry_(Schaller)/IV%3A__Reactivity_in_Organic_Biological_and_Inorganic_Chemistry_2/01%3A_Reaction_Kinetics/1.03%3A_Activation_Barriers\">activation energy</a> to a chemical reaction, or in other words the amount of energy required to start a reaction. <br /><br />The UV index will also change throughout the year just as the infrared (heat) does. There is chart for NYC UV index, but it provides a good reference to understanding that UV index changes intensity throughout the year and what the average UV index in a day looks like. Right now, I am interested in the shape of the slope as well.", 
+                            "images" : [
+                                {
+                                    "name": "uv_index", 
+                                    "type": "png", 
+                                    "alt": "The UV index for each month of the year.", 
+                                    "source": "https://www.grassrootshealth.net/wp-content/uploads/2019/05/NYC-UV-Chart.pdf"
+                                }
+                            ] 
+                        },
                         {
                             "title": "What is a grow light?", 
                             "text": "A Grow light is a light made to mimic the full color spectrum, especially the colors needed to make chlorophyll. There are many different methods and strategies that different companies seem to employ to achieve to make full color spectrum lights.", 
