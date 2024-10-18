@@ -33,6 +33,10 @@ import planet_sim from './images/planet_sim.gif'
 import rert from './images/rert.gif'
 import saving_your_bacon from './images/saving_your_bacon.png'
 import walk_around3D from './images/walk_around3D.gif'
+import sunlight_spectrum from './images/sunlight_spectrum.png'
+import chlorophyll_spectrum from './images/chlorophyll_spectrum.jpg'
+import led_spectral_graphs from './images/led_spectral_graphs.jpg'
+import rbg_led_spectrum from './images/rbg_led_spectrum.jpg'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -73,6 +77,14 @@ function map_images(name) {
     return saving_your_bacon;
   } else if (walk_around3D.includes(name)) {
     return walk_around3D;
+  } else if (sunlight_spectrum.includes(name)) {
+    return sunlight_spectrum;
+  } else if (chlorophyll_spectrum.includes(name)) {
+    return chlorophyll_spectrum;
+  } else if (rbg_led_spectrum.includes(name)) {
+    return rbg_led_spectrum;
+  } else if (led_spectral_graphs.includes(name)) {
+    return led_spectral_graphs;
   } else {
     return null;
   }
@@ -117,6 +129,7 @@ const render_iteration = (iteration_dict, index) => {
   var render_components = null; 
   if (iteration_dict[index]["components"].length >= 1) {
     render_components = (<div className="components_div">
+      <br />
       <h4>Components</h4>
       <ul>
         {component_elements}
@@ -180,13 +193,14 @@ const render_blurb = (blurb_dict, index) => {
   } else if (blurb_dict[index]["images"].length === 0) {
     whole_blurb = (
       <div className="whole_blurb_item">
-        <p>{parse(blurb_dict[index]["text"])}</p>
+        {parse(blurb_dict[index]["text"])}
       </div>
     ); 
   }
 
   return (
     <>
+      <br />
       <h4>{blurb_dict[index]["title"]}</h4>
 
       <div className="blurb_div">

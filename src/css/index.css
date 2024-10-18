@@ -99,6 +99,10 @@ img {
 .right_blurb_item.code {
   min-width: 66%;
 }
+
+.whole_blurb_item {
+  width: 100%; 
+}
 /* end content ----------------------------------------------------------------------------- */
 
 
@@ -118,7 +122,7 @@ img {
 nav {
   height: 70px;
   background: #101025;
-  color: rgb(220, 220, 220);
+  color: #DCDCDC;
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
