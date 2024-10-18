@@ -372,6 +372,48 @@
                     ]
                 }
             ]
+        }, 
+        {
+            "name": "Solar Power", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "",
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
         }
     ],
 
@@ -392,41 +434,7 @@
 
 
     "guides": [
-        {
-            "name": "Biosphere", 
-            "publish": true,
-            "introduction": "", 
-            "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
-            "iterations": [
-                {
-                    "title": "",
-                    "publish": true,
-                    "introduction": "I really like the idea of self-sustainability, which is also probably why I like renewable energy! The concept of putting plants in a closed jar still amazes me and I have wanted to try making some in the past with little success. Of all the ones I have made only two have survived so far as they usually end up being taken over by mold. I wanted to document here the guides and resources I have found and for the next ones I make, I want to document the process so that hopefully I can replicate it in the future.",
-                    "components": [],
-                    "blurbs": [
-                        {
-                            "title": "", 
-                            "text": "<div style=\"display:block\"><h4>Basic setup</h4><p>Info from <a href=\"http://www2.nau.edu/lrm22/lessons/bottle_biology/\">nau.edu lessons bottle_biology</a>.<ul><li>2-5 cm gravel or sand (¾ depth of substrate)</li><li>5-10 cm well draining soil<ul><li>Cactus soil works well</li></ul></li><li>Plants that can handle warm, humid environments</li><li>Can add bugs</li><li>Add water so that gravel is “fairly saturated”</li></ul><a href=\"https://www.youtube.com/watch?v=7Lg4tzkHgVo&ab_channel=SerpaDesign\">Making a Bottle Terrarium + Closed Terrarium Basics</a><ul><li>For outside soil Bake for 15-20 minutes at 350</li></ul><br/><h4> Soil</h4><a href=\"https://www.youtube.com/watch?v=bmSr17J2jho&ab_channel=SerpaDesign\">Tropical Terrarium Substrate Mix Terrarium Tips</a><ul><li>Soil base<ul><li>Coco fibre, dirt, potting soil</li><li>Do NOT use peat moss</li></ul></li><li>Fine bark<ul><li>Any bark that is not died</li></ul></li><li>Sphagnum moss:<ul><li>Helps retain humidity</li></ul></li><li>Sand: Any sand works</li><li>1 part soil, 1 part fine bark, 2 parts moss, 1 part sand (little less is better)</li></ul><br/></div><div style=\"display:block\"><h4>Springtails</h4><ul><li>Not necessary but preferred</li><li>Solve mold problems</li><li>Helps with decomposition</li><li>Soil from outside that’s not backed will result in springtails</li><li>Watering<ul><li>Distilled water</li><li>Too much: condensation on glass the whole day<ul><li>Wipe it off</li></ul></li><li>Good: condensation in morning and evening</li></ul></li></ul><a href=\"https://www.youtube.com/watch?v=c7UgKFtSjD0&ab_channel=SerpaDesign\">All About Springtails Care, Culturing, Seeding & More</a><ul><li>High moisture</li><li>Organic debris<ul><li>Soil, leaf litter, lichen, bark, decaying plants</li></ul></li><li>Cannot fly, but can jump</li><li>Diet: mold, fungi, algae, pollen, and decaying matter</li><li>Known as bioactive terrarium</li><li>Also: isopods and earth worms</li><li>Shallow container that closes tightly</li><li>Medium: Charcoal, bonfire coals, activated charcoal<ul><li>Rinse the charcoal with hot water</li><li>Lumpwood charcoal sold at the hardware store</li></ul></li><li>Half to one inch of water in the container</li><li>Get starter culture online (can do it yourself)</li><li>Food: Nutritious yeast flakes<ul><li>Uncooked rice (will mold, they’ll eat the mold)</li></ul></li><li>Open regularly to let air flow in</li><li>Established cultures can be used a couple times a week<ul><li>Takes about 2 to 4 weeks to establish</li></ul></li></ul><br/><h4> Jars</h4><ul><li>Mason jars don’t work => meant to let air escape</li><li>Some say it works fine…</li><li>Grab some pond water/dirt<ul><li>Grab some algae</li><li>Close it</li></ul></li></ul></p></div>", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }
-                    ]
-                }
-            ]
-        },
+        
         {
             "name": "Car OBD II", 
             "publish": true,
@@ -615,7 +623,7 @@
         }, 
         {
             "name": "18650 Lithium ion batteries", 
-            "publish": true,
+            "publish": false,
             "introduction": "", 
             "tags": [],
             "images": [
@@ -673,11 +681,11 @@
                 {
                     "title": "",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "I have a 3D printer and immediately wondered if there was something similar to CUPS and there is. There are a couple of open soure program <a href=\"https://all3dp.com/2/best-octoprint-alternatives/\">alternatives</a> that allow for online slicing and printing, one such program is <a href=\"https://octoprint.org/\">Octoprint</a>.",
                     "components": [
                         {
                             "link": "", 
-                            "text": "", 
+                            "text": "3D printer", 
                             "old_link": "", 
                             "old_text": ""
                         }
@@ -691,103 +699,6 @@
                         {
                             "title": "", 
                             "text": "", 
-                            "images" : [] 
-                        }
-                    ]
-                }
-            ]
-        }, 
-        {
-            "name": "Biosphere", 
-            "publish": false,
-            "introduction": "", 
-            "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
-            "iterations": [
-                {
-                    "title": "",
-                    "publish": true,
-                    "introduction": "",
-                    "components": [
-                        {
-                            "link": "", 
-                            "text": "", 
-                            "old_link": "", 
-                            "old_text": ""
-                        }
-                    ],
-                    "blurbs": [
-                        {
-                            "title": "", 
-                            "text": "https://octoprint.org/ https://all3dp.com/2/best-octoprint-alternatives/", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }
-                    ]
-                }
-            ]
-        }, 
-        {
-            "name": "Fertilizer", 
-            "publish": true,
-            "introduction": "", 
-            "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
-            "iterations": [
-                {
-                    "title": "",
-                    "publish": true,
-                    "introduction": "",
-                    "components": [],
-                    "blurbs": [
-                        {
-                            "title": "What is fertiliser?", 
-                            "text": "Plants need fertiliser to grow.” We’ve all heard this statement at one point or another but what does that mean? Well, I am here to explain that. Instead of it meaning, “Go to the nearest plant store or supermarket and buy some general purpose fertiliser.” What it actually means is that the plant needs minerals. Much like your body needs certain minerals for growth and maintenance, plants do as well. So really, when talking about fertiliser we are talking about minerals that the plants need to grow. ", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "What are minerals?", 
-                            "text": "Luckily, “Minerals are substances that are naturally formed on Earth” - <a href=\"https://www.notion.so/5219da77e2bf4ed5ac900f9ae2182725?pvs=21\">byjus</a>. These minerals are then used by the plants to grow. For example, onions need sulphur in the soil and in return they <a href=\"http://files-do-not-link.udc.edu/docs/causes/online/Onions%209.pdf\">store sulphur in them</a>. Another example is cucumbers, which <a href=\"https://libanswers.nybg.org/faq/223327#:~:text=Cucumbers%20need%20moderate%20nitrogen%20and,4%2D6)%20is%20good.\">need potassium in the soil to grow</a> and guess what’s <a href=\"https://ingenaes.illinois.edu/wp-content/uploads/ING-Info-Sheet-2018_05-Cucumber-nutritional-value-Kowalewska.pdf\">inside cucumbers, potassium</a>, among many other minerals. Coincidentally, from plants is where we get a lot of our minerals, since we <a href=\"https://www.notion.so/Mental-Health-ea7d9ba33d7e413cb5a7ac7096ab66bc?pvs=21\">cannot digest dirt</a>. <br /><br />The problem is that when we are farming plants in a small-ish area and they use up the same minerals, at some point certain minerals will deplete and there are two major ways that we can combat this. The first and easiest, plant other plants in that area. Different plants need different minerals so while one plant may struggle in a particular spot, another plant may thrive. And the second, of course, being that we retrieve those minerals from somewhere and put them in the ground ourselves. However, those minerals are often in some form that plants can absorb and then we call it fertiliser.", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "How do minerals not deplete in nature? ", 
-                            "text": "We have forests that have been standing for hundreds of years, they are still healthy lush plants. Yet, we plant tomatoes in the same bed for a few years and each year the plants do worse and eventually they won’t grow at all… How can that be? Never underestimate the power of an ecosystem. ", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "Where do we find minerals? ", 
-                            "text": "As mentioned, often just putting the pure mineral in the ground will not help the plant. For example, plants need calcium. A huge source is eggshells, so we can crush up the eggshells to a powder and add it to the soil of our plants. At this point, we will have to wait for the calcium to break down first at which point the plant can use it. The breaking down of these minerals can happen in a variety of ways including bacteria, insects, worms, and I’m sure there are more but I don’t know them all. ", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "What minerals do plants need?", 
-                            "text": "There are people far more knowledgeable than me who have worked on this and <a href=\"https://www.dpi.nsw.gov.au/agriculture/soils/soil-testing-and-analysis/plant-nutrients#:~:text=Soil%20is%20a%20major%20source,are%20calcium%2C%20magnesium%20and%20sulfur\">published what they found! :)</a>", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "What is electroculture?", 
-                            "text": "I have heard of this term but I know nothing about it, one of these days I will figure out what it is. ", 
                             "images" : [] 
                         }
                     ]
@@ -994,6 +905,96 @@
                         {
                             "title": "What is a grow light?", 
                             "text": "A Grow light is a light made to mimic the full color spectrum, especially the colors needed to make chlorophyll. There are many different methods and strategies that different companies seem to employ to achieve to make full color spectrum lights.", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Fertilizer", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "",
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "What is fertiliser?", 
+                            "text": "Plants need fertiliser to grow.” We’ve all heard this statement at one point or another but what does that mean? Well, I am here to explain that. Instead of it meaning, “Go to the nearest plant store or supermarket and buy some general purpose fertiliser.” What it actually means is that the plant needs minerals. Much like your body needs certain minerals for growth and maintenance, plants do as well. So really, when talking about fertiliser we are talking about minerals that the plants need to grow. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What are minerals?", 
+                            "text": "Luckily, “Minerals are substances that are naturally formed on Earth” - <a href=\"https://www.notion.so/5219da77e2bf4ed5ac900f9ae2182725?pvs=21\">byjus</a>. These minerals are then used by the plants to grow. For example, onions need sulphur in the soil and in return they <a href=\"http://files-do-not-link.udc.edu/docs/causes/online/Onions%209.pdf\">store sulphur in them</a>. Another example is cucumbers, which <a href=\"https://libanswers.nybg.org/faq/223327#:~:text=Cucumbers%20need%20moderate%20nitrogen%20and,4%2D6)%20is%20good.\">need potassium in the soil to grow</a> and guess what’s <a href=\"https://ingenaes.illinois.edu/wp-content/uploads/ING-Info-Sheet-2018_05-Cucumber-nutritional-value-Kowalewska.pdf\">inside cucumbers, potassium</a>, among many other minerals. Coincidentally, from plants is where we get a lot of our minerals, since we <a href=\"https://www.notion.so/Mental-Health-ea7d9ba33d7e413cb5a7ac7096ab66bc?pvs=21\">cannot digest dirt</a>. <br /><br />The problem is that when we are farming plants in a small-ish area and they use up the same minerals, at some point certain minerals will deplete and there are two major ways that we can combat this. The first and easiest, plant other plants in that area. Different plants need different minerals so while one plant may struggle in a particular spot, another plant may thrive. And the second, of course, being that we retrieve those minerals from somewhere and put them in the ground ourselves. However, those minerals are often in some form that plants can absorb and then we call it fertiliser.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "How do minerals not deplete in nature? ", 
+                            "text": "We have forests that have been standing for hundreds of years, they are still healthy lush plants. Yet, we plant tomatoes in the same bed for a few years and each year the plants do worse and eventually they won’t grow at all… How can that be? Never underestimate the power of an ecosystem. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Where do we find minerals? ", 
+                            "text": "As mentioned, often just putting the pure mineral in the ground will not help the plant. For example, plants need calcium. A huge source is eggshells, so we can crush up the eggshells to a powder and add it to the soil of our plants. At this point, we will have to wait for the calcium to break down first at which point the plant can use it. The breaking down of these minerals can happen in a variety of ways including bacteria, insects, worms, and I’m sure there are more but I don’t know them all. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What minerals do plants need?", 
+                            "text": "There are people far more knowledgeable than me who have worked on this and <a href=\"https://www.dpi.nsw.gov.au/agriculture/soils/soil-testing-and-analysis/plant-nutrients#:~:text=Soil%20is%20a%20major%20source,are%20calcium%2C%20magnesium%20and%20sulfur\">published what they found! :)</a>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "What is electroculture?", 
+                            "text": "I have heard of this term but I know nothing about it, one of these days I will figure out what it is. ", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Biosphere", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "",
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "I really like the idea of self-sustainability, which is also probably why I like renewable energy! The concept of putting plants in a closed jar still amazes me and I have wanted to try making some in the past with little success. Of all the ones I have made only two have survived so far as they usually end up being taken over by mold. I wanted to document here the guides and resources I have found and for the next ones I make, I want to document the process so that hopefully I can replicate it in the future.",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "<div style=\"display:block\"><h4>Basic setup</h4><p>Info from <a href=\"http://www2.nau.edu/lrm22/lessons/bottle_biology/\">nau.edu lessons bottle_biology</a>.<ul><li>2-5 cm gravel or sand (¾ depth of substrate)</li><li>5-10 cm well draining soil<ul><li>Cactus soil works well</li></ul></li><li>Plants that can handle warm, humid environments</li><li>Can add bugs</li><li>Add water so that gravel is “fairly saturated”</li></ul><a href=\"https://www.youtube.com/watch?v=7Lg4tzkHgVo&ab_channel=SerpaDesign\">Making a Bottle Terrarium + Closed Terrarium Basics</a><ul><li>For outside soil Bake for 15-20 minutes at 350</li></ul><br/><h4> Soil</h4><a href=\"https://www.youtube.com/watch?v=bmSr17J2jho&ab_channel=SerpaDesign\">Tropical Terrarium Substrate Mix Terrarium Tips</a><ul><li>Soil base<ul><li>Coco fibre, dirt, potting soil</li><li>Do NOT use peat moss</li></ul></li><li>Fine bark<ul><li>Any bark that is not died</li></ul></li><li>Sphagnum moss:<ul><li>Helps retain humidity</li></ul></li><li>Sand: Any sand works</li><li>1 part soil, 1 part fine bark, 2 parts moss, 1 part sand (little less is better)</li></ul><br/></div><div style=\"display:block\"><h4>Springtails</h4><ul><li>Not necessary but preferred</li><li>Solve mold problems</li><li>Helps with decomposition</li><li>Soil from outside that’s not backed will result in springtails</li><li>Watering<ul><li>Distilled water</li><li>Too much: condensation on glass the whole day<ul><li>Wipe it off</li></ul></li><li>Good: condensation in morning and evening</li></ul></li></ul><a href=\"https://www.youtube.com/watch?v=c7UgKFtSjD0&ab_channel=SerpaDesign\">All About Springtails Care, Culturing, Seeding & More</a><ul><li>High moisture</li><li>Organic debris<ul><li>Soil, leaf litter, lichen, bark, decaying plants</li></ul></li><li>Cannot fly, but can jump</li><li>Diet: mold, fungi, algae, pollen, and decaying matter</li><li>Known as bioactive terrarium</li><li>Also: isopods and earth worms</li><li>Shallow container that closes tightly</li><li>Medium: Charcoal, bonfire coals, activated charcoal<ul><li>Rinse the charcoal with hot water</li><li>Lumpwood charcoal sold at the hardware store</li></ul></li><li>Half to one inch of water in the container</li><li>Get starter culture online (can do it yourself)</li><li>Food: Nutritious yeast flakes<ul><li>Uncooked rice (will mold, they’ll eat the mold)</li></ul></li><li>Open regularly to let air flow in</li><li>Established cultures can be used a couple times a week<ul><li>Takes about 2 to 4 weeks to establish</li></ul></li></ul><br/><h4> Jars</h4><ul><li>Mason jars don’t work => meant to let air escape</li><li>Some say it works fine…</li><li>Grab some pond water/dirt<ul><li>Grab some algae</li><li>Close it</li></ul></li></ul></p></div>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
                             "images" : [] 
                         }
                     ]

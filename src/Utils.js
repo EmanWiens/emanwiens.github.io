@@ -218,7 +218,9 @@ export const create_electronics_page = () => {
   var electronic_elements = []; 
 
   for (let electronics = 0; electronics < Data['electronics'].length; electronics++) {
-    electronic_elements.push(render_element(Data["electronics"], electronics)); 
+    if (Data['electronics'][electronics]["publish"] === true) {
+      electronic_elements.push(render_element(Data["electronics"], electronics)); 
+    }
   }
 
   return (
@@ -232,7 +234,9 @@ export const create_guides_page = () => {
   var guide_elements = []; 
 
   for (let guides = 0; guides < Data['guides'].length; guides++) {
-    guide_elements.push(render_element(Data["guides"], guides)); 
+    if (Data['guides'][guides]["publish"] === true) {
+      guide_elements.push(render_element(Data["guides"], guides)); 
+    }
   }
 
   return (
@@ -246,7 +250,9 @@ export const create_plants_page = () => {
   var plant_elements = []; 
 
   for (let plants = 0; plants < Data['plants'].length; plants++) {
-    plant_elements.push(render_element(Data["plants"], plants)); 
+    if (Data['plants'][plants]["publish"] === true) {
+      plant_elements.push(render_element(Data["plants"], plants)); 
+    }
   }
 
   return (
@@ -260,7 +266,9 @@ export const create_programming_page = () => {
   var programming_elements = []; 
 
   for (let programming_counter = 0; programming_counter < Data['programming'].length; programming_counter++) {
-    programming_elements.push(render_element(Data["programming"], programming_counter)); 
+    if (Data['programming'][programming_counter]["publish"] === true) {
+      programming_elements.push(render_element(Data["programming"], programming_counter)); 
+    }
   }
 
   return (
@@ -269,19 +277,4 @@ export const create_programming_page = () => {
     </>
   );
 }
-
-export const test_render = () => {
-  var elements = []; 
-
-  for (let test_counter = 0; test_counter < Data['electronics'].length; test_counter++) {
-    elements.push(render_element(Data["electronics"], test_counter)); 
-  }
-
-  return (
-    <>
-      {/* {elements} */}
-    </>
-  );
-}
-
 // end create pages -----------------------------------------------------------------------------------------------------------------

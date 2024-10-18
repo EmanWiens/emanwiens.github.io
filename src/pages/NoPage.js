@@ -1,5 +1,4 @@
 import React from 'react';
-import { test_render } from '../Utils';
 
 const NoPage = () => {
   return (
@@ -8,9 +7,6 @@ const NoPage = () => {
         <div className='title_div'>
           <h1>404 page not found :(</h1>
         </div>
-        
-        {test_render()}
-
       </div>
     </div>
   );
