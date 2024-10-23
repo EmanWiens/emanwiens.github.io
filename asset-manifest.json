@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.ca4f0425.js",
+    "main.js": "./static/js/main.b986ce02.js",
     "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
@@ -14,6 +14,7 @@
     "static/media/hackmaster.jpg": "./static/media/hackmaster.eac1d3952bf8e774563a.jpg",
     "static/media/rc_car_it_1_1.jpg": "./static/media/rc_car_it_1_1.3212927e1edf0fbdb588.jpg",
     "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
+    "static/media/dbh_1A.png": "./static/media/dbh_1A.e21f44270cc6eaddc5db.png",
     "static/media/particle_system.gif": "./static/media/particle_system.5c4ddddddda0e7f5423d.gif",
     "static/media/sunlight_spectrum.png": "./static/media/sunlight_spectrum.ed7c2dd3748d528da42c.png",
     "static/media/rert.gif": "./static/media/rert.52279fd9b140dd0175e5.gif",
@@ -24,13 +25,14 @@
     "static/media/full_spectrum_with_UV.png": "./static/media/full_spectrum_with_UV.98cdfeb98788feb570f9.png",
     "static/media/chlorophyll_spectrum.jpg": "./static/media/chlorophyll_spectrum.d688c22ab3744d797931.jpg",
     "static/media/least_square_segression.png": "./static/media/least_square_segression.7fdfface43a52beca5d1.png",
+    "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.ca4f0425.js.map": "./static/js/main.ca4f0425.js.map",
+    "main.b986ce02.js.map": "./static/js/main.b986ce02.js.map",
     "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.ca4f0425.js"
+    "static/js/main.b986ce02.js"
   ]
 }
