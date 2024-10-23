@@ -10,6 +10,7 @@ import {
 } from 'react-accessible-accordion'; // TODO in future use this (https://www.npmjs.com/package/react-accessible-accordion) to make collapsible iterations 
 import Carousel from 'react-bootstrap/Carousel'; // TODO in future use this (https://www.npmjs.com/package/react-bootstrap-carousel) to make collapsible iterations 
 
+
 import Data from './data/data'
 
 
@@ -40,7 +41,6 @@ import rbg_led_spectrum from './images/rbg_led_spectrum.jpg'
 import full_spectrum_with_UV from './images/full_spectrum_with_UV.png'
 import uv_index from './images/uv_index.png'
 // end images -----------------------------------------------------------------------------------------------------------------------
-
 
 
 
