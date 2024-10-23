@@ -47,6 +47,10 @@ import uv_index from './images/uv_index.png'
 
 // start helper functions -----------------------------------------------------------------------------------------------------------
 function map_images(name) {
+  console.log(name); 
+  console.log(saving_your_bacon); 
+  console.log(sunlight_spectrum); 
+
   if (electric_drill_annot.includes(name)) {
     return electric_drill_annot; 
   } else if (rc_car_it_1_1.includes(name)) {
@@ -175,6 +179,7 @@ const render_blurb = (blurb_dict, index) => {
   if (blurb_dict[index]["images"].length >= 1) {
     right_blurb = (
       <div className="right_blurb_item">
+        {console.log(blurb_dict[index]["images"][0]["name"])}
         <img src={map_images(blurb_dict[index]["images"][0]["name"])} alt={blurb_dict[index]["alt"]} />
       </div>
     ); 
