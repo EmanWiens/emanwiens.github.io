@@ -923,7 +923,7 @@
                                     "type": "png", 
                                     "alt": "The UV index for each month of the year.", 
                                     "source": "https://www.grassrootshealth.net/wp-content/uploads/2019/05/NYC-UV-Chart.pdf"
-                                }
+                                } 
                             ] 
                         },
                         {
@@ -937,15 +937,15 @@
         },
         {
             "name": "Fertilizer", 
-            "publish": true,
+            "publish": true, 
             "introduction": "", 
-            "tags": [],
+            "tags": [], 
             "images": [
                 {
                     "name": "", 
                     "type": "", 
-                    "alt": "",
-                    "source": ""
+                    "alt": "", 
+                    "source": "" 
                 }
             ],
             

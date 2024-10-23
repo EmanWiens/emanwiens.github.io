@@ -38,20 +38,19 @@ body {
 
 
 /* Start content --------------------------------------------------------------------------- */
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .content_body {
-  height:auto; 
-  width:70%;
+  height: auto; 
+  width: 70%;
   margin: 0% 0% 0% 15%; 
   padding: 1%; 
 }
 
 img {
-  width:100%;
+  width: 100%;
   border-radius: 10px;
 }
 
