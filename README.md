@@ -10,6 +10,8 @@
 `npm install react-accessible-accordion`<br />
 <br />
  
+heic to jpg use `heif-convert image.HEIC new-image.jpg`
+
 A tutorial on how to make responsive navigation bars
 
 TL;DR <br />

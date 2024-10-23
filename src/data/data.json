@@ -94,7 +94,7 @@
                 {
                     "title": "Iteration 2:",
                     "publish": true,
-                    "introduction": "In the previous iteration I realised that the motor controller is too weak. In this iteration, I want to solve the power problem which likely will include the motor controller as well as batteries. Additionally, for what I am running the Raspberry Pi 3B+ is too large.",
+                    "introduction": "In the previous iteration I realised that the motor controller is too weak. In this iteration, I want to solve the power problem which likely will include the motor controller as well as batteries. Additionally, for what I am running the Raspberry Pi 3B+ is too large so for now we will switch to something smaller.",
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
@@ -141,8 +141,20 @@
                     ],
                     "blurbs": [
                         {
-                            "title": "Testing DBH-1A", 
-                            "text": "Given that the large motor takes around 15A and the L298N has a maximum current of around 2A, we need to upgrade to carry that level of current. For this, I will test the DBH-1A which is rated for up to 30A.", 
+                            "title": "Upgrading motor controll board: DBH-1A Dual-Channel H Bridge Motor Driver", 
+                            "text": "The L298N has a maximum current of around 2A, we need to upgrade to carry that level of current. For this, I will test the DBH-1A which is rated for up to 30A. The documentation for this board is not great, the best I can find is this blury image on <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>. The main idea of how these work is the same, with a couple of differences. <br /><br />The <b>differences</b> are V+ and CT. This board is powered by the power source conneted to it. So, <i><b>V+ is a 5v output</b></i> to power external devices... I found that one out the hard way. According to <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>, CT is \"the drive current\" and the usage is \"<code>CT Output Voltage(V)=Current(A) x 0.155</code>\" to \"do current-limiting processing\". It seems that figuring out what CT is will need some investigating.<br /><br />Otherwise, everything else is similar as the <a href=\"https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1\">L298N Module H Bridge Driver</a>, IN1 and IN2 are the PWM controllers for A and B output channels, respectively. And, EN enables each channel. GND is ground as always.", 
+                            "images" : [
+                                {
+                                    "name": "dbh_1A",
+                                    "type": "png", 
+                                    "alt": "An image of the DHB-1A.",
+                                    "source": "https://wholesaler.alibaba.com/product-detail/DBH-01A-30A-5V-12V-Dual_60297042810.html"
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "Rewiring and writing the code", 
+                            "text": "Since we are using a small compute board we can use the DBH-1A V+ output to power our Raspberry Pi Pico W through the <a href=\"https://penguintutor.com/electronics/pico-power\">VSYS pin</a>. This means that we will not have to have two power sources, one for the computer and one for the motors, like we did in Iteration 1. Note, the Raspberry Pi Pico W can run on a range of 1.8V - 5.5V, since I am using two 18650 batteries in parallel, I could connect the Raspberry Pi Pico W directly to the power source.<br /><br />With regards to the code, we will not have to adjust much from Iteration 1 since, from the programming perspective, we did not really change anything.", 
                             "images" : [] 
                         }, 
                         {
@@ -168,9 +180,7 @@
                         {
                             "title": "", 
                             "text": "", 
-                            "images" : [
-                                
-                            ] 
+                            "images" : [] 
                         }, 
                         {
                             "title": "", 
@@ -1487,5 +1497,4 @@
         }
     ]
 }
-
 

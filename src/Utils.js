@@ -40,6 +40,7 @@ import led_spectral_graphs from './images/led_spectral_graphs.jpg'
 import rbg_led_spectrum from './images/rbg_led_spectrum.jpg'
 import full_spectrum_with_UV from './images/full_spectrum_with_UV.png'
 import uv_index from './images/uv_index.png'
+import dbh_1A from './images/dbh_1A.png'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -95,6 +96,8 @@ function map_images(name) {
     return uv_index;
   } else if (full_spectrum_with_UV.includes(name)) {
     return full_spectrum_with_UV;
+  } else if (dbh_1A.includes(name)) {
+    return dbh_1A;
   } else {
     return null;
   }
