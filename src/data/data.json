@@ -179,7 +179,7 @@
                 },
                 {
                     "title": "Iteration 3:",
-                    "publish": true,
+                    "publish": false,
                     "introduction": "The next phase of this is to put it into a larger RC body to faciliate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power.",
                     "components": [
                         {
@@ -266,14 +266,20 @@
                             "old_text": ""
                         }, 
                         {
-                            "link": "", 
-                            "text": "Batteries", 
+                            "link": "https://www.aliexpress.com/item/1005007384898880.html?mp=1", 
+                            "text": "2S 18650 Batteries", 
+                            "old_link": "https://en.wikipedia.org/wiki/18650_battery", 
+                            "old_text": "18650 Batteries"
+                        },
+                        {
+                            "link": "https://www.aliexpress.com/item/1005006906778570.html?spm=a2g0o.cart.0.0.897038da3j0e1B&mp=1", 
+                            "text": "2S 18650 Charger", 
                             "old_link": "", 
                             "old_text": ""
-                        }, 
+                        },
                         {
-                            "link": "", 
-                            "text": "Battery charger", 
+                            "link": "https://www.aliexpress.com/item/1005006997248362.html?spm=a2g0o.cart.0.0.4a2b38da7uPQfE&mp=1", 
+                            "text": "USB-C decoy with Power Delivery (PD)", 
                             "old_link": "", 
                             "old_text": ""
                         }
