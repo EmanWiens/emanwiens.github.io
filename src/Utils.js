@@ -41,8 +41,8 @@ import rbg_led_spectrum from './images/rbg_led_spectrum.jpg'
 import full_spectrum_with_UV from './images/full_spectrum_with_UV.png'
 import uv_index from './images/uv_index.png'
 import dbh_1A from './images/dbh_1A.png'
+import rc_car_it_2 from './images/rc_car_it_2.jpg'
 // end images -----------------------------------------------------------------------------------------------------------------------
-
 
 
 
@@ -98,10 +98,13 @@ function map_images(name) {
     return full_spectrum_with_UV;
   } else if (dbh_1A.includes(name)) {
     return dbh_1A;
+  } else if (rc_car_it_2.includes(name)) {
+    return rc_car_it_2;
   } else {
     return null;
   }
 }
+
 // end helper functions -------------------------------------------------------------------------------------------------------------
 
 
