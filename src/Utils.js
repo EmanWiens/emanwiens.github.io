@@ -19,8 +19,7 @@ import Data from './data/data'
 
 // start images ---------------------------------------------------------------------------------------------------------------------
 import electric_drill_annot from './images/electric_drill_annot.jpg'
-import rc_car_it_1_1 from './images/rc_car_it_1_1.jpg'
-import rc_car_it_1_2 from './images/rc_car_it_1_2.jpg'
+import rc_car_it_1 from './images/rc_car_it_1.jpg'
 import sarracenia_roots from './images/sarracenia_roots.jpg'
 import sarracenia_young from './images/sarracenia_young.jpg'
 import sarracenia_farnhamii from './images/sarracenia_farnhamii.jpg'
@@ -54,10 +53,8 @@ function map_images(name) {
 
   if (electric_drill_annot.includes(name)) {
     return electric_drill_annot; 
-  } else if (rc_car_it_1_1.includes(name)) {
-    return rc_car_it_1_1;
-  } else if (rc_car_it_1_2.includes(name)) {
-    return rc_car_it_1_2;
+  } else if (rc_car_it_1.includes(name)) {
+    return rc_car_it_1;
   } else if (sarracenia_roots.includes(name)) {
     return sarracenia_roots;
   } else if (sarracenia_young.includes(name)) {
