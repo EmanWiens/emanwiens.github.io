@@ -409,8 +409,8 @@
         }, 
         {
             "name": "Local backups", 
-            "publish": false,
-            "introduction": "", 
+            "publish": true,
+            "introduction": "The basic idea is that this would be like a home cloud where the drives and computer are within the home network. This would allow anyone connected to the home network to also access the data, or in other words I want to make a <a href=\"https://www.raspberrypi.com/tutorials/nas-box-raspberry-pi-tutorial/\">Raspberry Pi powered Network-attached storage (NAS)</a>. I mostly wanted to use this for family photos, so everyone can see the photos and share theirs. There are three main components to this project. First, we want to mirror the drives to make duplicate copies. Second, we need to find some cloud-like open-source software to host the drives. Lastly, we want to be able to run system analysis such as detecting drive failures.", 
             "tags": [],
             "images": [
                 {
@@ -423,25 +423,48 @@
             
             "iterations": [
                 {
-                    "title": "",
+                    "title": "Automatically Mirroring Drives",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "First, I want to make sure that the data is backed up properly by creating a backup. So, one drive will be accessible while the other will be a mirror. This is to prevent accidental deletions by users and avoids loss of a drive fails.",
                     "components": [
                         {
-                            "link": "", 
-                            "text": "", 
+                            "link": "https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/", 
+                            "text": "Raspberry Pi 3B+", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }, 
+                        {
+                            "link": "https://www.amazon.ca/WESTERN-Elements-Portable-External-WDBU6Y0020BBK-WESN/dp/B06W55K9N6/ref=sr_1_6?dib=eyJ2IjoiMSJ9.QZIt-gjK-7FgDk8SsvTTg6rtx0yr07RImqHO5tCzTlwJ2u2m54gm4VsFyFxy721_RXK2FMC_4J40FPJWmnaNu0JrMuRt0TSv_rcMuknDgz0oIKWmZ99wm_qbyTutrrkZrSnQQFaoQ8i8PGVFzpl5EK-rtq1itbqtVtLC6x305IN2I4ZcLHHHvh-CEMOdkfYOTa04FLye56VliHnQ6swWUVUHDnrKaSoVGKQazJb8VdQBf_0c6vlIBOFQBrQVFyt9oNKzSW8Xhh-vumYzouhINyHcgzR5-AIlv1pq0fNfhkI.YUh8Y0pUinG4Ly_UnQ8PO-UoWGalA2dLf5FdD8U-6pQ&dib_tag=se&keywords=2%2Btb%2Bhard%2Bdrives&qid=1729805164&sr=8-6&th=1", 
+                            "text": "2 * WD 2TB HDD", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }, 
+                        {
+                            "link": "https://www.amazon.ca/UGREEN-Splitter-Charging-Individual-Extension/dp/B09DCK46PM/ref=sr_1_2_sspa?crid=18D6M8JZILFLS&dib=eyJ2IjoiMSJ9.Ja5VpJvtaeXKhUR6Usn6oSEj4wBMrjxHEbickNSfjL2BUR91E6WaoGMVSh0v3xfw-ybrSsRTABeDXrGMEV7VfYReAc9RaLqr_BJ47ytg0zZbwwAvnrxBXTLzRFm5b08RZmwg6OSJE6iShvBv1y89sVcMZurvT9vU28F6wVrDX-iDevlTug0MlsCPMSuTeiviJMvPCtMUiKxWpBL29ADvvEZghDYBElqYqadebBKsdtmsqsGurjktOPWN3_vuRGH7dt5d8yAl8KzsJXaHxu03sBo7Qg3HESFW8dKA_y-n7T0.m5-4zeviarLISHYTLViN786SDVPXfebUJz_uRSVDoQA&dib_tag=se&keywords=powered+usb+hub&qid=1729805230&sprefix=powered+%2Caps%2C153&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1", 
+                            "text": "Powered USB Hub", 
                             "old_link": "", 
                             "old_text": ""
                         }
                     ],
                     "blurbs": [
                         {
-                            "title": "", 
+                            "title": "Mirroring drives", 
+                            "text": "To mirror the drives I will use <a href=\"https://linux.die.net/man/1/rsync\">rsync</a>. Importantly, rsync is <a href=\"https://www.howtogeek.com/294871/is-it-safe-to-use-a-hard-drive-while-rsync-is-running/\">safe to run at the same time that a user updates the data</a>. If the user changes the data it at the same time as the sync, it might sync the data the next time rsync is run. What is also nice, is that there are flags that allow to transfer the file as-is, specifically the meta-data is untouched. Meaning, that things like the modified data will not be updated as would happen with a regular copy. This allows us to check if a file has been modified from the original and copy it only if it is updated.", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "Mirror drives code", 
+                            "code": "<code><ol><li>#!/bin/python3</li><li></li><li>import os</li><li>from datetime import datetime </li><li>import subprocess</li><li>import sys </li><li></li><li>main_drive = \"/mnt/f/\"</li><li>backup_drive = \"/mnt/e/\"</li><li>log_path = \"{}log/log_{}.txt\".format(main_drive, datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")) </li><li>rsync_command = [\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive]</li><li></li><li># create the folder </li><li>if (not os.path.isdir(\"{}log/\".format(main_drive))): </li><li>&emsp;os.mkdir(\"{}log/\".format(main_drive))</li><li></li><li># open the log file </li><li>f = open(log_path, \"w\")</li><li>f.write(\"Sync from {} to {}\n\".format(main_drive, backup_drive))</li><li>f.write(\"Started at {}\n\n\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\"))) </li><li></li><li># run rsync dry-run (-n)</li><li>process = subprocess.Popen([\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive], stdout=subprocess.PIPE, </li>universal_newlines=True)<li>stdout = process.communicate()[0]</li><li>f.write(stdout)</li><li>f.close() </li><li></li><li># actually run rsync </li><li>subprocess.call([\"rsync\", \"-aP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive])</li><li></li><li>f = open(log_path, \"a\") </li><li>f.write(\"\nFinished at {}\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")))</li><li>f.close()</li></ol></code>",
                             "text": "", 
                             "images" : [] 
                         }, 
                         {
-                            "title": "", 
+                            "title": "Automatically running scripts", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Result", 
                             "text": "", 
                             "images" : [] 
                         }

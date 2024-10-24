@@ -1,0 +1,38 @@
+
+<code>
+<ol>
+<li>#!/bin/python3</li>
+<li></li>
+<li>import os</li>
+<li>from datetime import datetime </li>
+<li>import subprocess</li>
+<li>import sys </li>
+<li></li>
+<li>main_drive = '/mnt/f/'</li>
+<li>backup_drive = '/mnt/e/'</li>
+<li>log_path = "{}log/log_{}.txt".format(main_drive, datetime.now().strftime("%Y-%m-%d_%H-%M-%S")) </li>
+<li>rsync_command = ["rsync", "-anP", '--delete', '--exclude', '$RECYCLE.BIN/', main_drive, backup_drive]</li>
+<li></li>
+<li># create the folder </li>
+<li>if (not os.path.isdir("{}log/".format(main_drive))): </li>
+<li>&emsp;os.mkdir("{}log/".format(main_drive))</li>
+<li></li>
+<li># open the log file </li>
+<li>f = open(log_path, "w")</li>
+<li>f.write("Sync from {} to {}\n".format(main_drive, backup_drive))</li>
+<li>f.write("Started at {}\n\n".format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))) </li>
+<li></li>
+<li># run rsync dry-run (-n)</li>
+<li>process = subprocess.Popen(["rsync", "-anP", '--delete', '--exclude', '$RECYCLE.BIN/', main_drive, backup_drive], stdout=subprocess.PIPE, </li>universal_newlines=True)
+<li>stdout = process.communicate()[0]</li>
+<li>f.write(stdout)</li>
+<li>f.close() </li>
+<li></li>
+<li># actually run rsync </li>
+<li>subprocess.call(["rsync", "-aP", '--delete', '--exclude', '$RECYCLE.BIN/', main_drive, backup_drive])</li>
+<li></li>
+<li>f = open(log_path, "a") </li>
+<li>f.write("\nFinished at {}".format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S")))</li>
+<li>f.close()</li>
+</ol>
+</code>
