@@ -267,13 +267,13 @@
                         }, 
                         {
                             "link": "https://www.aliexpress.com/item/1005007384898880.html?mp=1", 
-                            "text": "2S 18650 Batteries", 
-                            "old_link": "https://en.wikipedia.org/wiki/18650_battery", 
-                            "old_text": "18650 Batteries"
+                            "text": "3S 18650 Batteries", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.aliexpress.com/item/1005006906778570.html?spm=a2g0o.cart.0.0.897038da3j0e1B&mp=1", 
-                            "text": "2S 18650 Charger", 
+                            "text": "3S 18650 Charger", 
                             "old_link": "", 
                             "old_text": ""
                         },
@@ -301,6 +301,11 @@
                                     "source": ""
                                 }
                             ] 
+                        }, 
+                        {
+                            "title": "Fixing the drill", 
+                            "text": "Instead of stripping it for parts or throwing it out, I want to see if I can get this operational again. First, for the <b>batteries</b> I will use three 18650 batteries in series, making a <code>3.7v * 3 = 11.1v</code> battery. Note, when these are charged full they are at 4.2v each making 12.6v in total. Since taking 4 batteries results in a range that goes over, I will stick with a little under.<br /><br />To <b>charge the batteries</b> I will simply buy a charger that is meant for 3S batteries and put that in with the battery pack. To <b>supply power</b> for charging I will use a USB-C decay capable of delivering 12v.", 
+                            "images" : [] 
                         }
                     ]
                 }
