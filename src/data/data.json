@@ -56,7 +56,7 @@
                             "text": "The main components needed for a minimum viable remote control car are a <b>general purpose computer</b>, a <b>motor controller</b>, <b>motors</b>, and a <b>power source.</b><br /><br />The first thing we need is some kind of <b>compute chip</b>. This chip can be embedded or something more general purpose. Examples of embedded are <i>Arduino</i> and the <i>Raspberry Pi Pico</i>. These do not have an operating system and will instead execute some code upon startup. On the other hand a general purpose computer would have an operating system as well as all the things around it. This means that we can run a script on startup, but we can also do more advanced things like running multiple software and installing frameworks. Examples of general purpose computers to use for this would be Raspberry Pi zero and up. In this trial I will use what is available to me and use the Raspberry Pi 3B+ as I have one lying around. <br /><br />The second component we need is a <b>motor control board</b>. There are a couple of reasons this is a requirement. First, the motor is likely running on a much higher voltage and current than the computer so we cannot connect a motor directly to the computer. Second, the direction of spin on the motor alternates with the current. Meaning, there is no real + or - on an electric motor but rather it will spin in different directions based on which direction the power is connected. Fun fact, if you use an external source to spin the motor it will generate electricity. The motor controller allows for the current to be switched either way. The compute module will then communicate commands to the motor controller  using <a href=\"https://www.geeksforgeeks.org/pulse-width-modulation-pwm/\">Pulse Width Modulation (PWM)</a> to control the motor speed and direction.<br /><br />The <b>motors</b> are likely just going to be brushed motors. In my case I will start with using an existing RC car so I can skip the motor gearbox and steering for now. <br /><br />The <b>power source</b> will need to be sufficient for the whole system. In my case I will use a separate power source for the compute module and the motors, this may change in later revisions.", 
                             "images" : [
                                 {
-                                    "name": "rc_car_it_1_1", 
+                                    "name": "rc_car_it_1", 
                                     "type": "jpg", 
                                     "alt": "This is the result of the first iteration of this project.",
                                     "source": ""
@@ -147,8 +147,8 @@
                     ],
                     "blurbs": [
                         {
-                            "title": "Upgrading motor controll board: DBH-1A Dual-Channel H Bridge Motor Driver", 
-                            "text": "The L298N has a maximum current of around 2A, we need to upgrade to carry that level of current. For this, I will test the DBH-1A which is rated for up to 30A. The documentation for this board is not great, the best I can find is this blury image on <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>. The main idea of how these work is the same, with a couple of differences. <br /><br />The <b>differences</b> are V+ and CT. This board is powered by the power source conneted to it. So, <i><b>V+ is a 5v output</b></i> to power external devices... I found that one out the hard way. According to <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>, CT is \"the drive current\" and the usage is \"<code>CT Output Voltage(V)=Current(A) x 0.155</code>\" to \"do current-limiting processing\". It seems that figuring out what CT is will need some investigating.<br /><br />Otherwise, everything else is similar as the <a href=\"https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1\">L298N Module H Bridge Driver</a>, IN1 and IN2 are the PWM controllers for A and B output channels, respectively. And, EN enables each channel. GND is ground as always.", 
+                            "title": "Upgrading motor control board: DBH-1A Dual-Channel H Bridge Motor Driver", 
+                            "text": "The L298N has a maximum current of around 2A, we need to upgrade to carry that level of current. For this, I will test the DBH-1A which is rated for up to 30A. The documentation for this board is not great, the best I can find is this blury image on <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>. The main idea of how these work is the same, with a couple of differences. <br /><br />The <b>differences</b> are V+ and CT. This board is powered by the power source conneted to it. So, <i><b>V+ is a 5v output</b></i> to power external devices... I found that one out the hard way. According to <a href=\"https://www.aliexpress.us/item/2251801663442954.html?gatewayAdapt=glo2usa4itemAdapt\">AliExpress.us</a>, CT is \"the drive current\" and the usage is \"<code>CT Output Voltage(V)=Current(A) x 0.155</code>\" to \"do current-limiting processing\". It seems that figuring out what CT is will need some investigating.<br /><br />Otherwise, everything else is similar as the <a href=\"https://www.amazon.ca/gp/product/B07GC26TVK/ref=ppx_yo_dt_b_asin_title_o05_s02?ie=UTF8&psc=1\">L298N Module H Bridge Driver</a>, IN1 and IN2 are the PWM controllers for A and B output channels, respectively. And, EN enables each channel. GND is ground as always.<br /><br />Since we are using a small compute board we can use the DBH-1A V+ output to power our Raspberry Pi Pico W through the <a href=\"https://penguintutor.com/electronics/pico-power\">VSYS pin</a>, <b>to clean up the wiring</b>. This means that we will not have to have two power sources, one for the computer and one for the motors, like we did in Iteration 1. Note, the Raspberry Pi Pico W can run on a range of 1.8V - 5.5V, since I am using two 18650 batteries in parallel, I could connect the Raspberry Pi Pico W directly to the power source.", 
                             "images" : [
                                 {
                                     "name": "dbh_1A",
@@ -157,16 +157,23 @@
                                     "source": "https://wholesaler.alibaba.com/product-detail/DBH-01A-30A-5V-12V-Dual_60297042810.html"
                                 }
                             ] 
-                        }, 
+                        },
                         {
-                            "title": "Rewiring and writing the code", 
-                            "text": "Since we are using a small compute board we can use the DBH-1A V+ output to power our Raspberry Pi Pico W through the <a href=\"https://penguintutor.com/electronics/pico-power\">VSYS pin</a>. This means that we will not have to have two power sources, one for the computer and one for the motors, like we did in Iteration 1. Note, the Raspberry Pi Pico W can run on a range of 1.8V - 5.5V, since I am using two 18650 batteries in parallel, I could connect the Raspberry Pi Pico W directly to the power source.<br /><br />With regards to the code, we will not have to adjust much from Iteration 1 since, from the programming perspective, we did not really change anything.", 
+                            "title": "The code", 
+                            "text": "The first thing I noticed is that since Raspberry Pi Pico does not have an operating system, it does not have network software automatically running. In short, I have to write the bluetooth protocol myself. There are some bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython github repo</a>. As I dug into this more and more I realised that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well.", 
                             "images" : [] 
                         }, 
                         {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
+                            "title": "Results", 
+                            "text": "The issue of not having enough power going to the motors was solved using the new motor control board. I was able to improve on the overall circuit layout and make it much simpler. However, due to not having an operating system, I would have to write the entire bluetooth protocol for it and this was not the objective of the project. As such, I will say that in the next iterations I will either revert to a Raspberry Pi with an operating system or switch to a stronger signal since that is already the plan. This was also just an excuse to work with the Pico W, and they are really fun and absolutely perfect for embedded applications.<br /><br />What you cannot see in this picture is the on off switch neatly tucked underneath the motor control board, easily accessible from the bottom hatch. Also, the plastic cover does fit on this making it look as though nothing changed!", 
+                            "images" : [
+                                {
+                                    "name": "rc_car_it_2", 
+                                    "type": "jpg", 
+                                    "alt": "The unmasked version of the rc car in iteration II.", 
+                                    "source": ""
+                                }
+                            ] 
                         }
                     ]
                 },
@@ -1545,4 +1552,3 @@
         }
     ]
 }
-
