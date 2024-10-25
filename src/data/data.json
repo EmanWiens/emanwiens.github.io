@@ -180,7 +180,7 @@
                 {
                     "title": "Iteration 3:",
                     "publish": false,
-                    "introduction": "The next phase of this is to put it into a larger RC body to faciliate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power.",
+                    "introduction": "The next phase of this is to put it into a larger RC body to facilitate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power.",
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
@@ -273,13 +273,19 @@
                         },
                         {
                             "link": "https://www.aliexpress.com/item/1005006906778570.html?spm=a2g0o.cart.0.0.897038da3j0e1B&mp=1", 
-                            "text": "Raspberry Pi 3B+", 
+                            "text": "3S 18650 Charger", 
                             "old_link": "", 
                             "old_text": ""
                         },
                         {
                             "link": "https://www.aliexpress.com/item/1005006997248362.html?spm=a2g0o.cart.0.0.4a2b38da7uPQfE&mp=1", 
                             "text": "USB-C decoy with Power Delivery (PD)", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.aliexpress.com/item/1005006906778570.html?spm=a2g0o.cart.0.0.897038da3j0e1B&mp=1", 
+                            "text": "Raspberry Pi 3B+", 
                             "old_link": "", 
                             "old_text": ""
                         }
@@ -304,7 +310,7 @@
                         }, 
                         {
                             "title": "Fixing the drill", 
-                            "text": "Instead of stripping it for parts or throwing it out, I want to see if I can get this operational again. First, for the <b>batteries</b> I will use three 18650 batteries in series, making a <code>3.7v * 3 = 11.1v</code> battery. Note, when these are charged full they are at 4.2v each making 12.6v in total. Since taking 4 batteries results in a range that goes over, I will stick with a little under.<br /><br />To <b>charge the batteries</b> I will simply buy a charger that is meant for 3S batteries and put that in with the battery pack. To <b>supply power</b> for charging I will use a USB-C decay capable of delivering 12v.", 
+                            "text": "Instead of stripping it for parts or throwing it out, I want to see if I can get this operational again. First, for the <b>batteries</b> I will use three 18650 batteries in series, making a <code>3.7v * 3 = 11.1v</code> battery. Note, when these are charged full they are at 4.2v each making 12.6v in total. Since taking 4 batteries results in a range that goes over, I will stick with a little under.<br /><br />To <b>charge the batteries</b> I will simply buy a charger that is meant for 3S batteries and put that in with the battery pack. To <b>supply power</b> for charging I will use a USB-C decoy capable of delivering 12v.", 
                             "images" : [] 
                         }
                     ]
@@ -449,7 +455,7 @@
                     "blurbs": [
                         {
                             "title": "Mirroring drives", 
-                            "text": "To mirror the drives I will use <a href=\"https://linux.die.net/man/1/rsync\">rsync</a>. Importantly, rsync is <a href=\"https://www.howtogeek.com/294871/is-it-safe-to-use-a-hard-drive-while-rsync-is-running/\">safe to run at the same time that a user updates the data</a>. If the user changes the data it at the same time as the sync, it might sync the data the next time rsync is run. What is also nice, is that there are flags that allow to transfer the file as-is, specifically the meta-data is untouched. Meaning, that things like the modified data will not be updated as would happen with a regular copy. This allows us to check if a file has been modified from the original and copy it only if it is updated.", 
+                            "text": "To mirror the drives I will use <a href=\"https://linux.die.net/man/1/rsync\">rsync</a>. Importantly, rsync is <a href=\"https://www.howtogeek.com/294871/is-it-safe-to-use-a-hard-drive-while-rsync-is-running/\">safe to run at the same time that a user updates the data</a>. If the user changes the data at the same time as the sync, it might sync the data the next time rsync is run. What is also nice, is that there are flags that allow to transfer the file as-is, specifically the meta-data is untouched. Meaning, that things like the modified data will not be updated as would happen with a regular copy. This allows us to check if a file has been modified from the original and copy it only if it is updated.", 
                             "images" : [] 
                         },
                         {
@@ -538,13 +544,13 @@
             "name": "Car OBD II", 
             "publish": true,
             "Tags": ["Electronics", "OBD II"],
-            "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>, abbreviated to OBD II. I did some research so I can do basic diagnostics on my car. ", 
+            "introduction": "", 
             
             "iterations": [
                 {
                     "title": "",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "Most modern cars use what is known as <a href=\"https://en.wikipedia.org/wiki/On-board_diagnostics\">On-board diagnostic</a>, abbreviated to OBD II. I did some research so I can do basic diagnostics on my car.",
                     "images": [],
                     "components": [
                         {
@@ -557,7 +563,7 @@
                     "blurbs": [
                         {
                             "title": "Connecting to Bluetooth", 
-                            "text": "Connect the OBD II scanner into the slot in your car, it's often near the driver's seat. I used Linux on my laptop to connect to the bluetooth device. The device will pair but does not connect so I had to <a href=\"https://askubuntu.com/questions/248817/how-to-i-connect-a-raw-serial-terminal-to-a-bluetooth-connection\">connect a raw serial terminal to a bluetooth connection</a>. All inputs are considered files and if you know where they are, /dev/ in Linux, you can open and read them like a file. <br>To connect to the raw serial use the command <code>sudo rfcomm connect /dev/rfcomm0 MAC_ID 1 &</code>. For more context, /dev/ is where input device files generally reside. This command creates a file to facilitate the communication, rfcomm is the <a href=\"https://www.btframework.com/rfcomm.htm\">bluetooth protocol</a>", 
+                            "text": "Connect the OBD II scanner into the slot in your car, it's often near the driver's seat. I used Linux on my laptop to connect to the bluetooth device. The device will pair but does not connect so I had to <a href=\"https://askubuntu.com/questions/248817/how-to-i-connect-a-raw-serial-terminal-to-a-bluetooth-connection\">connect a raw serial terminal to a bluetooth connection</a>. All inputs are considered files and if you know where they are, <code>/dev/</code> in Linux, you can open and read them like a file. <br>To connect to the raw serial use the command <code>sudo rfcomm connect /dev/rfcomm0 MAC_ID 1 &</code>. For more context, <code>/dev/</code> is where input device files generally reside. This command creates a file to facilitate the communication, rfcomm is the <a href=\"https://www.btframework.com/rfcomm.htm\">bluetooth protocol</a>", 
                             "images" : [] 
                         }, 
                         {
@@ -798,6 +804,48 @@
                         {
                             "title": "", 
                             "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "name": "Solar Panels", 
+            "publish": true,
+            "introduction": "I always wanted to learn more about solar panels. They are a cool way to generate energy. Once I understand how they work I want to see how I can use it in my life when I am in a place with lots of light and I want renewable energy.", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "Getting started with Solar Panels",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "https://www.canadiantire.ca/en/cat/outdoor-living/outdoor-lighting/solar-lighting-DC0001555.html", 
+                            "text": "Solar lights (wait until a sale)", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "How solar panels work", 
+                            "text": "The aim is to understand how they work in a way that I can use today. Understanding how they work is important amd there is an excellent guide provided by <a href=\"https://www.brijencapsulants.com/2020/12/28/six-main-components-solar-panel/\">brijencapsulants.com</a>, which is where the image is from. Additionally, for more information about semiconductors by <a href=\"https://www.sciencefacts.net/semiconductor.html\">sciencefacts.net</a> explaining how those work.<br /><br />A concept that is generally important to consider is the law of conservation of energy and Newton's third law of physics \"every action has an opposite and equal reaction\". That is to say that when solar panels get light, the semiconductors create electricity and heat. When there is no light the solar panel will act as a load, taking electricity to generate heat. This is why there is a diode that makes sure that this cannot happen when there is no light.<br /><br />Otherwise, when solar panels are generating electricity, they can be used similar to how any other powersource works, like a battery. Solar panels, like batteries, can be used in <a href=\"https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/\">parallel or in series</a> to create higher voltages or higher current.", 
+                            "images" : [
+                                {
+                                    "name": "photovoltaic_cell", 
+                                    "type": "png", 
+                                    "alt": "A diagram showing how photovoltaic cells work (i.e. how solar panels generate electricity)", 
+                                    "source": "https://www.brijencapsulants.com/2020/12/28/six-main-components-solar-panel/"
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "How to make your own Solar Array", 
+                            "text": "For the purpose of learning I want to do a small scale experiment to make a small solar array.", 
                             "images" : [] 
                         }
                     ]

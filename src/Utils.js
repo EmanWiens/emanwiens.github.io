@@ -41,6 +41,7 @@ import full_spectrum_with_UV from './images/full_spectrum_with_UV.png'
 import uv_index from './images/uv_index.png'
 import dbh_1A from './images/dbh_1A.png'
 import rc_car_it_2 from './images/rc_car_it_2.jpg'
+import photovoltaic_cell from './images/photovoltaic_cell.png'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -97,6 +98,8 @@ function map_images(name) {
     return dbh_1A;
   } else if (rc_car_it_2.includes(name)) {
     return rc_car_it_2;
+  } else if (photovoltaic_cell.includes(name)) {
+    return photovoltaic_cell;
   } else {
     return null;
   }
@@ -141,7 +144,8 @@ const render_iteration = (iteration_dict, index) => {
 
   var render_components = null; 
   if (iteration_dict[index]["components"].length >= 1) {
-    render_components = (<div className="components_div">
+    render_components = (
+    <div className="components_div">
       <br />
       <h4>Components</h4>
       <ul>
@@ -212,9 +216,13 @@ const render_blurb = (blurb_dict, index) => {
     ); 
   }
 
+  var break_html = ( <br /> ); 
+  if (blurb_dict[index]["title"] === "")
+    break_html = null; 
+
   return (
     <>
-      <br />
+      {break_html}
       <h4>{blurb_dict[index]["title"]}</h4>
 
       <div className="blurb_div">
