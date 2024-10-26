@@ -160,12 +160,12 @@
                         },
                         {
                             "title": "The code", 
-                            "text": "The first thing I noticed is that since Raspberry Pi Pico does not have an operating system, it does not have network software automatically running. In short, I have to write the bluetooth protocol myself. There are some bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython github repo</a>. As I dug into this more and more I realised that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well.", 
+                            "text": "Getting bluetooth running on the Pico W is not as simple as the other models as I am not able to use <code>bluetoothctl</code>. There are some bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython github repo</a>. As I dug into this more and more I realised that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "Results", 
-                            "text": "The issue of not having enough power going to the motors was solved using the new motor control board. I was able to improve on the overall circuit layout and make it much simpler. However, due to not having an operating system, I would have to write the entire bluetooth protocol for it and this was not the objective of the project. As such, I will say that in the next iterations I will either revert to a Raspberry Pi with an operating system or switch to a stronger signal since that is already the plan. This was also just an excuse to work with the Pico W, and they are really fun and absolutely perfect for embedded applications.<br /><br />What you cannot see in this picture is the on off switch neatly tucked underneath the motor control board, easily accessible from the bottom hatch. Also, the plastic cover does fit on this making it look as though nothing changed!", 
+                            "text": "The issue of not having enough power going to the motors was solved using the new motor control board. I was able to improve on the overall circuit layout and make it much simpler. Though the other parts were a success, but I thinK I may need to think about getting another compute chip. The one I really want is a Raspberry Pi Zero W, but there was a shortage for a long time.<br /><br />What you cannot see in this picture is the on off switch neatly tucked underneath the motor control board, easily accessible from the bottom hatch. Also, the plastic cover does fit on this making it look as though nothing changed!", 
                             "images" : [
                                 {
                                     "name": "rc_car_it_2", 
@@ -180,7 +180,7 @@
                 {
                     "title": "Iteration 3:",
                     "publish": false,
-                    "introduction": "The next phase of this is to put it into a larger RC body to facilitate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power.",
+                    "introduction": "The next phase of this is to put it into a larger RC body to facilitate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power. I also like the idea of livefeed cameras on RC cars, and I have the gear so I will try to add that this iteration as well.",
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
@@ -190,7 +190,7 @@
                         },
                         {
                             "link": "https://www.pishop.ca/product/raspberry-pi-zero-wireless-wh-pre-soldered-header/", 
-                            "text": "Raspberry Zero 2 W", 
+                            "text": "Raspberry Zero W", 
                             "old_link": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html", 
                             "old_text": "Raspberry PI Pico W"
                         },
@@ -226,12 +226,28 @@
                         },
                         {
                             "link": "https://www.xbox.com/en-CA/accessories/controllers/xbox-wireless-controller", 
-                            "text": "Xbox one controller ", 
+                            "text": "Xbox one controller", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B00N1YJKFS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
+                            "text": "Wide Angle Fish-Eye Camera", 
                             "old_link": "", 
                             "old_text": ""
                         }
                     ],
                     "blurbs": [
+                        {
+                            "title": "Live Feed Camera", 
+                            "text": "There are many ways this can be done, one is to use a web browser explained at <a href=\"https://raspberrytips.com/how-to-live-stream-pi-camera/\">raspberrytips.com</a>. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
                         {
                             "title": "", 
                             "text": "", 
