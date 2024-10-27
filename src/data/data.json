@@ -160,7 +160,7 @@
                         },
                         {
                             "title": "The code", 
-                            "text": "Getting bluetooth running on the Pico W is not as simple as the other models as I am not able to use <code>bluetoothctl</code>. There are some bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython github repo</a>. As I dug into this more and more I realised that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well.", 
+                            "text": "Getting bluetooth running on the Pico W is not as simple as the other models as I am not able to use <code>bluetoothctl</code>. There are some bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython github repo</a>. As I dug into this more and more I realised that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well. There is a resource provided by <a href=\"https://projects.raspberrypi.org/en/projects/get-started-pico-w/0\">raspberrypi.org</a> explaining how to set it all up. I personally like Visual Studio Code so I used to set up the Pico. At the end of the tutorial I had a website that was running allowing me to send signals to it using a web browser.", 
                             "images" : [] 
                         }, 
                         {
@@ -180,7 +180,7 @@
                 {
                     "title": "Iteration 3:",
                     "publish": false,
-                    "introduction": "The next phase of this is to put it into a larger RC body to facilitate more goodies. In general this has been a challenge, as it would require more power overall. For this I will need 18650 batteries in series to deliver more power and figure out how I can power the computer since that is way too much power. I also like the idea of livefeed cameras on RC cars, and I have the gear so I will try to add that this iteration as well.",
+                    "introduction": "Since some of the shortages on Raspberry Pis have stopped, I think I want to take this iteration to polish this verion off before moving to the next one. The next phase of this is to put it into a larger RC body to facilitate more goodies, but this will come with other challenges that will be tackled at a later time. ",
                     "components": [
                         {
                             "link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
@@ -193,6 +193,96 @@
                             "text": "Raspberry Zero W", 
                             "old_link": "https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html", 
                             "old_text": "Raspberry PI Pico W"
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B07D2948RZ/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
+                            "text": "DBH-1A Dual-Channel H Bridge Motor Driver Board Module", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://en.wikipedia.org/wiki/18650_battery", 
+                            "text": "18650 Batteries", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "", 
+                            "text": "18650 Charger", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B01EV70C78/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1", 
+                            "text": "Female to female connectors", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.xbox.com/en-CA/accessories/controllers/xbox-wireless-controller", 
+                            "text": "Xbox one controller", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B00N1YJKFS/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
+                            "text": "Wide Angle Fish-Eye Camera", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        
+                        {
+                            "title": "Item list", 
+                            "text": "There are a couple of things that I think would really clean this project up. First, I want to upgrade to using the Raspberry Pi Zero W, this was the initial choice but was hard to come by at the time. The second is that getting to the batteries when the cover is on is going to be timely, to mitigate this I want to add a charger that will also supply power to the computer.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Iteration 4: ", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": "", 
+                            "old_link": "https://www.walmart.com/ip/Jada-Toys-Hyperchargers-Remote-Control-2015-Dodge-Challenger/838381879", 
+                            "old_text": "Jada Toys -2015 Dodge Challenger SRT Hellcat"
+                        },
+                        {
+                            "link": "https://www.pishop.ca/product/raspberry-pi-zero-wireless-wh-pre-soldered-header/", 
+                            "text": "Raspberry Zero W", 
+                            "old_link": "", 
+                            "old_text": ""
                         },
                         {
                             "link": "https://www.amazon.ca/gp/product/B07D2948RZ/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1", 
@@ -239,20 +329,15 @@
                     ],
                     "blurbs": [
                         {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
                             "title": "Live Feed Camera", 
-                            "text": "There are many ways this can be done, one is to use a web browser explained at <a href=\"https://raspberrytips.com/how-to-live-stream-pi-camera/\">raspberrytips.com</a>. ", 
+                            "text": "There are many ways this can be done, one is to use a web browser explained at <a href=\"https://raspberrytips.com/how-to-live-stream-pi-camera/\">raspberrytips.com</a>. This method makes a python server that creates a webpage that shows you a live feed, which seems like a good start.", 
                             "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
-                        }, 
+                        },
                         {
                             "title": "", 
                             "text": "", 
@@ -314,7 +399,7 @@
                         },
                         {
                             "title": "Drill components", 
-                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, which is used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor by allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed whereas more amperage will provide more torque. The motor controller is likely the most technical part of all of this but there are really just a couple of mosfets, switches, diodes, and a spring. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
+                            "text": "The drill itself is as simple as a machine can get. It is also so old that I cannot find the exact model online, it is a <a href=\"https://www.boschtools.com/ca/en/\">14.4v Bosch Brute drill</a>. The image is the cross section of the drill with the parts annotated. The first component is the <b>Chuck</b>, used to fasten the drill bits to the motor. The second component is the <b>Gearbox</b>, basically including gears that allow for more torque or more speed controlled by the switch at the top. Third, the <b>Electric Motor</b>, a device that converts electricity into mechanical rotation. The fourth component is a <b>Motor Controller</b>, which allows the user to set different speeds for the motor by allowing a higher or lower voltage into the motor. Note, a general rule of thumb is that a higher voltage will provide higher speed whereas more amperage will provide more torque. The motor controller is likely the most technical part of all of this but there are really just a couple of mosfets, switches, diodes, and a spring. And lastly, the <b>Battery</b> that powers the device, in this case they appear to be Nickel–cadmium batteries.",
                             "images" : [
                                 {
                                     "name": "electric_drill_annot",
@@ -849,7 +934,7 @@
                     "blurbs": [
                         {
                             "title": "How solar panels work", 
-                            "text": "The aim is to understand how they work in a way that I can use today. Understanding how they work is important amd there is an excellent guide provided by <a href=\"https://www.brijencapsulants.com/2020/12/28/six-main-components-solar-panel/\">brijencapsulants.com</a>, which is where the image is from. Additionally, for more information about semiconductors by <a href=\"https://www.sciencefacts.net/semiconductor.html\">sciencefacts.net</a> explaining how those work.<br /><br />A concept that is generally important to consider is the law of conservation of energy and Newton's third law of physics \"every action has an opposite and equal reaction\". That is to say that when solar panels get light, the semiconductors create electricity and heat. When there is no light the solar panel will act as a load, taking electricity to generate heat. This is why there is a diode that makes sure that this cannot happen when there is no light.<br /><br />Otherwise, when solar panels are generating electricity, they can be used similar to how any other powersource works, like a battery. Solar panels, like batteries, can be used in <a href=\"https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/\">parallel or in series</a> to create higher voltages or higher current.", 
+                            "text": "The aim is to understand how they work in a way that I can use today. Understanding how they work is important and there is an excellent guide provided by <a href=\"https://www.brijencapsulants.com/2020/12/28/six-main-components-solar-panel/\">brijencapsulants.com</a>, where the image is from. Additionally, for more information about semiconductors by <a href=\"https://www.sciencefacts.net/semiconductor.html\">sciencefacts.net</a> explaining how those work.<br /><br />A concept that is generally important to consider is the law of conservation of energy and Newton's third law of physics \"every action has an opposite and equal reaction\". That is to say that when solar panels get light, the semiconductors create electricity and heat. When there is no light the solar panel will act as a load, taking electricity to generate heat. This is why there is a diode that makes sure that this cannot happen when there is no light.<br /><br />Otherwise, when solar panels are generating electricity, they can be used similar to how any other powersource works, like a battery. Solar panels, like batteries, can be used in <a href=\"https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/\">parallel or in series</a> to create higher voltages or higher current.", 
                             "images" : [
                                 {
                                     "name": "photovoltaic_cell", 
@@ -898,12 +983,12 @@
                 {
                     "title": "Sarracenias in general",
                     "publish": true,
-                    "introduction": "Since these are two subspecies of each other they share a lot of common traits. The first fact I want to state is that these plants <i>do <b>not</b> have moving parts</i> that they use to catch their prey. And though you may think these plants are not going to survive they are excellent at what they do, catching insects. Everything from the shape to their taste and smell are designed to make them merciless bug hunters. I have two sub-special <b>Sarracenia Farnhamii</b> and <b>Sarracenia purpurea</b>. One source I used is provided by <a href=\"https://tomscarnivores.com/resources/how-to-grow-pitcher-plants/\">Tom's Carnivores</a>, which is in depth and has nice vo",
+                    "introduction": "Since these are two subspecies of each other they share a lot of common traits. The first fact I want to state is that these plants <i>do <b>not</b> have moving parts</i> that they use to catch their prey. And though you may think these plants are not going to survive they are excellent at what they do, catching insects. Everything from the shape to their taste and smell are designed to make them merciless bug hunters. I have two sub-special <b>Sarracenia Farnhamii</b> and <b>Sarracenia purpurea</b>. One source I used is provided by <a href=\"https://tomscarnivores.com/resources/how-to-grow-pitcher-plants/\">Tom's Carnivores</a>, which is in depth and has nice images.",
                     "components": [],
                     "blurbs": [
                         {
                             "title": "Shared traits: Background", 
-                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in are bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water which means <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow.<br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I report them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the rhizome, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
+                            "text": "These plants exist primarily in the North Americas. That's right, right here in our own homes! The <b>environment</b> these plants are adapted to live in are bogs and wet grasslands. These environments are generally not well shaded due to larger plants' roots suffocating in the water, meaning <i>near constant direct </i><b>sunlight</b>. Additionally, the water in the environment is usually <b>nutrient poor</b>. So, basically this plant has two of the three ingredients it needs to survive, the third being nutrients to grow.<br/><br/>Due to the lack of nutrients the plants adapted to catch insects. Additionally, these plants have gotten really good at absorbing any nutrients that land on them, so you are not actually allowed to touch them or risk chemical burns wherever you touch the plant. When I report them I usually make sure to keep my hands wet to dilute anything that might be on my hands. It also helps to mist them with water.<br /><br />With regards to <b>climate</b>, these plants live in the warmer parts of the North Americas but still experience a winter dormancy period. During the colder seasons, the leaves (the pitchers) will start to brown and die. Once the frost hits all the leaves will die and all that will be left are the roots. The roots, or rather the rhizome, survives the winter and starts growing more leaves, and sometimes flowers, in the springtime.", 
                             "images" : [] 
                         },
                         {
