@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.32d7736c.js",
+    "main.js": "./static/js/main.4c390ae6.js",
     "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
@@ -24,6 +24,7 @@
     "static/media/led_spectral_graphs.jpg": "./static/media/led_spectral_graphs.01f15674baebf68b4909.jpg",
     "static/media/rbg_led_spectrum.jpg": "./static/media/rbg_led_spectrum.dd1479e7d07ca6e4ef44.jpg",
     "static/media/planet_sim.gif": "./static/media/planet_sim.824320077f6277743264.gif",
+    "static/media/bloch_sphere.png": "./static/media/bloch_sphere.6d879410f503639a09c0.png",
     "static/media/environ_engine.gif": "./static/media/environ_engine.d9788fe3b0ced93cafad.gif",
     "static/media/full_spectrum_with_UV.png": "./static/media/full_spectrum_with_UV.98cdfeb98788feb570f9.png",
     "static/media/chlorophyll_spectrum.jpg": "./static/media/chlorophyll_spectrum.d688c22ab3744d797931.jpg",
@@ -31,11 +32,11 @@
     "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.32d7736c.js.map": "./static/js/main.32d7736c.js.map",
+    "main.4c390ae6.js.map": "./static/js/main.4c390ae6.js.map",
     "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.32d7736c.js"
+    "static/js/main.4c390ae6.js"
   ]
 }
