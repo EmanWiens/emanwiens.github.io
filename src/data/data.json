@@ -1294,15 +1294,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
+            "images": [],
             "iterations": [
                 {
                     "title": "",
@@ -1314,11 +1306,6 @@
                             "title": "Fall 2024, Personal Project", 
                             "text": "I always wanted to make a gravity simulation, where the stellar bodies move around based on gravity. I've also always wanted to do something with Javascript. So, I combined the two and wrote this gravity simulation in Javascript. There are a wide variety of calculations that I had to use and it was not as simple as I thought it would be. However, it was really fun to do and I enjoy watching it go. Currently, it has the sun and the first 4 planets in our solar system.Github.", 
                             "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1329,14 +1316,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1349,11 +1329,6 @@
                             "title": "Fall 2022, Personal Project", 
                             "text": "", 
                             "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1364,15 +1339,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
+            "images": [],
             "iterations": [
                 {
                     "title": "",
@@ -1391,11 +1358,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1406,14 +1368,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1433,11 +1388,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1448,15 +1398,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
+            "images": [],
             "iterations": [
                 {
                     "title": "",
@@ -1475,11 +1417,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1490,14 +1427,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1517,11 +1447,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1532,14 +1457,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1550,13 +1468,15 @@
                     "blurbs": [
                         {
                             "title": "Fall 2019, University Project", 
-                            "text": " In my last year I did an honours project focusing on Quantum Computing and Quantum Information processing. This started by first looking into what a Quantum Processor is and why it is different and such a hot topic. Once I learned more about how to manage state and the underlying maths behind it, I worked on writing simple quantum algorithms on IBM Q. Throughout this project I made use of technologies such as <a href=\"https://qiskit.org/\">Qiskit</a> and <a href=\"https://quantum-computing.ibm.com/\">IBM Q Experience</a>.<br /><br />Image Retrieved from <a href=\"https://en.wikipedia.org/wiki/Qubit\">https://en.wikipedia.org/wiki/Qubit</a>.", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
+                            "text": " In my last year I did an honours project focusing on Quantum Computing and Quantum Information processing. This started by first looking into what a Quantum Processor is and why it is different and such a hot topic. Once I learned more about how to manage state and the underlying maths behind it, I worked on writing simple quantum algorithms on IBM Q. Throughout this project I made use of technologies such as <a href=\"https://qiskit.org/\">Qiskit</a> and <a href=\"https://quantum-computing.ibm.com/\">IBM Q Experience</a>.<br /><br />Image Retrieved from <a href=\"https://en.wikipedia.org/wiki/Qubit\">wikipedia.org</a>.", 
+                            "images" : [
+                                {
+                                    "name": "bloch_sphere", 
+                                    "type": "png", 
+                                    "alt": "A representation of a Qubit, using a bloch sphere.", 
+                                    "source": "https://en.wikipedia.org/wiki/Qubit"
+                                }
+                            ] 
                         }
                     ]
                 }
@@ -1567,15 +1487,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
+            "images": [],
             "iterations": [
                 {
                     "title": "",
@@ -1594,11 +1506,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1609,15 +1516,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
-            
+            "images": [],
             "iterations": [
                 {
                     "title": "",
@@ -1636,11 +1535,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1651,14 +1545,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1678,11 +1565,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -1693,14 +1575,7 @@
             "publish": true,
             "introduction": "", 
             "tags": [],
-            "images": [
-                {
-                    "name": "", 
-                    "type": "", 
-                    "alt": "",
-                    "source": ""
-                }
-            ],
+            "images": [],
             
             "iterations": [
                 {
@@ -1720,11 +1595,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
                         }
                     ]
                 }

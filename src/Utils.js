@@ -44,6 +44,7 @@ import rc_car_it_2 from './images/rc_car_it_2.jpg'
 import photovoltaic_cell from './images/photovoltaic_cell.png'
 import rc_car_it_3_1 from './images/rc_car_it_3_1.jpg'
 import rc_car_it_3_2 from './images/rc_car_it_3_2.jpg'
+import bloch_sphere from './images/bloch_sphere.png'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -106,6 +107,8 @@ function map_images(name) {
     return rc_car_it_3_1;
   } else if (rc_car_it_3_2.includes(name)) {
     return rc_car_it_3_2;
+  } else if (bloch_sphere.includes(name)) {
+    return bloch_sphere;
   } else {
     return null;
   }
