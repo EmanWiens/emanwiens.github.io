@@ -42,6 +42,8 @@ import uv_index from './images/uv_index.png'
 import dbh_1A from './images/dbh_1A.png'
 import rc_car_it_2 from './images/rc_car_it_2.jpg'
 import photovoltaic_cell from './images/photovoltaic_cell.png'
+import rc_car_it_3_1 from './images/rc_car_it_3_1.jpg'
+import rc_car_it_3_2 from './images/rc_car_it_3_2.jpg'
 // end images -----------------------------------------------------------------------------------------------------------------------
 
 
@@ -100,6 +102,10 @@ function map_images(name) {
     return rc_car_it_2;
   } else if (photovoltaic_cell.includes(name)) {
     return photovoltaic_cell;
+  } else if (rc_car_it_3_1.includes(name)) {
+    return rc_car_it_3_1;
+  } else if (rc_car_it_3_2.includes(name)) {
+    return rc_car_it_3_2;
   } else {
     return null;
   }

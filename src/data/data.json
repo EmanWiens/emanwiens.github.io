@@ -179,7 +179,7 @@
                 },
                 {
                     "title": "Iteration 3:",
-                    "publish": false,
+                    "publish": true,
                     "introduction": "Since some of the shortages on Raspberry Pis have stopped, I think I want to take this iteration to polish this verion off before moving to the next one. The next phase of this is to put it into a larger RC body to facilitate more goodies, but this will come with other challenges that will be tackled at a later time. ",
                     "components": [
                         {
@@ -207,7 +207,7 @@
                             "old_text": ""
                         },
                         {
-                            "link": "", 
+                            "link": "https://www.amazon.ca/gp/product/B091TPZH13/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
                             "text": "18650 Charger", 
                             "old_link": "", 
                             "old_text": ""
@@ -239,14 +239,28 @@
                             "images" : [] 
                         }, 
                         {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
+                            "title": "Wiring", 
+                            "text": "The wiring is updated to include the Raspberry Pi Zero W, with a 5v power supply. The first part of the wiring is the same, the battery going to the motor controller with a switch to turn off the power supply. Then there is a second wire that starts at the battery and connects to the charge module. The module has two 5v outputs, one through the USB-A and the other connected directly to the board. From the 5v output connected to the board, I added a switch and then connected it to a micro-USB to power the Zero W. With this setup, I can put the cover on the car again since I can charge the batteries and switch off the computer and motors seperately. To update the software I will use SSH to connect to the Zero W and update the software.", 
+                            "images" : [
+                                {
+                                    "name": "rc_car_it_3_1", 
+                                    "type": "jpg", 
+                                    "alt": "RC Car from iteration 3 wiring.", 
+                                    "source": ""
+                                }
+                            ] 
                         }, 
                         {
-                            "title": "", 
-                            "text": "", 
-                            "images" : [] 
+                            "title": "Results", 
+                            "text": "The hardware is all set up and seems to be working consitently, and since I can update the software using SSH it feels like a well rounded system. I was even able to put the cover back on and make it look more or less like the original. Also, due to the charger and motor controllers' blue lights, it makes it look like the car has an awesome blue underglow.", 
+                            "images" : [
+                                {
+                                    "name": "rc_car_it_3_2", 
+                                    "type": "jpg", 
+                                    "alt": "RC Car from iteration 3 with cover.", 
+                                    "source": ""
+                                }
+                            ] 
                         }
                     ]
                 }
