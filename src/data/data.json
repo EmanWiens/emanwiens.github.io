@@ -1312,8 +1312,16 @@
                     "blurbs": [
                         {
                             "title": "Fall 2024, Personal Project", 
-                            "text": "I always wanted to make a gravity simulation, where the stellar bodies move around based on gravity. I've also always wanted to do something with Javascript. So, I combined the two and wrote this gravity simulation in Javascript. There are a wide variety of calculations that I had to use and it was not as simple as I thought it would be. However, it was really fun to do and I enjoy watching it go. Currently, it has the sun and the first 4 planets in our solar system.Github.", 
-                            "images" : [] 
+                            "text": "I always wanted to make a gravity simulation, where the stellar bodies move around based on gravity. I've also always wanted to do something with Javascript. So, I combined the two and wrote this gravity simulation in Javascript. There are a wide variety of calculations that I had to use and it was not as simple as I thought it would be. However, it was really fun to do and I enjoy watching it go. Currently, it has the sun and the first 4 planets in our solar system. <a href=\"https://github.com/EmanWiens/Grav_2D\">Github</a>.", 
+                            "images" : [
+                                {
+                                    "name": "grav_2d", 
+                                    "type": "gif", 
+                                    "alt": "A gravity simulation animation with real physics",
+                                    "source": ""
+                                }
+                            ] 
+                            
                         }, 
                         {
                             "title": "", 
