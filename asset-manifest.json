@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.4c390ae6.js",
+    "main.js": "./static/js/main.5cb15a54.js",
     "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
@@ -20,6 +20,7 @@
     "static/media/particle_system.gif": "./static/media/particle_system.5c4ddddddda0e7f5423d.gif",
     "static/media/photovoltaic_cell.png": "./static/media/photovoltaic_cell.37a9f1cf7805835528da.png",
     "static/media/sunlight_spectrum.png": "./static/media/sunlight_spectrum.ed7c2dd3748d528da42c.png",
+    "static/media/grav_2d.gif": "./static/media/grav_2d.dfb8367a7ee057dce9c2.gif",
     "static/media/rert.gif": "./static/media/rert.52279fd9b140dd0175e5.gif",
     "static/media/led_spectral_graphs.jpg": "./static/media/led_spectral_graphs.01f15674baebf68b4909.jpg",
     "static/media/rbg_led_spectrum.jpg": "./static/media/rbg_led_spectrum.dd1479e7d07ca6e4ef44.jpg",
@@ -32,11 +33,11 @@
     "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.4c390ae6.js.map": "./static/js/main.4c390ae6.js.map",
+    "main.5cb15a54.js.map": "./static/js/main.5cb15a54.js.map",
     "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.4c390ae6.js"
+    "static/js/main.5cb15a54.js"
   ]
 }
