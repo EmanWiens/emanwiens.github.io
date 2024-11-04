@@ -160,12 +160,12 @@
                         },
                         {
                             "title": "The code", 
-                            "text": "Getting bluetoBluetoothng on the Pico W is not as simple as the other models as I am not able to use <code>bluetoothctl</code>. There are some Bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython GitHub repo</a>. As I dug into this more and more I realized that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the Bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well. There is a resource provided by <a href=\"https://projects.raspberrypi.org/en/projects/get-started-pico-w/0\">raspberrypi.org</a> explaining how to set it all up. I personally like Visual Studio Code so I used to set up the Pico W. At the end of the tutorial I had a website that was running allowing me to send signals to it using a web browser.", 
+                            "text": "Getting Bluetooth working on the Pico W is not as simple as the other models as I am not able to use <code>bluetoothctl</code>. There are some Bluetooth examples provided in the <a href=\"https://github.com/micropython/micropython/tree/master/examples/bluetooth\">micropython GitHub repo</a>. As I dug into this more and more I realized that I would have to write the entire protocol for this device. Since the objective of the program was not to rewrite the Bluetooth protocol, I will leave that for now. <br /><br />Using other methods, I did test that this code does properly work. The motors can be controlled at variable speeds using the PWM and the enable worked as well. There is a resource provided by <a href=\"https://projects.raspberrypi.org/en/projects/get-started-pico-w/0\">raspberrypi.org</a> explaining how to set it all up. I personally like Visual Studio Code so I used to set up the Pico W. At the end of the tutorial I had a website that was running allowing me to send signals to it using a web browser.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "Results", 
-                            "text": "The issue of not having enough power going to the motors was solved using the new motor control board. I was able to improve the overall circuit layout and make it much simpler. Though the other parts were a success, I think I may need to think about getting another compute chip. The one I want is a Raspberry Pi Zero W, but there has been a shortage for a long time.<br /><br />What you cannot see in this picture is the on-off switch neatly tucked underneath the motor control board, easily accessible from the bottom hatch. Also, the plastic cover does fit on this making it look as though nothing changed!", 
+                            "text": "The issue of not having enough power going to the motors was solved using the new motor control board. I was able to improve the overall circuit layout and make it much simpler. Though the other parts were a success, I think I may need to think about getting another computer chip. The one I want is a Raspberry Pi Zero W, but there has been a shortage for a long time.<br /><br />What you cannot see in this picture is the on-off switch neatly tucked underneath the motor control board, easily accessible from the bottom hatch. Also, the plastic cover does fit on this making it look as though nothing changed!", 
                             "images" : [
                                 {
                                     "name": "rc_car_it_2", 
@@ -252,7 +252,7 @@
                         }, 
                         {
                             "title": "Results", 
-                            "text": "The hardware is all set up and seems to be working consistently, and since I can update the software using SSH it feels like a well-rounded system. I was even able to put the cover back on and make it look more or less like the original. Also, due to the charger and motor controllers' blue lights, it makes it look like the car has an awesome blue under glow.<br /><br />The car has enough power to do burnouts and drifts, since the sensitive controller triggres and the PWM allow variable motor speeds.", 
+                            "text": "The hardware is all set up and seems to be working consistently, and since I can update the software using SSH it feels like a well-rounded system. I was even able to put the cover back on and make it look more or less like the original. Also, the charger and motor controllers' blue lights, make it look like the car has an awesome blue under glow.<br /><br />The car has enough power to do burnouts and drifts since the sensitive controller triggers and the PWM allow variable motor speeds.", 
                             "images" : [
                                 {
                                     "name": "rc_car_it_3_2", 
@@ -265,7 +265,7 @@
                         }, 
                         {
                             "title": "Long-term result", 
-                            "text": "The car was more fun to drive than any I’ve ever driven. Even on carpet, I could do burnouts while on the wood floor I could do donuts. Overall, I had a lot of control over the car and that made it a lot more fun to interact with.<br /><br />However, I learned something about electric motors that I knew in theory but not in practice. An electric motor has a certain amount of watts that it needs to be able to turn electricity into motion. <code>Watts = Volts * Amps</code> and when you use a PWM, we get the average voltage and amps of whatever we set. This means, when the voltage is low (as a result of low PWM value) the motor creates a huge amount of amps in an attempt to reach the wattage required to create motion. This results in lots of amps creating lots of heat and no motion. <br /><br />The second thing is something I didn’t event know about so my brother, with an electrical engineering diploma, explained it to me. The short version is that when the motor is going in one direction then suddenly swaps to the other, it creates a power surge. This power surge can get bad enough to damage the motor. <br /><br />In short, the combination of these two as well as overheating from a heavier car fried the drive motor. The steer motor does not take a large draw, nor carry a large load so it seems to be fine. The plastic of the steering has worn down, however. ", 
+                            "text": "The car was more fun to drive than any I’ve ever driven. Even on carpet, I could do burnouts while on the wood floor I could do donuts. Overall, I had a lot of control over the car and that made it a lot more fun to interact with.<br /><br />However, I learned something about electric motors that I knew in theory but not in practice. An electric motor has a certain amount of watts that it needs to be able to turn electricity into motion. <code>Watts = Volts * Amps</code> and when you use a PWM, we get the average voltage and amps of whatever we set. This means, when the voltage is low (as a result of low PWM value) the motor creates a huge amount of amps in an attempt to reach the wattage required to create motion. This results in lots of amps creating lots of heat and no motion. <br /><br />The second thing is something I didn’t even know about so my brother, with an electrical engineering diploma, explained it to me. The short version is that when the motor is going in one direction and then suddenly swaps to the other, it creates a power surge. This power surge can get bad enough to damage the motor. <br /><br />In short, the combination of these two as well as overheating from a heavier car fried the drive motor. The steer motor does not take a large draw, nor carry a large load so it seems to be fine. The plastic of the steering has worn down, however. ", 
                             "images" : [] 
                         }
                     ]
@@ -273,7 +273,7 @@
                 {
                     "title": "Iteration 2.1: ",
                     "publish": true,
-                    "introduction": "In this iteration I want to finally get this into a much larger system, in this case the LiteHawk Tank. This system needs higher voltage and a really high current, together making a tough combination to get right. This includes decisions about batteries, wiring, and chargers.",
+                    "introduction": "In this iteration, I want to finally get this into a much larger system, the LiteHawk Tank. This system needs higher voltage and a high current, together making a tough combination to get right. This includes decisions about batteries, wiring, and chargers.",
                     "components": [
                         {
                             "link": "", 
@@ -333,7 +333,7 @@
                     "blurbs": [
                         {
                             "title": "Power", 
-                            "text": "For the main power source I will most likely use two Lithium Ion batteries in series, to make a 7.4v battery. The charger is made to charge the batteries quickly and, takes a maximum input of 9v. A USB-C DEcay can supply different voltages, including 9v, allowing for a smooth single input charger user experience for the user. There are other methods to create 9v inputs, but I wanted to try using a USB-C Decoy and this is the perfect excuse for it.", 
+                            "text": "For the main power source I will most likely use two Lithium Ion batteries in series, to make a 7.4v battery. The charger is made to charge the batteries quickly and takes a maximum input of 9v. A USB-C DEcay can supply different voltages, including 9v, allowing for a smooth single-input charger user experience for the user. There are other methods to create 9v inputs, but I wanted to try using a USB-C Decoy and this is the perfect excuse for it.", 
                             "images" : [] 
                         }, 
                         {
@@ -478,7 +478,7 @@
                         }, 
                         {
                             "title": "Results", 
-                            "text": "There is some conflicting information about USB C being able to provide 12v, apparently the common is 5v, 9v, 15v, or 20v. Since overvoltage will likely kill everything, I’ll go for under. There may also be different versions of power delivery modules, but the one I got was falsely advertised to have 12v but doesn’t. It did work well with 9v, none of the modules overheated, all worked well, and the dimensions seem to mostly fit well. In terms of function, the cold side had a lot of condensation but due to lack of cover from the fan, the fast-moving, hot air evaporated before it could drip the be collected. This also indicates that whatever design is chosen, the cold side needs to have slow-moving air.", 
+                            "text": "There is some conflicting information about USB C being able to provide 12v, apparently the common is 5v, 9v, 15v, or 20v. Since overvoltage will likely kill everything, I’ll go for under. There may also be different versions of power delivery modules, but the one I got was falsely advertised to have 12v but doesn’t. It did work well with 9v, none of the modules overheated, all worked well, and the dimensions seem to mostly fit well. In terms of function, the cold side had a lot of condensation but due to lack of cover from the fan, the fast-moving, hot air evaporated before it could drip to be collected. This also indicates that whatever design is chosen, the cold side needs to have slow-moving air.", 
                             "images" : [] 
                         }
                     ]
@@ -530,7 +530,7 @@
         {
             "name": "Local backups", 
             "publish": true,
-            "introduction": "The basic idea is that this would be like a home cloud where the drives and computer are within the home network. This would allow anyone connected to the home network to also access the data, or in other words I want to make a <a href=\"https://www.raspberrypi.com/tutorials/nas-box-raspberry-pi-tutorial/\">Raspberry Pi powered Network-attached storage (NAS)</a>. I mostly wanted to use this for family photos, so everyone can see the photos and share theirs. There are three main components to this project. First, we want to mirror the drives to make duplicate copies. Second, we need to find some cloud-like open-source software to host the drives. Lastly, we want to be able to run system analysis such as detecting drive failures.", 
+            "introduction": "The basic idea is that this would be like a home cloud where the computer and drives are within the home network. This would allow anyone connected to the home network to also access the data, or in other words I want to make a <a href=\"https://www.raspberrypi.com/tutorials/nas-box-raspberry-pi-tutorial/\">Raspberry Pi powered Network-attached storage (NAS)</a>. I mostly wanted to use this for family photos, so everyone can see the photos and share theirs. There are three main components to this project. First, we want to mirror the drives to make duplicate copies. Second, we need to find some cloud-like open-source software to host the drives. Lastly, we want to be able to run system analysis such as detecting drive failures.", 
             "tags": [],
             "images": [
                 {
@@ -959,7 +959,7 @@
                         }, 
                         {
                             "title": "How to make your own Solar Array", 
-                            "text": "For learning I want to do a small-scale experiment to make a small solar array.", 
+                            "text": "For learning, I want to do a small-scale experiment to make a small solar array.", 
                             "images" : [] 
                         }
                     ]
@@ -1438,7 +1438,7 @@
                     "blurbs": [
                         {
                             "title": "Winter 2021, Personal Project", 
-                            "text": "Least square regression simply tries to minimize the distance to all points. Ridge regression takes the error into account and tries to minimize error by giving points a weight that indicates how much this point should contribute to the model. For example, an outlier is not desirable so giving it a small weight means that it will be less likely to make the model incorrect. Additionally, you can also use more advanced methods like nonlinear solutions. For now, I implemented the simplest version of the algorithm. <br /><br />See the code on <a href=\"https://github.com/EmanWiens/Least_Squares_Regression\" target=\"_blank\">Github</a>.", 
+                            "text": "Least square regression simply tries to minimize the distance to all points. Ridge regression takes the error into account and tries to minimize the error by giving points a weight that indicates how much this point should contribute to the model. For example, an outlier is not desirable so giving it a small weight means that it will be less likely to make the model incorrect. Additionally, you can also use more advanced methods like nonlinear solutions. For now, I implemented the simplest version of the algorithm. <br /><br />See the code on <a href=\"https://github.com/EmanWiens/Least_Squares_Regression\" target=\"_blank\">Github</a>.", 
                             "images" : [
                                 {
                                     "name": "least_square_segression", 
@@ -1503,7 +1503,7 @@
                                 {
                                     "name": "bloch_sphere", 
                                     "type": "png", 
-                                    "alt": "A representation of a Qubit, using a bloch sphere.", 
+                                    "alt": "A representation of a Qubit, using a Bloch sphere.", 
                                     "source": "https://en.wikipedia.org/wiki/Qubit"
                                 }
                             ] 
@@ -1632,4 +1632,5 @@
         }
     ]
 }
+
 
