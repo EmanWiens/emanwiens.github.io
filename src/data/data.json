@@ -261,6 +261,12 @@
                                     "source": ""
                                 }
                             ] 
+                           
+                        }, 
+                        {
+                            "title": "Long-term result", 
+                            "text": "The car was more fun to drive than any I’ve ever driven. Even on carpet, I could do burnouts while on the wood floor I could do donuts. Overall, I had a lot of control over the car and that made it a lot more fun to interact with.<br /><br />However, I learned something about electric motors that I knew in theory but not in practice. An electric motor has a certain amount of watts that it needs to be able to turn electricity into motion. <code>Watts = Volts * Amps</code> and when you use a PWM, we get the average voltage and amps of whatever we set. This means, when the voltage is low (as a result of low PWM value) the motor creates a huge amount of amps in an attempt to reach the wattage required to create motion. This results in lots of amps creating lots of heat and no motion. <br /><br />The second thing is something I didn’t event know about so my brother, with an electrical engineering diploma, explained it to me. The short version is that when the motor is going in one direction then suddenly swaps to the other, it creates a power surge. This power surge can get bad enough to damage the motor. <br /><br />In short, the combination of these two as well as overheating from a heavier car fried the drive motor. The steer motor does not take a large draw, nor carry a large load so it seems to be fine. The plastic of the steering has worn down, however. ", 
+                            "images" : [] 
                         }
                     ]
                 },
@@ -457,18 +463,28 @@
                     "blurbs": [
                         {
                             "title": "Dehumidifier components", 
-                            "text": "", 
+                            "text": "The thermoelectric cooler, also known as a Peltier Module named after the person who invented it, uses electricity to create a temperature difference. This leads to there being a cold side and a hot side. To get moisture out of the air we need to cool it, so we want the cold but not the hot. Also, remember that energy is always conserved and as much energy has to go in and come out. The reason I mention the law of conservation of energy is because a cold side is a lack of energy and a warm side is more energy so overall there will be no temperature difference (other than a tiny amount of heat from loss). <br /><br />The hot side will be cooled as much as possible, we do not want the module burning out so we can’t supply too much cooling for the hot side. The cold side is what we need to cool the air and collect the moisture. I know there is more to a dehumidifier but I will have to do some experimentation to determine how to best get this done. ", 
                             "images" : [] 
                         }, 
                         {
-                            "title": "", 
-                            "text": "", 
+                            "title": "Testing components", 
+                            "text": "For my first design, the objective is to focus on getting the wiring right. The TEC needs 12v and so does the fan. I will also need heat sinks to distribute the heat and cold. Then I need a power supply and something to hold it all. For the power supply I want to try using USB C decoys a.k.a. power delivery. This module allows for different voltages to be produced and generally at a high current. They are also not that costly by themselves but you also need the wall plug and wire to support it. The nice thing is that you can use the wire and plug for other USB C applications. The downside is that they are more expensive.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Putting it together ", 
+                            "text": "I made this structure to hold the components and test it. Largely this was to test the electrical components, understand how dehumidifiers work, and get a sense of dimensions. There are certain things I expect will not work efficiently, mostly the actual effectiveness of collecting water. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Results", 
+                            "text": "There is some conflicting information about USB C being able to provide 12v, apparently the common is 5v, 9v, 15v, or 20v. Since overvoltage will likely kill everything, I’ll go for under. There may also be different versions of power delivery modules, but the one I got was falsely advertised to have 12v but doesn’t. It did work well with 9v, none of the modules overheated, all worked well, and the dimensions seem to mostly fit well. In terms of function, the cold side had a lot of condensation but due to lack of cover from the fan, the fast-moving, hot air evaporated before it could drip the be collected. This also indicates that whatever design is chosen, the cold side needs to have slow-moving air.", 
                             "images" : [] 
                         }
                     ]
                 }
             ]
-        }, 
+        },
         {
             "name": "Plant camera", 
             "publish": false,
