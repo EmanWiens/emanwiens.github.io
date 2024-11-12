@@ -8,7 +8,7 @@ const Electronicspage = () =>{
         <div className='title_div'>
           <h1>Electronics page</h1>
           <p>
-              I have been interested in small eletronics and have start making some myself. Some of the items I strip out of old broken electronics, some I make, and some I buy. I always enjoy learning more about eletronics and tinkering around with them myself has been teaching me a lot. These projects often require more learning and planning, usually leading to longer turn around times. 
+          I have always had an interest in electronics, it started when I was a kid and took apart broken electronics. This then lead to me taking apart electronics and putting them back together, in working order without anyone noticing. These endeavours are focused on learning about various electrical properties, the resulting projects you see are me using that knowledge in practical ways. Now, I regularly work on some electronics projects that I have kicking around. These types of projects often require more learning, planning, and resources, usually leading to longer turnaround times. 
           </p>
         </div>
 
