@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.00c52111.js",
+    "main.js": "./static/js/main.92ca68ae.js",
     "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
@@ -17,6 +17,7 @@
     "static/media/rc_car_it_1.jpg": "./static/media/rc_car_it_1.96f84560115dd6adf04c.jpg",
     "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
     "static/media/dbh_1A.png": "./static/media/dbh_1A.e21f44270cc6eaddc5db.png",
+    "static/media/led_wiring.jpg": "./static/media/led_wiring.20fc072244a867145dbd.jpg",
     "static/media/particle_system.gif": "./static/media/particle_system.5c4ddddddda0e7f5423d.gif",
     "static/media/photovoltaic_cell.png": "./static/media/photovoltaic_cell.37a9f1cf7805835528da.png",
     "static/media/sunlight_spectrum.png": "./static/media/sunlight_spectrum.ed7c2dd3748d528da42c.png",
@@ -33,11 +34,11 @@
     "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.00c52111.js.map": "./static/js/main.00c52111.js.map",
+    "main.92ca68ae.js.map": "./static/js/main.92ca68ae.js.map",
     "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.00c52111.js"
+    "static/js/main.92ca68ae.js"
   ]
 }
