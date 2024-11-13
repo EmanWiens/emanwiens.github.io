@@ -1,6 +1,77 @@
 {
     "electronics": [
         {
+            "name": "LED Lights Project", 
+            "publish": true,
+            "introduction": "I have been wanting to get more into working with LEDs. When it comes to electronics, LEDs are somewhere between simple and complicated, it really depends on how deep you want to get into it. For this project, I will focus simply on making the LED work and putting it into some sort of housing.", 
+            "tags": [],
+            "images": [],
+            "iterations": [
+                {
+                    "title": "LED filaments",
+                    "publish": true,
+                    "introduction": "When it comes to LEDs, they can be a variety of shapes, sizes, and colors. One such hape is filament, similar to other light filaments, it usually goes into a bulb that you would screw into your ceiling. I realized recently, that you can buy the individual filements inside the bulb. After some research, I found that the ones that go into the wall sockets are in series so that they can take high voltages at a low current, and alternatively, there are some that are in parallel so they take low voltages and high current. For small projects, the low voltage is easier to produce using small power sources like a USB.",
+                    "components": [
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B0CT5Z2CJ4/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
+                            "text": "Edison Bulb LED Filament", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }, 
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B0CBLP569W/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
+                            "text": "Type C Female Connector Board", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/dp/B07KHLD4NR?ref=ppx_yo2ov_dt_b_fed_asin_title", 
+                            "text": "100uF Capacitor", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/ELEGOO-Resistor-Assortment-Compliant-Respberry/dp/B072BL2VX1/ref=sr_1_6?crid=2QO6KX3PQ78VK&dib=eyJ2IjoiMSJ9.rZUEPcUJVygRlQTv5lu4lwbdsMj3JnUWwQX1kHL7uCPtzR9c0K0wL_2B1Nv8JchEy8tqiQcyJ8ZbsRjeTB5J2IEBP3k6mTfNSe3bbIvrLpqVZE0IV06moRircb7KXCLag3Uk_OxUofxSzJLbgo7gf93ZOfYrGLAjUY3KqsOa2HJpagUaQZQGaFbAPLeiSz3B02Mmz7IKmLzvFfFfm-vvcMtTKP3q2tTwjaFwaeCR_ZqoeTLYPWU1zlKr2buZsKqhtE6ubSCfAl3k87ZTUvSISSYBXDfCsNW19hyjedTxQmw.jrcBiixLNNhXrNxooe0SFJ40DAbUN2ScDtKSTHaVe4Q&dib_tag=se&keywords=resistors&qid=1731456034&s=industrial&sprefix=resis%2Cindustrial%2C550&sr=1-6", 
+                            "text": "30 Ohm resistor", 
+                            "old_link": "", 
+                            "old_text": ""
+                        },
+                        {
+                            "link": "https://www.amazon.ca/TUOFENG-Solid-Wire-18-Tinned-Copper/dp/B0CM2Y7V1Z/ref=sr_1_1_sspa?crid=2FWYORJFW5Z8N&dib=eyJ2IjoiMSJ9.jOTTQah58ZWaSlU5blEIf8d4qx7rJrUORcYg9cN4SpUGLvYoXOzVQp9655TiCqu8NRYIOp4m5Q8sExPjEfJd4tEwYNvVURujSO4y5tIVL83BAtlhp8E3hrDx2hIt1Jh1ttCkBmMsLaLp3Iiln59jEwK-ruVWRKxXwtjOBRCp1B2WofyvMbk7iTeikzS0H6b8T4fp-4Xp6ScuFh1qXpoJetIM0Rjk1Tj_4Brr6W-WmVRZORk5QtVvR-HQaE76ewNOmizOo-ip4HWbTE4e8RulLMSkG1Je1zZFH6bwEXUzXXk.ujsQ14Ku6qqY193lJWJJERL8EIES462GCRU7t_sdkCs&dib_tag=se&keywords=22%2Bawg%2Bwire&qid=1731454837&sprefix=22%2Bawg%2B%2Caps%2C132&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1", 
+                            "text": "TUOFENG 22 awg Wire Solid Core", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }, 
+                        {
+                            "link": "https://www.thingiverse.com/thing:1688024/files", 
+                            "text": "Industrial light (3D printed)", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "Connecting the components", 
+                            "text": "I shaped the wires in the loops as desired, then I soldered all the LED filaments in parallel. The LED strip runs at about 2.5V when I tested it, as the power supply is USB will give it 5V, we need resistors to make this work. I used trial and error as the capacitors cannot carry a large load, or in other words, discipate the heat fast enough. So, I simply balanced the amount of current the resistors can handle while still keeping the LEDs bright which resulted in about 30 Ohms. Lastly, we have a capacitor, this is simply to smooth out the input electricity. Since USB can move around and this can cause brief fluctuations, the capacitor is meant to smooth those out so we do not notice as much of a flicker. Then we simply connect this to a USB-C module. Now we can use any USB-C power source to power the lights.", 
+                            "images" : [
+                                {
+                                    "name": "led_wiring", 
+                                    "type": "jpg", 
+                                    "alt": "An image showing the wiring of the lights.", 
+                                    "source": ""
+                                }
+                            ] 
+                        }, 
+                        {
+                            "title": "Result", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "RC tank project", 
             "publish": true,
             "introduction": "During my undergraduate degree I volunteered in the Humanoid Robotics Lab and got to learn a lot about robotics and computer engineering. This inspired me to want to learn more about how RC cars work and how I can make my own. This project has so many components I will need to learn about that this can be considered an unending project, there is always another thing that I can add. To avoid this endless scope creep, I set this up in iterations where I set some goals for each iteration and conclude it when those goals have been reached.", 
