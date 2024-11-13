@@ -52,7 +52,7 @@
                     "blurbs": [
                         {
                             "title": "Connecting the components", 
-                            "text": "I shaped the wires in the loops as desired, then I soldered all the LED filaments in parallel. The LED strip runs at about 2.5V when I tested it, as the power supply is USB will give it 5V, we need resistors to make this work. I used trial and error as the capacitors cannot carry a large load, or in other words, discipate the heat fast enough. So, I simply balanced the amount of current the resistors can handle while still keeping the LEDs bright which resulted in about 30 Ohms. Lastly, we have a capacitor, this is simply to smooth out the input electricity. Since USB can move around and this can cause brief fluctuations, the capacitor is meant to smooth those out so we do not notice as much of a flicker. Then we simply connect this to a USB-C module. Now we can use any USB-C power source to power the lights.", 
+                            "text": "I shaped the wires in the loops as desired, then I soldered all the LED filaments in parallel. The LED strip runs at about 2.5V when I tested it, as the power supply is USB will give it 5V, we need resistors to make this work. I used trial and error as the capacitors cannot carry a large load, or in other words, discipate the heat fast enough. So, I simply balanced the amount of current the resistors can handle while still keeping the LEDs bright which resulted in about 30 Ohms. Lastly, we have a capacitor, this is simply to smooth out the input electricity. Since USB can move around and this can cause brief fluctuations, the capacitor is meant to smooth those out so we do not notice as much of a flicker. Then we simply connect this to a USB-C module. Now we can use any USB-C power source to power the lights. The wires are single core so they are fairly sturdy on their own, they worked quite well for this and with some reinforcement should hold well. Note, the version here is brighter but the resistors overheated so the new version uses 3 * 10 Ohms in series to make 30 Ohms.", 
                             "images" : [
                                 {
                                     "name": "led_wiring", 
@@ -64,8 +64,15 @@
                         }, 
                         {
                             "title": "Result", 
-                            "text": "", 
-                            "images" : [] 
+                            "text": "I am happy with these results, the lights are just glued in and once I get better at 3D design I will fix that but for now it serves as a light doesn't overheat. The design is also amazing and was well accomodating to putting another type of light in.", 
+                            "images" : [
+                                {
+                                    "name": "temp", 
+                                    "type": "", 
+                                    "alt": "An industrial light that is 3D printed, it's a light bulb with a cage around it. The light is white, the cage is black.", 
+                                    "source": ""
+                                }
+                            ] 
                         }
                     ]
                 }
