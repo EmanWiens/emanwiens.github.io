@@ -10,7 +10,7 @@
                 {
                     "title": "LED filaments",
                     "publish": true,
-                    "introduction": "When it comes to LEDs, they can be a variety of shapes, sizes, and colors. One such hape is filament, similar to other light filaments, it usually goes into a bulb that you would screw into your ceiling. I realized recently, that you can buy the individual filements inside the bulb. After some research, I found that the ones that go into the wall sockets are in series so that they can take high voltages at a low current, and alternatively, there are some that are in parallel so they take low voltages and high current. For small projects, the low voltage is easier to produce using small power sources like a USB.",
+                    "introduction": "When it comes to LEDs, they can be a variety of shapes, sizes, and colors. One such shape is filament, similar to other light filaments, it usually goes into a bulb that you would screw into your ceiling. I realized recently, that you can buy the individual filements inside the bulb. After some research, I found that the ones that go into the wall sockets are in series so that they can take high voltages at a low current, and alternatively, there are some that are in parallel so they take low voltages and high current. For small projects, the low voltage is easier to produce using small power sources like a USB.",
                     "components": [
                         {
                             "link": "https://www.amazon.ca/gp/product/B0CT5Z2CJ4/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
@@ -724,7 +724,34 @@
 
 
     "guides": [
-        
+        {
+            "name": "Software vs. Hardware PWM", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "When using a Raspberry Pi PWM, there is an option between software PWM and hardware PWM. Basically, on a raspberry pi the CPU will need to other things and that PWM will be interrupted during this time according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! To avoid this use the hardware PWM using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "name": "Car OBD II", 
             "publish": true,
