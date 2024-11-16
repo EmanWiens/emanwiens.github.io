@@ -747,12 +747,14 @@
                     "blurbs": [
                         {
                             "title": "", 
-                            "text": "When using a Raspberry Pi PWM, there is an option between software PWM and hardware PWM. Basically, on a raspberry pi the CPU will need to other things and that PWM will be interrupted during this time according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! To avoid this use the hardware PWM using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. Since devices often have a limited number of hardware PWMs, <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> provides a high accuracy software timer for PWMs so we can get similar results.", 
+                            
+                            "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is tha the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "", 
-                            "text": "", 
+                            "text": "For this reason <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> uses <b>Direct Memory Access (DMA) PWMs</b>, which directly updates the memory without going through the CPU. This is techically a software PWM, but also makes more efficient use of the hardware. By using DMA the timing can be precisely controlled allowing for flicker free PWM. <br /><br />The code shows an example of how to initlize <code>pigpio</code> in python3, set the frquency and then set the PWM to 25% for 10 seconds.", 
+                            "code": "<code><ol><li>import pigpio</li><li>import time </li><li></li><li>pi = pigpio.pi()</li><li>pi.set_PWM_frequency(23, 1 << 8) # 256 </li><li>pi.set_PWM_range(23, 1 << 8) # 256 </li><li></li><li>pi.set_PWM_dutycycle(23, (1 << 8) * .25)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li><li>time.sleep(10)</li><li></li><li>pi.set_PWM_dutycycle(23, 0)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li></ol></code>",
                             "images" : [] 
                         }
                     ]
@@ -933,7 +935,7 @@
                     "blurbs": [
                         {
                             "title": "", 
-                            "text": "<ol><li>Go to the Windows store to install Ubuntu 20.04.4 LTS, or a version that you like</li><li>Then you have to enable the right Windows features<ol><li>You can press start and search: <code>Turn Windows features on or off</code></li><li>Then enable <code>Windows Subsystems for Linux</code></li><li>To enable this feature, you will need to restart your comtpuer</li></ol></li><li>For newer versions of WSL, enable the following: (source <a href=\"https://github.com/microsoft/WSL/issues/5014\">https://github.com/microsoft/WSL/issues/5014</a>)<ul><li><code>Microsoft-Windows-Subsystem-Linux</code></li><li><code>VirtualMachinePlatform</code></li></ul></li></ol>", 
+                            "text": "<ol><li>Go to the Windows store to install Ubuntu 20.04.4 LTS, or a version that you like</li><li>Then you have to enable the right Windows features<ol><li>You can press start and search: <code>Turn Windows features on or off</code></li><li>Then enable <code>Windows Subsystems for Linux</code></li><li>To enable this feature, you will need to restart your comtpuer</li></ol></li><li>For newer versions of WSL, enable the following: (source <a href=\"https://github.com/microsoft/WSL/issues/5014\">github.com/microsoft/WSL/issues/5014</a>)<ul><li><code>Microsoft-Windows-Subsystem-Linux</code></li><li><code>VirtualMachinePlatform</code></li></ul></li></ol>", 
                             "images" : [] 
                         }, 
                         {
