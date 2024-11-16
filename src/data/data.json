@@ -3,14 +3,14 @@
         {
             "name": "LED Lights Project", 
             "publish": true,
-            "introduction": "I have been wanting to get more into working with LEDs. When it comes to electronics, LEDs are somewhere between simple and complicated, it really depends on how deep you want to get into it. For this project, I will focus simply on making the LED work and putting it into some sort of housing.", 
+            "introduction": "I have been wanting to get more into working with LEDs. When it comes to electronics, LEDs are somewhere between simple and complicated, it depends on how deep you want to get into it. For this project, I will focus simply on making the LED work and putting it into some sort of housing.", 
             "tags": [],
             "images": [],
             "iterations": [
                 {
                     "title": "LED filaments",
                     "publish": true,
-                    "introduction": "When it comes to LEDs, they can be a variety of shapes, sizes, and colors. One such shape is filament, similar to other light filaments, it usually goes into a bulb that you would screw into your ceiling. I realized recently, that you can buy the individual filements inside the bulb. After some research, I found that the ones that go into the wall sockets are in series so that they can take high voltages at a low current, and alternatively, there are some that are in parallel so they take low voltages and high current. For small projects, the low voltage is easier to produce using small power sources like a USB.",
+                    "introduction": "When it comes to LEDs, they can be a variety of shapes, sizes, and colours. One such shape is a filament, similar to other light filaments, it usually goes into a bulb that you would screw into your ceiling. I realized recently, that you can buy the individual filements inside the bulb. After some research, I found that the ones that go into the wall sockets are in series so that they can take high voltages at a low current, and alternatively, some are in parallel so they take low voltages and high current. For small projects, the low voltage is easier to produce using small power sources like a USB.",
                     "components": [
                         {
                             "link": "https://www.amazon.ca/gp/product/B0CT5Z2CJ4/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1", 
@@ -38,7 +38,7 @@
                         },
                         {
                             "link": "https://www.amazon.ca/TUOFENG-Solid-Wire-18-Tinned-Copper/dp/B0CM2Y7V1Z/ref=sr_1_1_sspa?crid=2FWYORJFW5Z8N&dib=eyJ2IjoiMSJ9.jOTTQah58ZWaSlU5blEIf8d4qx7rJrUORcYg9cN4SpUGLvYoXOzVQp9655TiCqu8NRYIOp4m5Q8sExPjEfJd4tEwYNvVURujSO4y5tIVL83BAtlhp8E3hrDx2hIt1Jh1ttCkBmMsLaLp3Iiln59jEwK-ruVWRKxXwtjOBRCp1B2WofyvMbk7iTeikzS0H6b8T4fp-4Xp6ScuFh1qXpoJetIM0Rjk1Tj_4Brr6W-WmVRZORk5QtVvR-HQaE76ewNOmizOo-ip4HWbTE4e8RulLMSkG1Je1zZFH6bwEXUzXXk.ujsQ14Ku6qqY193lJWJJERL8EIES462GCRU7t_sdkCs&dib_tag=se&keywords=22%2Bawg%2Bwire&qid=1731454837&sprefix=22%2Bawg%2B%2Caps%2C132&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1", 
-                            "text": "TUOFENG 22 awg Wire Solid Core", 
+                            "text": "TUOFENG 22 AWG Wire Solid Core", 
                             "old_link": "", 
                             "old_text": ""
                         }, 
@@ -52,7 +52,7 @@
                     "blurbs": [
                         {
                             "title": "Connecting the components", 
-                            "text": "I shaped the wires in the loops as desired, then I soldered all the LED filaments in parallel. The LED strip runs at about 2.5V when I tested it, as the power supply is USB will give it 5V, we need resistors to make this work. I used trial and error as the capacitors cannot carry a large load, or in other words, discipate the heat fast enough. So, I simply balanced the amount of current the resistors can handle while still keeping the LEDs bright which resulted in about 30 Ohms. Lastly, we have a capacitor, this is simply to smooth out the input electricity. Since USB can move around and this can cause brief fluctuations, the capacitor is meant to smooth those out so we do not notice as much of a flicker. Then we simply connect this to a USB-C module. Now we can use any USB-C power source to power the lights. The wires are single core so they are fairly sturdy on their own, they worked quite well for this and with some reinforcement should hold well. Note, the version here is brighter but the resistors overheated so the new version uses 3 * 10 Ohms in series to make 30 Ohms.", 
+                            "text": "I shaped the wires in the loops as desired, then I soldered all the LED filaments in parallel. The LED filaments ran at about 2.5V when I tested it, as the power supply is USB to supply 5V, we need resistors to make this work. I used trial and error as the capacitors cannot carry a large load, or in other words, dissipate the heat fast enough. So, I simply balanced the amount of current the resistors can handle while still keeping the LEDs bright which resulted in about 30 Ohms. Lastly, we have a capacitor, this is simply to smooth out the input electricity. Since USB can move around and this can cause brief fluctuations, the capacitor is meant to smooth those out so we do not notice as much of a flicker. Then we simply connect this to a USB-C module. Now we can use any USB-C power source to power the lights. The wires are single core so they are fairly sturdy on their own, they worked quite well for this and with some reinforcement should hold well. Note, the version here is brighter but the resistors overheated so the new version uses 3 * 10 Ohms in series to make 30 Ohms.", 
                             "images" : [
                                 {
                                     "name": "led_wiring", 
@@ -64,7 +64,7 @@
                         }, 
                         {
                             "title": "Result", 
-                            "text": "I am happy with these results, the lights are just glued in and once I get better at 3D design I will fix that but for now it serves as a light and doesn't overheat. The design is also amazing and was well accomodating to putting another type of light in.", 
+                            "text": "I am happy with these results, the lights are just glued in and once I get better at 3D design I will fix that but for now it serves as a light and doesn't overheat. The design is also amazing and was well accommodating to putting another type of light in.", 
                             "images" : [
                                 {
                                     "name": "temp", 
@@ -748,12 +748,12 @@
                         {
                             "title": "", 
                             
-                            "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is tha the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
+                            "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is that the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "", 
-                            "text": "For this reason <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> uses <b>Direct Memory Access (DMA) PWMs</b>, which directly updates the memory without going through the CPU. This is techically a software PWM, but also makes more efficient use of the hardware. By using DMA the timing can be precisely controlled allowing for flicker free PWM. <br /><br />The code shows an example of how to initlize <code>pigpio</code> in python3, set the frquency and then set the PWM to 25% for 10 seconds.", 
+                            "text": "For this reason <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> uses <b>Direct Memory Access (DMA) PWMs</b>, which directly updates the memory without going through the CPU. This is technically a software PWM, but also makes more efficient use of the hardware. By using DMA the timing can be precisely controlled allowing for flicker-free PWM. <br /><br />The code shows an example of how to initialize <code>pigpio</code> in python3, set the frequency and then set the PWM to 25% for 10 seconds.", 
                             "code": "<code><ol><li>import pigpio</li><li>import time </li><li></li><li>pi = pigpio.pi()</li><li>pi.set_PWM_frequency(23, 1 << 8) # 256 </li><li>pi.set_PWM_range(23, 1 << 8) # 256 </li><li></li><li>pi.set_PWM_dutycycle(23, (1 << 8) * .25)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li><li>time.sleep(10)</li><li></li><li>pi.set_PWM_dutycycle(23, 0)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li></ol></code>",
                             "images" : [] 
                         }
@@ -799,7 +799,7 @@
         {
             "name": "Ubuntu antivirus", 
             "publish": true,
-            "introduction": "One day I was curious if I may have installed a virus on my Ubuntu machine and looked up how to scan it. Luckily someone else already posted this question on <a href=\"https://askubuntu.com/questions/417429/how-can-i-scan-for-possible-viruses-on-my-ubuntu-system \">askubuntu</a>.", 
+            "introduction": "One day I was curious if I may have installed a virus on my Ubuntu machine and looked up how to scan it. Luckily someone else already posted this question on <a href=\"https://askubuntu.com/questions/417429/how-can-i-scan-for-possible-viruses-on-my-ubuntu-system \">askubuntu.com</a>.", 
             "tags": [],
             "images": [
                 {
@@ -1733,5 +1733,4 @@
         }
     ]
 }
-
 
