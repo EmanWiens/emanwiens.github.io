@@ -653,7 +653,7 @@
                         {
                             "title": "Mirror drives code", 
                             "code": "<code><ol><li>#!/bin/python3</li><li></li><li>import os</li><li>from datetime import datetime </li><li>import subprocess</li><li>import sys </li><li></li><li>main_drive = \"/mnt/f/\"</li><li>backup_drive = \"/mnt/e/\"</li><li>log_path = \"{}log/log_{}.txt\".format(main_drive, datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")) </li><li>rsync_command = [\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive]</li><li></li><li># create the folder </li><li>if (not os.path.isdir(\"{}log/\".format(main_drive))): </li><li>&emsp;os.mkdir(\"{}log/\".format(main_drive))</li><li></li><li># open the log file </li><li>f = open(log_path, \"w\")</li><li>f.write(\"Sync from {} to {}\n\".format(main_drive, backup_drive))</li><li>f.write(\"Started at {}\n\n\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\"))) </li><li></li><li># run rsync dry-run (-n)</li><li>process = subprocess.Popen([\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive], stdout=subprocess.PIPE, </li>universal_newlines=True)<li>stdout = process.communicate()[0]</li><li>f.write(stdout)</li><li>f.close() </li><li></li><li># actually run rsync </li><li>subprocess.call([\"rsync\", \"-aP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive])</li><li></li><li>f = open(log_path, \"a\") </li><li>f.write(\"\nFinished at {}\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")))</li><li>f.close()</li></ol></code>",
-                            "text": "", 
+                            "text": "When using a bash terminal, you can use <b>python3 subprocess</b> to bash commands as a seperate process, the output of which will be returned in <code>stdout</code> (see lines 5 and 23).<br /><br />There are multiple types of <b>flags</b> that can be used:<ul><li><code>-u</code>: Do not update new files on destination</li><li><code>-n</code>: dry-run</li><li><code>-r</code>: recursive</li><li><code>-P</code>: <code>--progress</code> and <code>--partial</code></li><li><code>-z</code>: compress on transfer</li></ul>The most important of these in our case are <code>-u</code>", 
                             "images" : [] 
                         }, 
                         {
@@ -748,12 +748,12 @@
                         {
                             "title": "", 
                             
-                            "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is that the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
+                            "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to do other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is that the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "", 
-                            "text": "For this reason <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> uses <b>Direct Memory Access (DMA) PWMs</b>, which directly updates the memory without going through the CPU. This is technically a software PWM, but also makes more efficient use of the hardware. By using DMA the timing can be precisely controlled allowing for flicker-free PWM. <br /><br />The code shows an example of how to initialize <code>pigpio</code> in python3, set the frequency and then set the PWM to 25% for 10 seconds.", 
+                            "text": "For this reason <a href=\"https://abyz.me.uk/rpi/pigpio/\">pigpio</a> also provides <b>Direct Memory Access (DMA) PWMs</b>, which directly updates the memory without going through the CPU. This is technically a software PWM, but makes more efficient use of the hardware. By using DMA the timing can be precisely controlled allowing for flicker-free PWM. <br /><br />The code shows an example of how to initialize <code>pigpio</code> in python3, set the frequency and then set the PWM to 25% for 10 seconds.", 
                             "code": "<code><ol><li>import pigpio</li><li>import time </li><li></li><li>pi = pigpio.pi()</li><li>pi.set_PWM_frequency(23, 1 << 8) # 256 </li><li>pi.set_PWM_range(23, 1 << 8) # 256 </li><li></li><li>pi.set_PWM_dutycycle(23, (1 << 8) * .25)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li><li>time.sleep(10)</li><li></li><li>pi.set_PWM_dutycycle(23, 0)</li><li>print(pi.get_PWM_dutycycle() / (1 << 8))</li></ol></code>",
                             "images" : [] 
                         }
@@ -799,7 +799,7 @@
         {
             "name": "Ubuntu antivirus", 
             "publish": true,
-            "introduction": "One day I was curious if I may have installed a virus on my Ubuntu machine and looked up how to scan it. Luckily someone else already posted this question on <a href=\"https://askubuntu.com/questions/417429/how-can-i-scan-for-possible-viruses-on-my-ubuntu-system \">askubuntu.com</a>.", 
+            "introduction": "", 
             "tags": [],
             "images": [
                 {
@@ -814,7 +814,7 @@
                 {
                     "title": "",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "One day I was curious if I may have installed a virus on my Ubuntu machine and looked up how to scan it. Luckily someone else already posted this question on <a href=\"https://askubuntu.com/questions/417429/how-can-i-scan-for-possible-viruses-on-my-ubuntu-system \">askubuntu.com</a>.",
                     "components": [],
                     "blurbs": [
                         {
@@ -835,14 +835,14 @@
             "name": "CUPS: Remote printer", 
             "publish": true,
             "tags": ["Electronics", "Printer", "Raspberry Pi"],
-            "introduction": "My dad got an old printer from a garage sale and though the printer is excellent it does not have wireless printing. The printer itself is of good quality and for a few dollars it was worth the money. Instead of trying to find some fancy printer, I decided to try to see if I could find a workaround for this. And since I like learning new things, especially related to tech, that is exactly what I did. I used <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">CUPS</a> along with my <a href=\"https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/\">Raspberry Pi 3B+</a> to turn the printer into a wireless printer!", 
+            "introduction": "", 
             "images": [], 
             
             "iterations": [
                 {
                     "title": "",
                     "publish": true,
-                    "introduction": "",
+                    "introduction": "My dad got an old printer from a garage sale and though the printer is excellent it does not have wireless printing. The printer itself is of good quality and for a few dollars it was worth the money. Instead of trying to find some fancy printer, I decided to try to see if I could find a workaround for this. And since I like learning new things, especially related to tech, that is exactly what I did. I used <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">CUPS</a> along with my <a href=\"https://www.pishop.ca/product/raspberry-pi-3-model-b-plus/\">Raspberry Pi 3B+</a> to turn the printer into a wireless printer!",
                     "images": [],
                     "components": [
                         {
@@ -861,7 +861,7 @@
                     "blurbs": [
                         {
                             "title": "Description", 
-                            "text": "<ol><li>Install CUPS using: <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/</a></li><li>To turn the Raspberry Pi into a print server use: <a href=\"https://www.tomshardware.com/how-to/raspberry-pi-print-server\">https://www.tomshardware.com/how-to/raspberry-pi-print-server</a><ul><li><code>sudo cupsctl --remote-any</code></li></ul></li><li>Use <code>cupsctl --remote-admin</code> to allow for remote admin</li><li>Find your printer driver online<ul><li><a href=\"https://support.brother.com/g/b/productsearch.aspx?c=ca&lang=en&content=dl\">Brothers printer drivers</a></li><li>In my case I have to find a driver for Brother HL-2040 series <a href=\"https://www.openprinting.org/printer/Brother/Brother-HL-2040\">https://www.openprinting.org/printer/Brother/Brother-HL-2040</a></li></ul></ol>", 
+                            "text": "<ol><li>Install CUPS using a guide provided at <a href=\"https://www.raspberrypi.com/news/printing-at-home-from-your-raspberry-pi/\">raspberrypi.com</a></li><li>To turn the Raspberry Pi into a print server, see <a href=\"https://www.tomshardware.com/how-to/raspberry-pi-print-server\">tomshardware.com</a>: <ul><li><code>sudo cupsctl --remote-any</code></li></ul></li><li>Use <code>cupsctl --remote-admin</code> to allow for remote admin</li><li>Find your printer driver online<ul><li>Look up the support website to the printer to find what driver it needs: <a href=\"https://support.brother.com/g/b/productsearch.aspx?c=ca&lang=en&content=dl\">support.brother.com</a></li><li>Downloaded the printer driver at <a href=\"https://www.openprinting.org/printer/Brother/Brother-HL-2040\">openprinting.org</a></li></ul></ol>", 
                             "images" : []
                         }
                     ]
