@@ -21,7 +21,7 @@ const Homepage = () => {
             <li>Migrate my project contents here.
               <ul>
                 <li><strike>Move old web page projects here.</strike></li>
-                <li>Move Notion projects here.</li>
+                <li><strike>Move Notion projects here.</strike></li>
                 <li>Document the undocumented projects.</li>
               </ul>
             </li>

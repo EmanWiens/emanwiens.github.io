@@ -651,18 +651,48 @@
                             "images" : [] 
                         },
                         {
+                            "title": "rsync", 
+                            "text": "<ul><li>Test: `rsync -r -P -n /media/pi/GoofieGooberOne/ /media/pi/GoofieGooberTwo/`</li><li>`rsync -gloptrunP --exclude System\\ Volume\\ Information/ --exclude WPSystem/ --exclude f/$RECYCLE.BIN/ /media/pi/GoofieGooberOne/ /media/pi/GoofieGooberTwo/`<ul><li>Exclude the system files because they are not helpful</li><li>Note: remove n to run this</li><li>For windows: `rsync -gloptrunP --exclude System\\ Volume\\ Information/ --exclude WPSystem/ --exclude f/$RECYCLE.BIN/ /mnt/f /mnt/e`</li><li>t: for keeping time https://serverfault.com/questions/262411/rsync-to-nas-copies-everything-every-time</li><li>Just use -a</li><li>https://phoenixnap.com/kb/rsync-exclude-files-and-directories <ul><li>--timeout=SECONDS <ul><li>Not sure that I want timeout, but when another file is using it then it cannot copy</li></ul></li><li>`rsync -anP --timeout=3600 --exclude System\\ Volume\\ Information/ --exclude WPSystem/ --exclude $RECYCLE.BIN/ /mnt/f/ /mnt/e/`</li><li>Has to have -t because that's the tag that</li></ul></li></ul></li></ul>", 
+                            "images" : [] 
+                        },
+                        {
                             "title": "Mirror drives code", 
                             "code": "<code><ol><li>#!/bin/python3</li><li></li><li>import os</li><li>from datetime import datetime </li><li>import subprocess</li><li>import sys </li><li></li><li>main_drive = \"/mnt/f/\"</li><li>backup_drive = \"/mnt/e/\"</li><li>log_path = \"{}log/log_{}.txt\".format(main_drive, datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")) </li><li>rsync_command = [\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive]</li><li></li><li># create the folder </li><li>if (not os.path.isdir(\"{}log/\".format(main_drive))): </li><li>&emsp;os.mkdir(\"{}log/\".format(main_drive))</li><li></li><li># open the log file </li><li>f = open(log_path, \"w\")</li><li>f.write(\"Sync from {} to {}\n\".format(main_drive, backup_drive))</li><li>f.write(\"Started at {}\n\n\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\"))) </li><li></li><li># run rsync dry-run (-n)</li><li>process = subprocess.Popen([\"rsync\", \"-anP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive], stdout=subprocess.PIPE, </li>universal_newlines=True)<li>stdout = process.communicate()[0]</li><li>f.write(stdout)</li><li>f.close() </li><li></li><li># actually run rsync </li><li>subprocess.call([\"rsync\", \"-aP\", \"--delete\", \"--exclude\", \"$RECYCLE.BIN/\", main_drive, backup_drive])</li><li></li><li>f = open(log_path, \"a\") </li><li>f.write(\"\nFinished at {}\".format(datetime.now().strftime(\"%Y-%m-%d_%H-%M-%S\")))</li><li>f.close()</li></ol></code>",
-                            "text": "When using a bash terminal, you can use <b>python3 subprocess</b> to bash commands as a seperate process, the output of which will be returned in <code>stdout</code> (see lines 5 and 23).<br /><br />There are multiple types of <b>flags</b> that can be used:<ul><li><code>-u</code>: Do not update new files on destination</li><li><code>-n</code>: dry-run</li><li><code>-r</code>: recursive</li><li><code>-P</code>: <code>--progress</code> and <code>--partial</code></li><li><code>-z</code>: compress on transfer</li></ul>The most important of these in our case are <code>-u</code>", 
+                            "text": "When using a bash terminal, you can use <b>python3 subprocess</b> to bash commands as a seperate process, the output of which will be returned in <code>stdout</code> (see lines 5 and 23).<br /><br />There are multiple types of <b>flags</b> that can be used for <code>rsync</code>:<ul><li><code>-a, --archive</code>: archive mode; equals -rlptgoD</li><li><code>-u</code>: Do not update new files on destination</li><li><code>-n</code>: dry-run</li><li><code>-r</code>: recursive</li><li><code>-P</code>: <code>--progress</code> and <code>--partial</code></li><li><code>-z</code>: compress on transfer</li></ul>The most important of these in our case are <code>-u</code> ", 
                             "images" : [] 
                         }, 
                         {
                             "title": "Automatically running scripts", 
-                            "text": "", 
+                            "text": "- run it automatically     - Using Cron: https://bc-robotics.com/tutorials/setting-cron-job-raspberry-pi/     - https://phoenixnap.com/kb/set-up-cron-job-linux     - list items using `crontab -l`     - https://stackoverflow.com/questions/41281112/crontab-not-working-with-bash-on-ubuntu-on-windows     - to run in sudo run as sudo         - `sudo crontab -e`     - https://crontab.guru/#0_22_*_*_1-5     - run crontab using `sudo cron` ```python #!/bin/bash 0 2 * * * sudo python3 /mnt/c/Users/cunni/Documents/Github/local_backups/main.py > /mnt/c//Users/cunni/Documents/Github/local_backups/log.txt```", 
                             "images" : [] 
                         }, 
                         {
                             "title": "Result", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }, 
+                {
+                    "title": "Hosting options",
+                    "publish": false,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "", 
+                            "text": "", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "# File server - Cost money: https://filerun.com/ - Looks like a nice js based web file manager: https://tinyfilemanager.github.io/     - This is a really nice cloud server but have to figure out users and permissions for users - Looks decent: https://filebrowser.org/installation ## Web/file servers - https://www.npmjs.com/package/node-file-manager - TODO check this out https://www.howtogeek.com/190835/how-to-turn-an-old-pc-into-a-home-file-server/ ## Cloud Why not cloud? [https://www.reichelt.com/magazin/en/own-cloud-with-the-raspberry-pi/#:~:text=NextCloud is open source software,with specific participants and collaborate](https://www.reichelt.com/magazin/en/ wn-cloud-with-the-raspberry-pi/#:~:text=NextCloud%20is%20open%20source%20software,with%20specific%20participants%20and%20collaborate).  Nextcloud: https://github.com/nextcloud - This was a product. Single hard-drive. This is no longer in use. - Can install image on raspberry pi. Seems to be a challenge to install otherwise on raspi. - Can be installed on existing raspi os: https://raspberrytips.com/install-nextcloud-raspberry-pi/ Own cloud: https://thepi.io/how-to-set-up-a-raspberry-pi-owncloud-server/ - https://pimylifeup.com/raspberry-pi-owncloud/ - Also a disc image called DietPi ## Samba - https://magpi.raspberrypi.org/articles/samba-file-server     - `sudo vim /etc/samba/smb.conf` - https://ubuntu.com/tutorials/install-and-configure-samba#4-setting-up-user-accounts-and-connecting-to-share     - `sudo vim /etc/samba/smb.conf`     - `sudo service smbd restart`     - https://help.ubuntu.com/community/Samba/SambaServerGuide?_ga=2.242564551.413817086.1626414322-2055300553.1626146326 - Connect windows: https://www.pcmag.com/how-to/how-to-turn-a-raspberry-pi-into-a-nas-for-whole-home-file-sharing - Force user? : https://forums.linuxmint.com/viewtopic.php?t=245005 - A given user can only use this when they are the sole user     - e.g. root user cannot be logged in at multiple computers ## Kodi - https://pimylifeup.com/raspberry-pi-kodi/ - https://kodi.wiki/view/HOW-TO:Install_Kodi_on_Raspberry_Pi ", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
                             "text": "", 
                             "images" : [] 
                         }
@@ -687,7 +717,7 @@
             "iterations": [
                 {
                     "title": "",
-                    "publish": true,
+                    "publish": false,
                     "introduction": "",
                     "components": [
                         {
@@ -699,8 +729,34 @@
                     ],
                     "blurbs": [
                         {
+                            "title": "Introduction Solar panels", 
+                            "text": " have been growing widely as a renewable source of energy and the question is how do they work? I am sure you have read about the photons hitting the solar panels and a current being created. However, in this forum I don't care as much how the physics inside works, I care more about how I can use one, today, to power something. First, I will explain the basics about solar panels since there are some things about solar panels that make them a lot simpler than I thought, but there are other things that make it more complex. Then I will go over how you can create a solar array with less than $10. # 2. Basics about solar panels I would like to point out again that I will not go into the physics or chemistry to explain how electric components like batteries or solar panels work. Instead I will discuss how you can use them to generate enough power to power some LEDs or maybe your phone. The most basic thing about all electronics is that there is a positive and a negative side. On a battery for example, we know there is a plus and minus side. A solar panel, in a lot of respects, can be thought of a similar to a battery in that it is a power source for your circuit. Note, that a circuit can have multiple power sources which can be in [parallel or in series](https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/). Unlike batteries, solar panels cannot explode so they are safer to work with. Back to the main point, there is a plus pole and minus pole on a solar panel. This can be tested with a simple multimeter on the back of the solar panel and making sure light hits the panel. If you don't have a multimeter already, I would highly recommend getting one. Even a simple one that is fairly cheap will take a lot of guess work out, and let me tell you that you do not want to guess when it comes to electricity. # 3. How to make your own Solar Array for under $10 As promised, I will provide a step-by-step walkthrough for creating your own solar array. As mentioned, solar panels are widely available and there are likely many sources at which you can conveniently get them for a fair price. However, since my intention was for experimentation and I kept in mind that I may break them, I chose the cheapest and easiest option and went to the local store to get simple garden lights. I went with the cheapest lights which cost about $1.50. Note, don't worry about getting a poor quality solar panel, I noticed that many garden lights use the same panels and the cost seems to depend heavily on the hardware used such as the battery and casing. ## 3.1 Supplies1. 6 * Garden lights I chose to use 6, but you can use more or less depending on what you want to do 2. An LED NOTE: The garden lights have LEDs so you don't have to buy extras. 3. Soldering iron 4. Multimeter ## 3.2 Taking the garden lights apart The nice thing about these is that the garden light only cost $1.50 so I was not really all that worried about breaking some of them. Either way, the ones I have you can twist the top off and then unscrew a couple screws and you should be seeing wires, a battery, and a control board. You can also keep the battery, though it's likely not a good one, and the LED. The one I have has 4 wires, the first is a blue (-/ground) and red (+) coming from the solar panel side. The other is a black (-/ground) and red (+) going to the battery. This light is made so that it uses the solar panel to charge the battery during the day, while the LED is off. As soon as the day ends and the solar panel no longer produces enough energy, the LED is enable. You can cut the the solar panel wires off somewhere near the middle. Once you strip them, connect them to the multimeter, and held the panel to full sunlight I was able to see 2.5v. ## 3.3 Making the Solar ArrayAs mentioned before, solar panels can be put into [parallel or in series](https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/), which is what I did. Like the [last diagram](https://www.power-sonic.com/blog/how-to-connect-batteries-in-series-and-parallel/) I put two in series and three of those in parallel. For the solar panels I have, this would mean that I have 2 * 2.5v and 3 * the amps. Unfortunately, I do not know how many amps these solar panels output, however, I suspect that they output somewhere between 50 to 100 mA. Maybe 150mA. CAUTION, I do not take responsibility for any damages to devices that you plug the solar panels into; I did the math, did my own tests to make sure nothing would be damaged, and did this at my own risk and so should you. Additionally, please do the necessary research when charging batteries and other devices. At the cost of the USB wire, once cut and stripped there will likely be 2 to 4 wires. One will be red (+) and one will be black (-). Those will be the 5V 2A output. Again, please test this with the multimeter. The good news is that the charging logic is already built into the phone, meaning that if the voltage is lower than 5V the device will not charge. Caution, I have not tested, nor will I test, what happens when the voltage is higher! Please take caution. If the solar panels run at 5V, then the amps will not matter as long as it is less than or equal to 2A for this particular device. Given that the solar panels are estimated to have about .15A, you should not have to worry about that. Since I measured the max output for the solar array to be 5V it will never go over and should be safe to use on mobile devices. I tested this with a power bank that I have and under the sun it will be charging and I am happy with the results. ## 3.4 Voltage regulators and battery charger controller If you want to get more into solar panels there are a couple things that you should look into. These are things that I have had to consider for other projects. First, a voltage regulator. Now that we have played with solar panels, we've realized that the voltage changes. If the solar panels are large enough, you could produce a higher voltage than needed even when power income is low. Even with the 5V panels, they are somewhere between 0V and 5V. This is enough for our purposes. However, I also have a 20V solar panel which would be dangerous to connect to a 5V device. So, there are buck converters, a.k.a. step down converters, which are meant to take a higher voltage and lower it to a set voltage. Note, we don't need one at the moment but for completeness, there are also boost converters, a.k.a. step up converters, which do the opposite of step down converters. As mentioned before, charging batteries takes some logic. You have to charge the battery right, which depends on what type of battery it is and so on. If you want to get your own AA batteries and recharge them, you could. However, you will need a battery charger controller to keep yourself and the batteries safe. For this reason, I have decided to use phone power banks, they have all that logic built on already.", 
+                            "images" : [] 
+                        }, 
+                        {
                             "title": "", 
                             "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }, 
+                {
+                    "title": "",
+                    "publish": false,
+                    "introduction": "",
+                    "components": [
+                        {
+                            "link": "https://www.amazon.ca/gp/product/B07NPDWZJ7/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&th=1", 
+                            "text": "Renogy Wanderer 10 Amp 12V/24V PWM Negative Ground Solar Charge Controller Regulator", 
+                            "old_link": "", 
+                            "old_text": ""
+                        }
+                    ],
+                    "blurbs": [
+                        {
+                            "title": "", 
+
+                            "text": "Simple diagram: https://renogy.com/learn-system-setup/ There are several types of batteries and it’s important to find the right kind of battery. For some help visit https://batteryguys.com/pages/the-differences-between-agm-gel-and-flooded-batteries. How to properly connect load to solar battery: https://cleversolarpower.com/connect-solar-panel-to-battery/ Battery type Common use Pros Cons Gel  Flooded or “wet cell” Car battery Relatively cheap Not sealed. When pressure builds they release gasses and acid Acid  Lithium ion Expensive ", 
                             "images" : [] 
                         }, 
                         {
@@ -747,7 +803,6 @@
                     "blurbs": [
                         {
                             "title": "", 
-                            
                             "text": "When using a Raspberry Pi Pulse-Width Modulation (PWM), there is an option between <b>software PWM</b> and <b>hardware PWM</b>.<br /><br /> For <b> software PWM</b>, be aware that on a Raspberry Pi the CPU will need to do other things and that will interrupt the PWM according to this answer on <a href=\"https://electronics.stackexchange.com/questions/352439/raspberry-pi-controlled-led-strip-flickering\">electronics.stackexchange.com</a>. Simply put, if you use LEDs on software PWM they will flicker! <br /><br />The alternative is to use <b>hardware PWM</b> using <code>pigpio</code>, with code provided on <a href=\"https://forums.raspberrypi.com/viewtopic.php?t=194839\">forums.raspberrypi.com</a>. However, the problem is that the Raspberry Pi has four hardware PWM pins on two channels, meaning that two pins will share one PWM setting.", 
                             "images" : [] 
                         }, 
