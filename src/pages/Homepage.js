@@ -10,10 +10,12 @@ const Homepage = () => {
             Now compatible with mobile!<br /><br />
           </h5>
           <p>
-            Welcome to my personal page. I am currently working on switching the backend to <a href="https://react.dev/">React</a>. Some parts of the site might be missing, not functional yet, or might just look odd.
+            Welcome to my page! This is a space where I can primarily share my interests and hobbies. This page is mostly intended for me to reference back to some of my many projects and interests, almost like a journal. Some of these are guides that I refer to from time to time and, at some point, it became easier to store them here.<br /><br /> 
+            
+            I always have more projects brewing, and at any given point, I can probably say "there is a project I still have to write about".
           </p><br /><br />
 
-          <h2>Roadmap</h2>
+          {/* <h2>Roadmap</h2>
           <p>These are the changes I need to make happen for this switch to be deemed a success.</p>
           <ol>
             <li><strike>Switch the backend to <a href="https://react.dev/">React</a>.</strike></li>
@@ -28,7 +30,7 @@ const Homepage = () => {
             <li><strike>Make a <i>nice looking</i> Navigation bar.</strike></li>
             <li>Make a nice UI for the projects pages.</li>
             <li>Personalise webpage colours and layout.</li>
-          </ol>     
+          </ol> */}
         </div>
       </div>
     </div>

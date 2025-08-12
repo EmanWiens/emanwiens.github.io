@@ -438,7 +438,7 @@
                 {
                     "title": "Introduction",
                     "publish": true,
-                    "introduction": "Recently my brother happened to find an old electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially, we thought we would just scrap it for parts. After all, there is a large electric motor, a motor controller, and a battery and if even 1 of those works then the $5 investment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done. When I saw the batteries are done, I mean 0 volts and <i>visibly oxidised</i>.",
+                    "introduction": "Recently my brother happened to find an old electric drill at a local flea market and I figured this would be a good project to learn more about how electric drills work. The drill is in decent shape but it is old. We tried it and it did not work, and initially, we thought we would just scrap it for parts. After all, there is a large electric motor, a motor controller, and a battery and if even 1 of those works then the $5 investment my brother made was worth it. After some investigation, we noticed that the motor and motor controller are still fully operational, but the batteries are all done, I mean 0 volts and <i>visibly oxidised</i>.",
                     "images": [],
                     "components": [
                         {
@@ -489,11 +489,6 @@
                                     "source": ""
                                 }
                             ] 
-                        }, 
-                        {
-                            "title": "Fixing the drill", 
-                            "text": "Instead of stripping it for parts or throwing it out, I want to see if I can get this operational again. First, for the <b>batteries</b> I will use three 18650 batteries in series, making a <code>3.7v * 3 = 11.1v</code> battery. Note, when these are charged full they are at 4.2v each making 12.6v in total. Since taking 4 batteries results in a range that goes over, I will stick with a little under.<br /><br />To <b>charge the batteries</b> I will simply buy a charger that is meant for 3S batteries and put that in with the battery pack. To <b>supply power</b> for charging I will use a USB-C decoy capable of delivering 12v.", 
-                            "images" : [] 
                         }
                     ]
                 }
@@ -663,12 +658,12 @@
                         }, 
                         {
                             "title": "Automatically running scripts", 
-                            "text": "- run it automatically     - Using Cron: https://bc-robotics.com/tutorials/setting-cron-job-raspberry-pi/     - https://phoenixnap.com/kb/set-up-cron-job-linux     - list items using `crontab -l`     - https://stackoverflow.com/questions/41281112/crontab-not-working-with-bash-on-ubuntu-on-windows     - to run in sudo run as sudo         - `sudo crontab -e`     - https://crontab.guru/#0_22_*_*_1-5     - run crontab using `sudo cron` ```python #!/bin/bash 0 2 * * * sudo python3 /mnt/c/Users/cunni/Documents/Github/local_backups/main.py > /mnt/c//Users/cunni/Documents/Github/local_backups/log.txt```", 
+                            "text": "To run the scripts automatically I used <a href=\"https://bc-robotics.com/tutorials/setting-cron-job-raspberry-pi/\">Cron</a>. I set it up to automatically run the backup script at 2 am every week. The way that it did the backup allowed to use the device, the device is small and I wanted to do it when it was most likely not getting other requests.", 
                             "images" : [] 
                         }, 
                         {
                             "title": "Result", 
-                            "text": "", 
+                            "text": "This mostly worked and did keep my data backed up for a couple of months or even years. Eventually it needed updated and I just used the hard drives like normal drives. I also learned of tools that do this more efficiently, like <a href=\"https://openzfs.org/wiki/Main_Page\">Zettabyte File System</a>, but I sure enjoyed learning more about development work on Raspberry Pis and cloud storage.", 
                             "images" : [] 
                         }
                     ]
@@ -1230,7 +1225,7 @@
         }, 
         {
             "name": "Nepenthes Ventrata", 
-            "publish": true,
+            "publish": false,
             "introduction": "This is another carnivorous plant, and though it is also sometimes referred to as a pitcher plant it is a different species than Sarracenias. These plants are native to Asia and can grow in a variety of areas. These plants use a similar yet also unique way to catch their prey. This is a species I always wanted to have! I got my first Nepenthes in early 2023, it's still alive and seems to be doing well.", 
             "tags": [],
             "images": [],
@@ -1402,11 +1397,6 @@
                         {
                             "title": "What minerals do plants need?", 
                             "text": "There are people far more knowledgeable than me who have worked on this and <a href=\"https://www.dpi.nsw.gov.au/agriculture/soils/soil-testing-and-analysis/plant-nutrients#:~:text=Soil%20is%20a%20major%20source,are%20calcium%2C%20magnesium%20and%20sulfur\">published what they found! :)</a>", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "What is electroculture?", 
-                            "text": "I have heard of this term but I know nothing about it, one of these days I will figure out what it is. ", 
                             "images" : [] 
                         }
                     ]
