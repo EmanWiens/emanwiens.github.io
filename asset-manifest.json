@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.d5700b84.js",
+    "main.js": "./static/js/main.2809157f.js",
     "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
@@ -15,6 +15,7 @@
     "static/media/rc_car_it_3_2.jpg": "./static/media/rc_car_it_3_2.987ecba2ee43fead010d.jpg",
     "static/media/hackmaster.jpg": "./static/media/hackmaster.eac1d3952bf8e774563a.jpg",
     "static/media/rc_car_it_1.jpg": "./static/media/rc_car_it_1.96f84560115dd6adf04c.jpg",
+    "static/media/industrial_light.jpg": "./static/media/industrial_light.f5c68bc9bb6dc6a8f97f.jpg",
     "static/media/electric_drill_annot.jpg": "./static/media/electric_drill_annot.cc3e9c9010e703504434.jpg",
     "static/media/dbh_1A.png": "./static/media/dbh_1A.e21f44270cc6eaddc5db.png",
     "static/media/led_wiring.jpg": "./static/media/led_wiring.20fc072244a867145dbd.jpg",
@@ -34,11 +35,11 @@
     "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
     "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.d5700b84.js.map": "./static/js/main.d5700b84.js.map",
+    "main.2809157f.js.map": "./static/js/main.2809157f.js.map",
     "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.794b8da7.css",
-    "static/js/main.d5700b84.js"
+    "static/js/main.2809157f.js"
   ]
 }
