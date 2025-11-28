@@ -47,6 +47,7 @@ import rc_car_it_3_2 from './images/rc_car_it_3_2.jpg'
 import grav_2d from './images/grav_2d.gif'
 import bloch_sphere from './images/bloch_sphere.png'
 import led_wiring from './images/led_wiring.jpg'
+import industrial_light from './images/industrial_light.jpg'
 
 
 
@@ -118,6 +119,8 @@ function map_images(name) {
     return led_wiring;
   } else if (bloch_sphere.includes(name)) {
     return bloch_sphere;
+  } else if (industrial_light.includes(name)) {
+    return industrial_light;
   } else {
     return null;
   }
