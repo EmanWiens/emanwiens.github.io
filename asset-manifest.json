@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "./static/css/main.794b8da7.css",
-    "main.js": "./static/js/main.2809157f.js",
-    "static/js/453.83a4abc5.chunk.js": "./static/js/453.83a4abc5.chunk.js",
+    "main.css": "./static/css/main.dd01d12c.css",
+    "main.js": "./static/js/main.188b1761.js",
+    "static/js/453.75521a57.chunk.js": "./static/js/453.75521a57.chunk.js",
     "static/media/sarracenia_farnhamii.jpg": "./static/media/sarracenia_farnhamii.4027680abb8343ca6683.jpg",
     "static/media/sarracenia_purpurea.jpg": "./static/media/sarracenia_purpurea.752a6bf87b7528af71d9.jpg",
     "static/media/sarracenia_young.jpg": "./static/media/sarracenia_young.64eb1352ff0010d776cf.jpg",
@@ -34,12 +34,12 @@
     "static/media/least_square_segression.png": "./static/media/least_square_segression.7fdfface43a52beca5d1.png",
     "static/media/saving_your_bacon.png": "./static/media/saving_your_bacon.54a2b01108fab12e65bf.png",
     "index.html": "./index.html",
-    "main.794b8da7.css.map": "./static/css/main.794b8da7.css.map",
-    "main.2809157f.js.map": "./static/js/main.2809157f.js.map",
-    "453.83a4abc5.chunk.js.map": "./static/js/453.83a4abc5.chunk.js.map"
+    "main.dd01d12c.css.map": "./static/css/main.dd01d12c.css.map",
+    "main.188b1761.js.map": "./static/js/main.188b1761.js.map",
+    "453.75521a57.chunk.js.map": "./static/js/453.75521a57.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.794b8da7.css",
-    "static/js/main.2809157f.js"
+    "static/css/main.dd01d12c.css",
+    "static/js/main.188b1761.js"
   ]
 }
