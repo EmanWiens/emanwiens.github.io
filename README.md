@@ -3,11 +3,11 @@
 ## Fresh clone run 
 `git clone https://github.com/EmanWiens/emanwiens.github.io.git` <br />
 `npm install` <br />
-`npm install react-bootstrap bootstrap` <br />
-`npm install react-router-dom` <br />
-`npm install html-react-parser`<br />
-`npm install react-string-format`<br />
-`npm install react-accessible-accordion`<br />
+~`npm install react-bootstrap bootstrap`~<br />
+~`npm install react-router-dom`~<br />
+~`npm install html-react-parser`~<br />
+~`npm install react-string-format`~<br />
+~`npm install react-accessible-accordion`~<br />
 <br />
  
 heic to jpg use `heif-convert image.HEIC new-image.jpg`

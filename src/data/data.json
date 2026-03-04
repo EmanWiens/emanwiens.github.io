@@ -783,6 +783,34 @@
 
     "guides": [
         {
+            "name": "How to set up a vm using Linux Containers (LXC) in Ubuntu Linux", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Install guide", 
+                            "text": "First, you need to download and set up the proper iso files using a <a href=\"https://ubuntu.com/tutorials/how-to-install-a-windows-11-vm-using-lxd#1-overview\">guide provided by ubuntu.com</a>. The main commands for the setup are:<br />Initlize using <code>lxc init win11 --vm --empty</code><br /><code>lxc config device override win11 root size=64GiB</code><br /><code>lxc config set win11 limits.cpu=4 limits.memory=8GiB</code><br /><code>lxc config device add win11 vtpm tpm path=/dev/tpm0</code><br /><code></code><br />", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "User guide", 
+                            "text": "Once the vm is set up and installed, you can now run it using:<br /> <code>lxc start win11 --console=vga</code><br /><code>lxc stop win11 --console=vga</code><br /><br />To open it once you close it use: <code>lxc console win11 --type=vga</code>. <br /><br />For extra confiurations use: <code>lxc config device add win11 install disk source=/home/mionaalex/Downloads/win11.lxd.iso boot.priority=10</code><br /><br />Note, on first run it will simulate the install for the OS. If you do not select the install option, you will get a no boot found error. An additional note, when the installer runs it will reboot the computer. This means the vm will shut off, and you need to run the \"stop\" command to run the shutdown sequence.<br />", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Software vs. Hardware PWM", 
             "publish": true,
             "introduction": "", 
