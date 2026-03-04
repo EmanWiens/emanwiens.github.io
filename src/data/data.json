@@ -1486,6 +1486,40 @@
 
     "programming": [
         {
+            "name": "Oh Deer", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "2025 game jam", 
+                            "text": "At the end of 2025 my friends and I had a game jam in one of our basements. We partially recreated a game my friend made in 2D, but we added 3D and multiplayer this time!", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "This game is still under development, more coming soon!", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Grav_2D", 
             "publish": true,
             "introduction": "", 
