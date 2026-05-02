@@ -783,6 +783,251 @@
 
     "guides": [
         {
+            "name": "Pin executable to Favorites in Ubuntu Linux", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "I downloaded the <a href=\"https://godotengine.org/download/linux/\">Godot engine executable</a> and you cannot pin an executable in Ubuntu Linux. <br /><br />First you have to make it a desktop application. Go to <code>~/.local/share/applications</code>, there create a file named <code>godot.desktop</code> and add the code.<br /><br />You'll need to download the icon for it to use, I recommend the <a href=\"https://godotengine.org/press/\">Godot svg icon</a>.", 
+                            "code": "<code><ol><li>[Desktop Entry]</li><li>Name=Godot Engine</li><li>Comment=2D and 3D game engine</li><li>Exec=/home/YOUR_USERNAME/path/to/your/Godot_v4.x.x-stable_linux.x86_64</li><li>Terminal=false</li><li>Type=Application</li><li>Categories=Development;IDE;</li></ol></code>",
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Zettabyte File System (ZFS) setup ", 
+            "publish": true,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Setup", 
+                            "text": "There is a setup guide provided by <a href=\"https://ubuntu.com/tutorials/setup-zfs-storage-pool#2-installing-zfs\">ubuntu.com</a>. <br /> The install command is <code>sudo apt install zfsutils-linux</code>.<br />", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Set up a new drive", 
+                            "text": "When connecting a new disk, ZFS will format it how it needs to for the drive work within the ZFS pool. <br /> <br />To check what drives are plugged in use <code>sudo fdisk -l</code><br />", 
+                            "images" : [] 
+                        },
+                        {
+                            "title": "Creating a pool", 
+                            "text": "A pool is a collection of drives, containing at least one drive but potentially many. The pool is not the file system, that comes later. There are multiple options for pools, including <code>RAID-1</code> also known as a <code>mirrored pool</code>. The <code>mirrored pool</code> is not the most efficient but the easiest to get started with, it works by creating an exact copy of the drive to avoid data loss through corruption of data or failing sectors/drives.<br /><br />First create a pool using <code>sudo zpool create pool_name mirror /dev/disk/by-id/your_main_disk_id /dev/disk/by-id/your_mirrored_disk_id</code><br />&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> it is recommended that you use <code>/dev/disk/by-id/your_disk_id</code> rather than using <code>/dev/sd__</code>, because the ID is assigned to the drive itself whereas the <code>/dev/sd__</code> path is assigned by race condition. If the system reboots it is not guarenteed to map to the same <code>/dev/sd__</code> letter.<br /><br />You can create a pool with a single disk, but you would not be getting any real data recovery benefits. Further, if you connect multiple drives as one pool with no mirrors, and a drive breaks all you data could get corrupted so it is not recommeded.<br/><br/>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Updating a pool", 
+                            "text": "If a drive in a pool breaks or you want to swap it out, you can remove it using: <br /><code>sudo zpool detach pool_name /dev/disk/by-id/your_disk_id</code>.<br/><br />Similarly, to attach a new drive to the pool you can use: <br/><code>sudo zpool attach pool_name /dev/disk/by-id/your_main_disk_id /dev/disk/by-id/your_mirrored_disk_id</code><br/>It is often a good idea to first turn the drive off, if it is not already using <code>sudo zpool offline pool_name /dev/disk/by-id/your_disk_id</code>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Pool status and health", 
+                            "text": "To get status information of a pool use: <br><code>sudo zpool status</code> <br />To get a list of the file systems mounted use <code>sudo zpool list main_pool</code><br/><br/>One of the major features of using ZFS is being able to check for corrupted data using scrub:<br/><code>sudo zpool scrub pool_name</code>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Set up and mount a file system", 
+                            "text": "Setting up a file system is relatively easy, but there are some steps to consider. Create a file system sudo zfs create pool_name/mydataset sudo zfs set compression=on pool_name/myfilesystem sudo zfs list main_pool/main_fs sudo zfs set mountpoint=/mnt/mydataset pool_name/mydataset zfs get all <pool>/<dataset>", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "Snapshots", 
+                            "text": "I have not used this feature yet, but I want to use this to create off-site backups in the future, encrypted of coursess.", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Disk Commands Cheat Sheet", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "Checking disk health",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Convert to eBook", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [
+                {
+                    "name": "", 
+                    "type": "", 
+                    "alt": "", 
+                    "source": ""
+                }
+            ],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Official guide", 
+                            "text": "https://manual.calibre-ebook.com/generated/en/ebook-convert.html#epub-output-options <br /><br />install using <code>sudo apt-get install calibre<code><br />Usage <code>ebook-convert from.pdf to.epub</code>.", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "WritingTools/languageTool", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "", 
+                            "text": "https://github.com/theJayTea/WritingTools?tab=readme-ov-file", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GPT4ALL linux", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Install guide", 
+                            "text": "https://docs.entroware.com/posts/linux-gpt4all-gui/", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ollama linux", 
+            "publish": false,
+            "introduction": "", 
+            "tags": [],
+            "images": [],
+            
+            "iterations": [
+                {
+                    "title": "",
+                    "publish": true,
+                    "introduction": "",
+                    "components": [],
+                    "blurbs": [
+                        {
+                            "title": "Ollama Guide", 
+                            "text": "https://docs.ollama.com/linux", 
+                            "images" : [] 
+                        }, 
+                        {
+                            "title": "", 
+                            "text": "", 
+                            "images" : [] 
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "How to set up a vm using Linux Containers (LXC) in Ubuntu Linux", 
             "publish": true,
             "introduction": "", 
