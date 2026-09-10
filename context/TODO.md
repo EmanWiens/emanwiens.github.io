@@ -1,0 +1,65 @@
+# TODO List
+
+## 🧹 Cleanup & Maintenance
+- [ ] Remove or archive `manual_create_element_method.js` if it's no longer needed (duplicates functionality in `src/Utils.js`)
+- [ ] Remove debug `console.log()` statements from `map_images()` function in `src/Utils.js` (leak in production)
+
+## ⚡ Performance Improvements
+- [ ] Replace the O(n) `map_images()` switch/if chain with an O(1) object lookup:
+  ```javascript
+  const IMAGE_MAP = {
+    electric_drill_annot: './images/electric_drill_annot.jpg',
+    // ... map all images here
+  };
+
+  function map_images(name) {
+    return IMAGE_MAP[name] || null;
+  }
+  ```
+
+## 🛡️ Robustness & Error Handling
+- [ ] Add defensive bounds checking throughout `Utils.js` (e.g., check if `dict[index]` exists before accessing properties)
+- [ ] Handle edge cases where `blurbs` or `components` arrays might be empty/null
+- [ ] Add React Error Boundary around the app to catch rendering crashes gracefully
+
+## 🧩 Code Quality & Readability
+- [ ] Extract hardcoded CSS class names into a constants file (`src/constants.js`) for easier maintenance:
+  ```javascript
+  export const CLASSES = {
+    projectDiv: 'project_div',
+    iterationDiv: 'iteration_div',
+    componentList: 'components_div',
+    blurbContainer: 'blurb_div',
+    leftBlurbItem: 'left_blurb_item',
+    rightBlurbItem: 'right_blurb_item',
+    // ... etc
+  };
+  ```
+- [ ] Consider refactoring `render_blurb` — the left/right toggle logic may produce mismatched div closures; test with various data scenarios
+- [ ] Remove unused imports in `Utils.js`:
+  - `Accordion`, `AccordionItem`, etc. (commented out for future use)
+  - `Carousel` from react-bootstrap (also commented out)
+
+## 📚 Documentation
+- [ ] Add JSDoc comments to public functions (`render_element`, `render_iteration`, `create_electronics_page`, etc.)
+- [ ] Update `README.md` with project setup instructions, data format expectations, and deployment steps
+- [ ] Document the expected JSON data schema for each page category (electronics, guides, plants, programming)
+
+## 🎨 UI/UX Enhancements
+- [ ] Replace `<HashRouter>` with `<BrowserRouter>` if client-side navigation is desired (better UX)
+- [ ] Add loading states during image rendering
+- [ ] Improve responsive layout for the blurb items on mobile devices
+
+## 🧪 Testing
+- [ ] Write unit tests for `map_images` function
+- [ ] Write component tests for each page's render functions (`create_electronics_page`, etc.)
+- [ ] Add integration tests to verify full rendering pipeline works with sample data
+
+## 🔗 Dependency Audit
+- [ ] Review `package.json` dependencies — remove unused ones if any
+- [ ] Consider upgrading React and React Router versions if compatible
+- [ ] Check for security vulnerabilities using `npm audit`
+
+---
+
+**Last updated:** 2025
