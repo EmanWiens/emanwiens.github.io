@@ -37,6 +37,7 @@ import grav_2d from './images/grav_2d.gif'
 import bloch_sphere from './images/bloch_sphere.png'
 import led_wiring from './images/led_wiring.jpg'
 import industrial_light from './images/industrial_light.jpg'
+import oh_deer from './images/oh_deer.gif'
 
 // end images -----------------------------------------------------------------------------------------------------------------------
 
@@ -73,6 +74,7 @@ const IMAGE_MAP = {
   bloch_sphere: bloch_sphere,
   led_wiring: led_wiring,
   industrial_light: industrial_light,
+  oh_deer: oh_deer,
 };
 
 function map_images(name) {

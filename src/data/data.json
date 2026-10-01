@@ -1752,13 +1752,15 @@
                     "blurbs": [
                         {
                             "title": "2025 game jam", 
-                            "text": "At the end of 2025 my friends and I had a game jam in one of our basements. We partially recreated a game my friend made in 2D, but we added 3D and multiplayer this time!", 
-                            "images" : [] 
-                        }, 
-                        {
-                            "title": "", 
-                            "text": "This game is still under development, more coming soon!", 
-                            "images" : [] 
+                            "text": "At the end of 2025 my friends and I had a game jam in one of our basements. We partially recreated a game my friend made in 2D, but we added 3D and multiplayer this time!<br><br>The deer uses up glucose and calories and will die if you do not eat the apples that fall from the trees. We left off at making the wolf, the wolf currently sets a random point and walks towards it. The idea for the wolf is that it meant to hunt after the deer by doing random searches then sprinting for the deer on sight. Obviously we did not get that far, but the spirit is there! ", 
+                            "images" : [
+                                {
+                                    "name": "oh_deer", 
+                                    "type": "gif", 
+                                    "alt": "A quick demo of the Oh Deer Game",
+                                    "source": ""
+                                }
+                            ] 
                         }
                     ]
                 }
