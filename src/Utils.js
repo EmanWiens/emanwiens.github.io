@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import parse from "html-react-parser" 
 // import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion'; // TODO in future use this
 // import Carousel from 'react-bootstrap/Carousel'; // TODO in future use this
@@ -82,40 +82,23 @@ function map_images(name) {
 // end helper functions -------------------------------------------------------------------------------------------------------------
 
 
-// create pages ---------------------------------------------------------------------------------------------------------------------
-const render_element = (dict, index) => {
-  var iteration_elements = []; 
+// collapsible iteration component -----------------------------------------------------------------------------------------------
+const CollapsibleIteration = ({ iteration, index }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-  for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
-    if (dict[index]["iterations"][iteration]["publish"] === true) {
-      iteration_elements.push(render_iteration(dict[index]["iterations"], iteration)); 
-    }
-  }
-
-  return (
-    <div className="project_div">
-      <h2>{dict[index]['name']}</h2>
-      <p>{parse(dict[index]["introduction"])}</p>
-
-      {iteration_elements}
-    </div>
-  ); 
-}
-
-const render_iteration = (iteration_dict, index) => {
-  var component_elements = []; 
+  var component_elements = [];
   var blurb_elements = []; 
 
-  for (let component = 0; component < iteration_dict[index]["components"].length; component++) {
-    component_elements.push(render_component(iteration_dict[index]["components"], component)); 
+  for (let component = 0; component < iteration["components"].length; component++) {
+    component_elements.push(render_component(iteration["components"], component));
   }
 
-  for (let blurb = 0; blurb < iteration_dict[index]["blurbs"].length; blurb++) {
-    blurb_elements.push(render_blurb(iteration_dict[index]["blurbs"], blurb)); 
+  for (let blurb = 0; blurb < iteration["blurbs"].length; blurb++) {
+    blurb_elements.push(render_blurb(iteration["blurbs"], blurb));
   }
 
   var render_components = null; 
-  if (iteration_dict[index]["components"].length >= 1) {
+  if (iteration["components"].length >= 1) {
     render_components = (
     <div className="components_div">
       <br />
@@ -124,6 +107,73 @@ const render_iteration = (iteration_dict, index) => {
         {component_elements}
       </ul>
     </div>); 
+  }
+
+  return (
+    <div className="iteration_div collapsible_iteration">
+      <div
+        className="iteration_header_div collapsible_header"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <h3 className="collapsible_title">{iteration["title"]}</h3>
+        <span className="collapsible_toggle">{isOpen ? '−' : '+'}</span>
+      </div>
+          <p className="iteration_introduction">{parse(iteration["introduction"])}</p>
+      {isOpen && (
+        <div className="iteration_content">
+          {render_components}
+      <div className="blurbs_div">
+        {blurb_elements}
+      </div>
+    </div>
+      )}
+      </div>
+    );
+};
+// end collapsible iteration component -----------------------------------------------------------------------------------------------
+
+
+// create pages ---------------------------------------------------------------------------------------------------------------------
+const render_element = (dict, index) => {
+  var iteration_elements = [];
+
+  for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
+    if (dict[index]["iterations"][iteration]["publish"] === true) {
+      iteration_elements.push(render_iteration(dict[index]["iterations"], iteration));
+    }
+  }
+
+  return (
+    <div className="project_div">
+      <h2>{dict[index]['name']}</h2>
+      <p>{parse(dict[index]["introduction"])}</p>
+      {iteration_elements}
+    </div>
+  );
+}
+
+const render_iteration = (iteration_dict, index) => {
+  var component_elements = [];
+  var blurb_elements = [];
+
+  for (let component = 0; component < iteration_dict[index]["components"].length; component++) {
+    component_elements.push(render_component(iteration_dict[index]["components"], component));
+  }
+
+  for (let blurb = 0; blurb < iteration_dict[index]["blurbs"].length; blurb++) {
+    blurb_elements.push(render_blurb(iteration_dict[index]["blurbs"], blurb));
+  }
+
+  var render_components = null;
+  if (iteration_dict[index]["components"].length >= 1) {
+    render_components = (
+    <div className="components_div">
+      <br />
+      <h4>Components</h4>
+      <ul>
+        {component_elements}
+      </ul>
+    </div>);
   }
 
   return (
@@ -144,52 +194,52 @@ const render_iteration = (iteration_dict, index) => {
 
 const render_component = (component_dict, index) => {
   if (component_dict[index]["old_text"] === "") {
-    return (<li><a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>); 
+    return (<li><a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>);
   } else {
-    return (<li><strike><a href={component_dict[index]["old_link"]}>{component_dict[index]["old_text"]}</a></strike> → <a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>); 
+    return (<li><strike><a href={component_dict[index]["old_link"]}>{component_dict[index]["old_text"]}</a></strike> → <a href={component_dict[index]["link"]}>{component_dict[index]["text"]}</a></li>);
   }
 }
 
 const render_blurb = (blurb_dict, index) => {
-  var right_blurb = null; 
-  var left_blurb = null; 
-  var whole_blurb = null; 
+  var right_blurb = null;
+  var left_blurb = null;
+  var whole_blurb = null;
 
   if (blurb_dict[index]["images"].length >= 1) {
     right_blurb = (
       <div className="right_blurb_item">
         <img src={map_images(blurb_dict[index]["images"][0]["name"])} alt={blurb_dict[index]["alt"]} />
       </div>
-    ); 
+    );
 
     left_blurb = (
       <div className="left_blurb_item">
         <p>{parse(blurb_dict[index]["text"])}</p>
       </div>
-    ); 
+    );
   } else if ("code" in blurb_dict[index]) {
     right_blurb = (
       <div className="right_blurb_item code">
         {parse(blurb_dict[index]["code"])}
       </div>
-    ); 
+    );
 
     left_blurb = (
       <div className="left_blurb_item">
         <p>{parse(blurb_dict[index]["text"])}</p>
       </div>
-    ); 
+    );
   } else if (blurb_dict[index]["images"].length === 0) {
     whole_blurb = (
       <div className="whole_blurb_item">
         {parse(blurb_dict[index]["text"])}
       </div>
-    ); 
+    );
   }
 
-  var break_html = ( <br /> ); 
+  var break_html = ( <br /> );
   if (blurb_dict[index]["title"] === "")
-    break_html = null; 
+    break_html = null;
 
   return (
     <>
@@ -200,19 +250,41 @@ const render_blurb = (blurb_dict, index) => {
         {left_blurb}
 
         {right_blurb}
-        
+
         {whole_blurb}
       </div>
     </>
-  ); 
+  );
 }
+// create pages ---------------------------------------------------------------------------------------------------------------------
+
+const render_element_collapsible = (dict, index) => {
+  var iteration_elements = [];
+
+  for (let iteration = 0; iteration < dict[index]["iterations"].length; iteration++) {
+    if (dict[index]["iterations"][iteration]["publish"] === true) {
+      iteration_elements.push(
+        <CollapsibleIteration key={iteration} iteration={dict[index]["iterations"][iteration]} index={iteration} />
+      );
+    }
+  }
+
+  return (
+    <div className="project_div">
+      <h2>{dict[index]['name']}</h2>
+      <p>{parse(dict[index]["introduction"])}</p>
+
+      {iteration_elements}
+    </div>
+  );
+};
 
 export const create_electronics_page = () => {
-  var electronic_elements = []; 
+  var electronic_elements = [];
 
   for (let electronics = 0; electronics < Data['electronics'].length; electronics++) {
     if (Data['electronics'][electronics]["publish"] === true) {
-      electronic_elements.push(render_element(Data["electronics"], electronics)); 
+      electronic_elements.push(render_element_collapsible(Data["electronics"], electronics));
     }
   }
 
@@ -224,11 +296,11 @@ export const create_electronics_page = () => {
 }
 
 export const create_guides_page = () => {
-  var guide_elements = []; 
+  var guide_elements = [];
 
   for (let guides = 0; guides < Data['guides'].length; guides++) {
     if (Data['guides'][guides]["publish"] === true) {
-      guide_elements.push(render_element(Data["guides"], guides)); 
+      guide_elements.push(render_element(Data["guides"], guides));
     }
   }
 
@@ -244,7 +316,7 @@ export const create_plants_page = () => {
 
   for (let plants = 0; plants < Data['plants'].length; plants++) {
     if (Data['plants'][plants]["publish"] === true) {
-      plant_elements.push(render_element(Data["plants"], plants)); 
+      plant_elements.push(render_element_collapsible(Data["plants"], plants));
     }
   }
 
@@ -256,18 +328,18 @@ export const create_plants_page = () => {
 }
 
 export const create_programming_page = () => {
-  var programming_elements = []; 
+  var programming_elements = [];
 
   for (let programming_counter = 0; programming_counter < Data['programming'].length; programming_counter++) {
     if (Data['programming'][programming_counter]["publish"] === true) {
-      programming_elements.push(render_element(Data["programming"], programming_counter)); 
+      programming_elements.push(render_element(Data["programming"], programming_counter));
     }
   }
 
   return (
     <>
-      {programming_elements}
+    {programming_elements}
     </>
   );
 }
-// end create pages -------------------------------------------------------------------------------------------------
+

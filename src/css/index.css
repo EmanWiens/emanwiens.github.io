@@ -115,6 +115,165 @@ img {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Start collapsible iterations ----------------------------------------------------------- */
+.collapsible_iteration {
+  margin-top: 2%;
+}
+
+.collapsible_header {
+  cursor: pointer;
+
+
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  user-select: none;
+}
+
+
+
+.collapsible_header:hover {
+  opacity: 0.85;
+}
+
+
+
+.collapsible_title {
+  margin: 0;
+}
+
+
+
+
+.collapsible_toggle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+
+
+
+.iteration_content {
+  padding-top: 0.5rem;
+}
+
+
+
+.iteration_introduction {
+  margin: 0.5rem 0;
+}
+/* End collapsible iterations ------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Start mobile Nav bar -------------------------------------------------------------------- */
 /* Responsive Navigation Bar Tutorial | HTML & CSS https://dev.to/chaoocharles/responsive-navigation-bar-tutorial-html-css-3fb2 */
 
@@ -148,11 +307,32 @@ nav {
 .overview {
   margin-right: 4rem;
 }
-
 nav li {
   list-style: none;
   margin: 0 0.5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 nav a {
   text-decoration: none;
@@ -165,16 +345,22 @@ nav a:hover {
 
 nav a::after {
   content: "";
-  display: block;
+    display: block;
+
+
+
+
   height: 3px;
   background: #a0ebfd;
   width: 0%;
   transition: all ease-in-out 300ms;
-}
+  }
+  
 
 nav a:hover::after {
-  width: 100%;
-}
+    width: 100%;
+  }
+
 
 a.nav_bar.active {
   color: #a0ebfd;
@@ -201,7 +387,7 @@ a.nav_bar.active {
   .overview {
     overflow-y: scroll;
     height: 100vh;
-    padding-bottom: 35px; 
+    padding-bottom: 35px;
     padding-right: 75%; /* breaks the underline animation for some reason */
     justify-content: space-evenly;
   }
@@ -231,7 +417,7 @@ a.nav_bar.active {
     padding: 8% 0% 2% 0%;
     z-index: 1;
   }
-  
+
   .nav-items_mobile:hover .nav-items {
     display: block;
   }
@@ -256,7 +442,7 @@ a.nav_bar.active {
   /* Start mobile content -------------------------------------------------------------------- */
 
   div.content_body {
-    height:auto; 
+    height:auto;
     width:100%;
     margin: 0% 0% 0% 0%;
   }
@@ -268,7 +454,7 @@ a.nav_bar.active {
   div.left_blurb_item {
     width: 100%;
   }
-  
+
   div.right_blurb_item {
     width: 100%;
   }
